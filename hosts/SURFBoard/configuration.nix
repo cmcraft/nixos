@@ -92,7 +92,7 @@
     extraConfig = {
       init.defaultBranch = "master";
       safe.directory = "/etc/nixos";
-      safe.directory = "/home/yourusername/.dotfiles";
+      safe.directory = "/home/cmcraft/.dotfiles";
     };
   };
   # programs.firefox.enable = true;
