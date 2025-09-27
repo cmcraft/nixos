@@ -3,6 +3,11 @@
 #   run github:nix-community/disko -- \
 #   --mode disko /tmp/disko-elysium.nix
 
+# _____ FOR REF ONLY _____ #
+# btrfs subvolume snapshot -r /mnt/root /mnt/root-blank
+# umount /mnt
+# _____ _____ #
+
 # sudo nixos-generate-config --no-root-password --no-filesystems --root /mnt
 {
   disko.devices = {
@@ -42,6 +47,13 @@
               content = {
                 type = "btrfs";
                 extraArgs = [ "-L" "nixoelysium" "-f" ]; # Override existing partition
+                # Make a blank snapshot for Impermanence
+                postCreateHook = /* sh */ ''
+                  MNTPOINT=$(mktemp -d)
+									mount "/dev/nvme0n1p3" "$MNTPOINT" -o subvol=/
+									trap 'umount $MNTPOINT; rm -rf $MNTPOINT' EXIT
+                  btrfs subvolume snapshot -r $MNTPOINT/root $MNTPOINT/root-blank
+                ''
                 # Subvolumes must set a mountpoint in order to be mounted,
                 # unless their parent is mounted
                 subvolumes = {
