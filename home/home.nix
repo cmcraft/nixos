@@ -6,6 +6,9 @@
     ./packages.nix
     ./modules/hyprland/hyprland.nix
   ];
+  
+  home.username = "cmcraft";
+  home.homeDirectory = "/home/cmcraft";
 
   home.persistence."/persist" = {
     directories = [
@@ -50,6 +53,7 @@
     ];
     allowOther = true;
   };
+
   programs.git = {
     enable = true;
     userName = "Constantine Craft";
@@ -60,4 +64,6 @@
       safe.directory = "/home/cmcraft/.dotfiles";
     };
   };
+
+  programs.home-manager.enable = true;
 }
