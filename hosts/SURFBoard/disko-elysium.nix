@@ -53,7 +53,7 @@
 									mount "/dev/nvme0n1p3" "$MNTPOINT" -o subvol=/
 									trap 'umount $MNTPOINT; rm -rf $MNTPOINT' EXIT
                   btrfs subvolume snapshot -r $MNTPOINT/root $MNTPOINT/root-blank
-                ''
+                '';
                 # Subvolumes must set a mountpoint in order to be mounted,
                 # unless their parent is mounted
                 subvolumes = {
