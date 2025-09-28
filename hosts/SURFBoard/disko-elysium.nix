@@ -6,6 +6,7 @@
 # _____ _____ #
 
 # sudo nixos-generate-config --no-root-password --no-filesystems --root /mnt
+# sudo nixos-install --no-root-password --root /mnt
 {
   disko.devices = {
     disk = {
