@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     # system stuff
-    swww
+    inputs.swww.packages.${pkgs.system}.default
     waybar
     
     #gaming stuff
