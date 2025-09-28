@@ -4,7 +4,7 @@
 
   imports = [
     ./packages.nix
-    ./hyprland.nix
+    ./modules/hyprland/hyprland.nix
   ];
 
   home.persistence."/persist" = {

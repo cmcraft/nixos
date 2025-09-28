@@ -1,8 +1,9 @@
 { config, lib, pkgs, inputs, ... }:
 {
   imports = [
+    ./hyprland-keybinds.nix
     ./hyprland-rules.nix
-    ./waybar.nix
+    ../waybar.nix
   ];
 
   wayland.windowManager.hyprland = {
