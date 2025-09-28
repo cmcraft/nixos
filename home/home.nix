@@ -1,6 +1,12 @@
 { pkgs, ... }:
 
 {
+
+  imports = [
+    ./packages.nix
+    ./hyprland.nix
+  ];
+
   home.persistence."/persist" = {
     directories = [
       "/etc/nixos"

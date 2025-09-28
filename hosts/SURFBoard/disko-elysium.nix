@@ -1,3 +1,4 @@
+# git clone https://github.com/cmcraft/nixos.git
 # sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./hosts/SURFBoard/disko-elysium.nix
 
 # _____ FOR REF ONLY _____ #
@@ -5,7 +6,7 @@
 # umount /mnt
 # _____ _____ #
 
-# sudo nixos-generate-config --no-root-password --no-filesystems --root /mnt
+# cp repo to /persist/etc/nixos
 # sudo nixos-install --no-root-password --root /mnt
 {
   disko.devices = {
