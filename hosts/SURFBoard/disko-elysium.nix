@@ -1,7 +1,4 @@
-# sudo nix \
-#   --experimental-features "nix-command flakes" \
-#   run github:nix-community/disko -- \
-#   --mode disko /tmp/disko-elysium.nix
+# sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./hosts/SURFBoard/disko-elysium.nix
 
 # _____ FOR REF ONLY _____ #
 # btrfs subvolume snapshot -r /mnt/root /mnt/root-blank
@@ -49,7 +46,7 @@
                 extraArgs = [ "-L" "nixoelysium" "-f" ]; # Override existing partition
                 # Make a blank snapshot for Impermanence
                 postCreateHook = /* sh */ ''
-                  MNTPOINT=$(mktemp -d)
+                  MNTPOINT=/mnt
 									mount "/dev/nvme0n1p3" "$MNTPOINT" -o subvol=/
 									trap 'umount $MNTPOINT; rm -rf $MNTPOINT' EXIT
                   btrfs subvolume snapshot -r $MNTPOINT/root $MNTPOINT/root-blank
