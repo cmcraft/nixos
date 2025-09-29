@@ -1,6 +1,11 @@
-{ config, pkgs, ... }:
-
 {
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
 
   imports = [
     ./packages.nix
@@ -31,7 +36,7 @@
     ];
   };
 
-  home.persistence."/persistent/home/cmcraft" = {
+  home.persistence."/persist/home/cmcraft" = {
     directories = [
       "Downloads"
       "Music"
@@ -66,4 +71,8 @@
   };
 
   programs.home-manager.enable = true;
+
+  # Nicely reload system units when changing configs
+  systemd.user.startServices = "sd-switch";
+  home.stateVersion = "25.03";
 }
