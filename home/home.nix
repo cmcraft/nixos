@@ -66,7 +66,7 @@
     extraConfig = {
       init.defaultBranch = "master";
       safe.directory = "/etc/nixos";
-      safe.directory = "/home/cmcraft/.dotfiles";
+      # safe.directory = "/home/cmcraft/.dotfiles";
     };
   };
 
