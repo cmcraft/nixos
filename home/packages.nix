@@ -5,6 +5,9 @@
     # system stuff
     inputs.swww.packages.${pkgs.system}.default
     waybar
+    rofi
+    mako
+    networkmanagerapplet
 
     #hyprland stuff
     # hyprpaper # maybe this as opposed to swww

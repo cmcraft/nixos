@@ -6,6 +6,7 @@
       [
         "$mod, B, exec, zen"
         ", Print, exec, grimblast copy area"
+        "$mod, A, exec, rofi -show drun -show-icons"
       ]
       ++ (
         # workspaces
