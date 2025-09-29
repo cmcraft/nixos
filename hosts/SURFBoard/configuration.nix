@@ -145,13 +145,13 @@
     ];
   };
   
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "cmcraft" = import ../../home/home.nix;
-    };
-  };
-  
+  # home-manager = {
+  #   extraSpecialArgs = { inherit inputs; };
+  #   users = {
+  #     "cmcraft" = import ../../home/home.nix;
+  #   };
+  # };
+
   # programs.firefox.enable = true;
 
   # List packages installed in system profile.
