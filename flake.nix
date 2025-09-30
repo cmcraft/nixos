@@ -20,7 +20,7 @@
     swww = {
       url = "github:LGFae/swww";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
+    };
 
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
