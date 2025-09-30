@@ -32,10 +32,23 @@
 
   outputs = { self, nixpkgs, home-manager, hyprland, impermanence, disko,... }@inputs: {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/SURFBoard/configuration.nix
-        inputs.home-manager.nixosModules.default
+
+        {
+            imports = [ home-manager.nixosModules.home-manager ];
+
+            home-manager.users.cmcraft =
+              { ... }:
+              {
+                imports = [
+                  impermanence.homeManagerModules.impermanence
+                  ./home/impermanence.nix # Your home-manager impermanence-configuration
+                ];
+              };
+          }
         inputs.disko.nixosModules.disko
       ];
     };
