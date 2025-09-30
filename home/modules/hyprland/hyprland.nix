@@ -11,21 +11,21 @@
     # set the flake package
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
-  };
+    xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
+    };
 
-  settings = {
-    exec-once = [
-      "nm-applet &"
-      "wl-clip-persist --clipboard both &"
-      "wl-paste --watch cliphist store &"
-      "waybar &"
-      "swww-daemon &"
-      "hyprlock"
-    ];
+    settings = {
+      exec-once = [
+        "nm-applet &"
+        "wl-clip-persist --clipboard both &"
+        "wl-paste --watch cliphist store &"
+        "waybar &"
+        "swww-daemon &"
+        "hyprlock"
+      ];
+    };
   };
 }
