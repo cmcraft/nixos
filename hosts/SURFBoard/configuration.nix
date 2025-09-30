@@ -2,13 +2,14 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, outputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./disko-elysium.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -146,7 +147,7 @@
   };
   
   # home-manager = {
-  #   extraSpecialArgs = { inherit inputs; };
+  #   extraSpecialArgs = { inherit inputs outputs; };
   #   users = {
   #     "cmcraft" = import ../../home/home.nix;
   #   };
