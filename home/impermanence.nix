@@ -42,4 +42,5 @@
     ];
     allowOther = true;
   };
+  home.stateVersion = "25.11";
 }
