@@ -15,14 +15,5 @@
     hypridle
     hyprlock
     
-    #gaming stuff
-    steam
-    steam-gamescope
-    mangohud 
-    protonup-qt 
-    lutris 
-    bottles 
-    heroic
-    #
   ];
 }

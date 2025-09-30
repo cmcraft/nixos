@@ -146,6 +146,15 @@
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       git
+
+      #gaming stuff
+      steam
+      steam-gamescope
+      mangohud 
+      protonup-qt 
+      lutris 
+      bottles 
+      heroic
     ];
   };
   
