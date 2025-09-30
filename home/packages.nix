@@ -3,7 +3,8 @@
 {
   home.packages = with pkgs; [
     # system stuff
-    inputs.swww.packages.${pkgs.system}.default
+    # inputs.swww.packages.${pkgs.system}.default
+    swww
     waybar
     rofi
     mako
