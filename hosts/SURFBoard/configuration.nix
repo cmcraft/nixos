@@ -149,7 +149,7 @@
 
       #gaming stuff
       steam
-      steam-gamescope
+      gamescope
       mangohud 
       protonup-qt 
       lutris 
