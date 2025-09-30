@@ -1,5 +1,6 @@
 {
   home.persistence."/persist" = {
+    allowOther = true;
     directories = [
       "/etc/nixos"
       "/etc/NetworkManager/system-connections"
