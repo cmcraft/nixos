@@ -24,8 +24,8 @@
     };
   };
 
-  xdg.portal = {
-      enable = true;
-      extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
-    };
+  # xdg.portal = {
+  #     enable = true;
+  #     extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
+  # };
 }
