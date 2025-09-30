@@ -22,6 +22,9 @@
   };
 
   environment.etc = { nixos.source = "/persist/etc/nixos"; };
+  environment.systemPackages = [ 
+    inputs.home-manager.packages.${pkgs.system}.default 
+  ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -146,12 +149,12 @@
     ];
   };
   
-  # home-manager = {
-  #   extraSpecialArgs = { inherit inputs outputs; };
-  #   users = {
-  #     "cmcraft" = import ../../home/home.nix;
-  #   };
-  # };
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      "cmcraft" = import ../../home/home.nix;
+    };
+  };
 
   # programs.firefox.enable = true;
 
