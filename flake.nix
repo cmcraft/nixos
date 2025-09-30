@@ -17,7 +17,10 @@
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
-    swww.url = "github:LGFae/swww";
+    swww = {
+      url = "github:LGFae/swww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
 
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
