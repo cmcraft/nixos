@@ -46,10 +46,10 @@
             home-manager.users.cmcraft =
               { ... }:
               {
-                # imports = [
-                #   impermanence.homeManagerModules.impermanence
-                #   ./home/impermanence.nix # Your home-manager impermanence-configuration
-                # ];
+                imports = [
+                  impermanence.homeManagerModules.impermanence
+                  ./home/impermanence.nix # Your home-manager impermanence-configuration
+                ];
               };
           }
         inputs.disko.nixosModules.disko
