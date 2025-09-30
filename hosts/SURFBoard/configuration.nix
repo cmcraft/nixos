@@ -159,6 +159,10 @@
   };
   
   home-manager = {
+    imports = [
+      impermanence.homeManagerModules.impermanence
+      ../../home/impermanence.nix # Your home-manager impermanence-configuration
+    ];
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       "cmcraft" = import ../../home/home.nix;
