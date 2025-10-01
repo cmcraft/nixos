@@ -87,6 +87,10 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
+  etc."NetworkManager/system-connections" = {
+    source = "/persist/etc/NetworkManager/system-connections/";
+  };
+
   # Set your time zone.
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
@@ -144,7 +148,7 @@
     password = "password"; # Change this. Duh.
     home = "/home/cmcraft";
     useDefaultShell = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "cmcraft" "wheel" "networkmanager" ];
     packages = with pkgs; [
       git
 

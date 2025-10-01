@@ -6,6 +6,11 @@
       "/etc/NetworkManager/system-connections"
       "/etc/secureboot"
       "/var/db/sudo"
+      "/var/log"
+      "/var/lib/bluetooth"
+      "/var/lib/nixos"
+      "/var/lib/systemd/coredump"
+      { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
 
     files = [
@@ -28,10 +33,10 @@
       "Pictures"
       "Documents"
       "Videos"
-      ".gnupg"
-      ".ssh"
-      ".nixops"
-      ".local/share/keyrings"
+      { directory = ".gnupg"; mode = "0700"; }
+      { directory = ".ssh"; mode = "0700"; }
+      { directory = ".nixops"; mode = "0700"; }
+      { directory = ".local/share/keyrings"; mode = "0700"; }
       ".local/share/direnv"
       {
         directory = ".local/share/Steam";
