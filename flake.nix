@@ -43,7 +43,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/SURFBoard/configuration.nix
-        impermanence.homeManagerModules.impermanence
+        impermanence.nixosModules.impermanence
         {
             imports = [ home-manager.nixosModules.home-manager ];
             
