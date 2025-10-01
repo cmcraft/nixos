@@ -149,12 +149,13 @@
     password = "password"; # Change this. Duh.
     home = "/home/cmcraft";
     useDefaultShell = true;
+    users.groups.cmcraft = {};
     group = "cmcraft";
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       git
 
-      #gaming stuff
+      #gaming stuffc
       steam
       gamescope
       mangohud 
@@ -167,6 +168,7 @@
   
   users.users.colord = {
     isSystemUser = true;
+    users.groups.colord = {};
     group = "colord";
   };
   home-manager = {
