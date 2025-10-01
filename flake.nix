@@ -24,7 +24,7 @@
 
     waybar = {
       url = "github:Alexays/Waybar";
-      inputs.hyprland.follows = "hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hyprland-contrib = {
