@@ -149,7 +149,8 @@
     password = "password"; # Change this. Duh.
     home = "/home/cmcraft";
     useDefaultShell = true;
-    extraGroups = [ "cmcraft" "wheel" "networkmanager" ];
+    group = "cmcraft";
+    extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       git
 
@@ -166,7 +167,7 @@
   
   users.users.colord = {
     isSystemUser = true;
-    extraGroups = [ "colord" ];
+    group = "colord";
   };
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
