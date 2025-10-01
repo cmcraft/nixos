@@ -23,7 +23,7 @@
     };
 
     waybar = {
-      url = "github/Alexays/Waybar";
+      url = "github:Alexays/Waybar";
       inputs.hyprland.follows = "hyprland";
     };
 
