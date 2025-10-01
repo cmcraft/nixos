@@ -6,7 +6,6 @@
       "/etc/NetworkManager/system-connections"
       "/etc/secureboot"
       "/var/db/sudo"
-      "/var/log"
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
