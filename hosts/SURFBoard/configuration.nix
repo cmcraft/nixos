@@ -164,6 +164,9 @@
     ];
   };
   
+  users.users.colord = {
+    extraGroups = [ "colord" ];
+  };
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
