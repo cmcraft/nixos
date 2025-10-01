@@ -165,6 +165,7 @@
   };
   
   users.users.colord = {
+    isSystemUser = true;
     extraGroups = [ "colord" ];
   };
   home-manager = {
