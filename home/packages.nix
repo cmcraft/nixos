@@ -3,8 +3,8 @@
 {
   home.packages = with pkgs; [
     # system stuff
-    # inputs.swww.packages.${pkgs.system}.default
-    swww
+    inputs.swww.packages.${pkgs.system}.default
+    # swww
     waybar
     rofi
     mako
@@ -16,5 +16,6 @@
     hypridle
     hyprlock
     
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }
