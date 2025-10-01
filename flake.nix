@@ -43,6 +43,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/SURFBoard/configuration.nix
+        impermanence.homeManagerModules.impermanence
         {
             imports = [ home-manager.nixosModules.home-manager ];
             
@@ -51,7 +52,7 @@
               {
                 imports = [
                   impermanence.homeManagerModules.impermanence
-                  ./home/impermanence.nix # Your home-manager impermanence-configuration
+                  ./home/home-impermanence.nix # Your home-manager impermanence-configuration
                 ];
               };
           }
