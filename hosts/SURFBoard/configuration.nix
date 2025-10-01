@@ -205,6 +205,10 @@
   };
   services.xserver.enable = true;
   programs.hyprland.enable = true;
+  programs.fuse = {
+    enable = true;
+    userAllowOther = true;
+  };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
