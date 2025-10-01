@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ./disko-elysium.nix
       inputs.home-manager.nixosModules.home-manager
-      ./modules/steam.nix
+      ../modules/steam.nix
     ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
