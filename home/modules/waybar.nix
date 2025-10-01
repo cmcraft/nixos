@@ -1,7 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 {
   programs.waybar.enable = true;
-  programs.waybar.package = inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
   programs.waybar.settings = [
     {
       mainBar = {

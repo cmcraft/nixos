@@ -5,7 +5,7 @@
     # system stuff
     # inputs.swww.packages.${pkgs.system}.default
     swww
-    # waybar
+    waybar
     rofi
     mako
     networkmanagerapplet
