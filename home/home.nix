@@ -15,7 +15,7 @@
   home.homeDirectory = "/home/cmcraft";
 
   home.file."Pictures/wallapapers".source = ./wallpapers;
-  
+
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
     default = {
@@ -24,7 +24,7 @@
       sorting = "random";
     };
     any = {
-      path = "${home.homeDirectory}/Pictures/wallapapers";
+      path = "${homeDirectory}/Pictures/wallapapers";
     };
   };
 
