@@ -23,7 +23,7 @@ in
   imports = [
     ./waybar-style.nix
   ];
-  
+
   programs.waybar.enable = true;
   programs.waybar.settings.mainbar = with custom; {
         layer = "top";
@@ -32,12 +32,12 @@ in
         modules-left = [  
           "custom/launcher"
           "hyprland/workspaces"
-          "tray" 
         ];
         modules-center = [
 
          ];
         modules-right = [
+          "tray" 
           "cpu"
           "memory"
           "disk"
@@ -86,19 +86,19 @@ in
       format = "<span foreground='${green}'> </span> {usage}%";
       format-alt = "<span foreground='${green}'> </span> {avg_frequency} GHz";
       interval = 2;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty btop'";
     };
     memory = {
       format = "<span foreground='${cyan}'>󰟜 </span>{}%";
       format-alt = "<span foreground='${cyan}'>󰟜 </span>{used} GiB"; # 
       interval = 2;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty btop'";
     };
     disk = {
       # path = "/";
       format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
       interval = 60;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty btop'";
     };
     network = {
       format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
@@ -124,7 +124,7 @@ in
     "custom/launcher" = {
       format = "";
       on-click = "random-wallpaper";
-      on-click-right = "rofi -show drun";
+      on-click-right = "rofi -show drun -show-icons";
       tooltip = "true";
       tooltip-format = "Random Wallpaper";
     };
