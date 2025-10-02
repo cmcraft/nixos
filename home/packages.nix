@@ -14,11 +14,11 @@
     pamixer
 
     #hyprland stuff
-    hyprpaper # maybe this as opposed to swww
+    # hyprpaper # maybe this as opposed to swww
+    waypaper
     hyprpicker
     hypridle
     hyprlock
-    gnome-shell-extension-random-wallpaper
 
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
