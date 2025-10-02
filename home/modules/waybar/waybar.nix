@@ -20,6 +20,10 @@ let
   };
 in
 {
+  imports = [
+    ./waybar-style.nix
+  ];
+  
   programs.waybar.enable = true;
   programs.waybar.settings.mainbar = with custom; {
         layer = "top";
