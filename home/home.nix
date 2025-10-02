@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  environment,
   ...
 }: 
 let 
@@ -18,7 +19,7 @@ in
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
 
-  home.file."Pictures/wallapapers".source = (builtins.readFile "${pathToFile}");
+  home.file."Pictures/wallapapers".source = "${environment.etc.wallpapers}";
 
   services.wpaperd.enable = true;
   services.wpaperd.settings = {

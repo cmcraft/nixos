@@ -23,7 +23,10 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
-  environment.etc = { nixos.source = "/persist/etc/nixos"; };
+  environment.etc = { 
+    nixos.source = "/persist/etc/nixos";
+    wallpapers.source = "/persist/etc/nixos/wallpapers"
+  };
   environment.systemPackages = [ 
     inputs.home-manager.packages.${pkgs.system}.default 
   ];
