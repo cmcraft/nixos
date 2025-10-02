@@ -18,7 +18,7 @@ in
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
 
-  home.file."Pictures/wallapapers".source = "${config.environment.etc.wallpapers}";
+  home.file."Pictures/wallapapers".source = "../wallpapers";
 
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
