@@ -24,7 +24,7 @@
       sorting = "random";
     };
     any = {
-      path = "${homeDirectory}/Pictures/wallapapers";
+      path = "/home/cmcraft/Pictures/wallapapers";
     };
   };
 
