@@ -17,7 +17,7 @@
 
     wpaperd = {
       url = "github:danyspin97/wpaperd";
-    }
+    };
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
