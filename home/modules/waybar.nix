@@ -9,7 +9,7 @@
         height = 30;
         modules-left = [ ];
         modules-center = [ ];
-        modules-right = [ ];
+        modules-right = [ "clock" ];
         };
     }
 ];
