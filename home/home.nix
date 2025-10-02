@@ -14,7 +14,7 @@
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
 
-  home.file."Pictures/wallapapers".source = ./wallpapers;
+  home.file."Pictures/wallapapers".source = /etc/nixos/wallpapers;
 
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
