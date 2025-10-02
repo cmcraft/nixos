@@ -6,6 +6,7 @@
 
   imports = [
     ./packages.nix
+    ./gtk.nix
     ./modules/hyprland/hyprland.nix
     ./modules/waybar/waybar.nix
   ];
