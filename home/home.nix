@@ -2,7 +2,11 @@
   config,
   pkgs,
   ...
-}: {
+}: 
+let 
+  pathToFile = "/etc/nixos/wallpapers";
+in
+{
 
   imports = [
     ./packages.nix
@@ -14,7 +18,7 @@
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
 
-  home.file."Pictures/wallapapers".source = /etc/nixos/wallpapers;
+  home.file."Pictures/wallapapers".source = (builtins.readFile "${pathToFile}");
 
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
