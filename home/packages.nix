@@ -18,7 +18,7 @@
     hyprpicker
     hypridle
     hyprlock
-    random-wallpaper
+    gnome-shell-extension-random-wallpaper
 
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
