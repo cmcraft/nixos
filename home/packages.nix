@@ -6,7 +6,7 @@
     alacritty
     inputs.swww.packages.${pkgs.system}.default
     # swww
-    waybar
+    xdg-desktop-portal
     rofi
     mako
     networkmanagerapplet
