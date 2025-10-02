@@ -3,8 +3,7 @@
   imports = [
     ./hyprland-keybinds.nix
     ./hyprland-rules.nix
-    ../waybar.nix
-  ];
+x  ];
 
   wayland.windowManager.hyprland = {
     enable = true;

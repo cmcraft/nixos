@@ -7,6 +7,7 @@
   imports = [
     ./packages.nix
     ./modules/hyprland/hyprland.nix
+    ./modules/waybar.nix
   ];
   
   home.username = "cmcraft";
