@@ -15,12 +15,16 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    wpaperd = {
+      url = "github:danyspin97/wpaperd"
+    }
+
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
-    swww = {
-      url = "github:LGFae/swww";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # swww = {
+    #   url = "github:LGFae/swww";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
@@ -36,7 +40,7 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, disko,... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, wpaperd, disko,... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";

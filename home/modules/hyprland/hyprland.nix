@@ -17,7 +17,8 @@
         "wl-clip-persist --clipboard both &"
         "wl-paste --watch cliphist store &"
         "waybar &"
-        "swww-daemon &"
+        "wpaperd -d"
+        # "swww-daemon &"
         # "hyprlock"
       ];
     };

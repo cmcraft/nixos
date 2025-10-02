@@ -123,7 +123,7 @@ in
     };
     "custom/launcher" = {
       format = "";
-      on-click = "random-wallpaper";
+      on-click = "wpaperctl next";
       on-click-right = "rofi -show drun -show-icons";
       tooltip = "true";
       tooltip-format = "Random Wallpaper";

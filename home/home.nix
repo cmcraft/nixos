@@ -13,6 +13,18 @@
   
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
+  home.directory."Pictures/wallapapers".source = ./wallpapers
+  services.wpaperd.enable = true;
+  services.wpaperd.settings = {
+    default = {
+      duration = "30m";
+      mode = "center";
+      sorting = "random";
+    };
+    any = {
+      path = "/home/cmcraft/Pictures/wallapapers";
+    }
+  };
 
   programs.git = {
     enable = true;
