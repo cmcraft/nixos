@@ -23,7 +23,7 @@
     };
     any = {
       path = "/home/cmcraft/Pictures/wallapapers";
-    }
+    };
   };
 
   programs.git = {
