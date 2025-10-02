@@ -18,7 +18,7 @@ in
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
 
-  home.file."Pictures/wallapapers".source = "../wallpapers";
+  home.file."Pictures/wallapapers".source = config.lib.file.mkOutOfStoreSymlink "../wallpapers";
 
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
