@@ -7,7 +7,6 @@
     inputs.swww.packages.${pkgs.system}.default
     # swww
     # xdg-desktop-portal
-    maple-mono
     rofi
     mako
     networkmanagerapplet
