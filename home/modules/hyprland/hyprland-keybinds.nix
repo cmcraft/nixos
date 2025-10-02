@@ -5,6 +5,7 @@
     bind =
       [
         "$mod, B, exec, zen"
+        "$mod, RETURN, exec, alacritty"
         ", Print, exec, grimblast copy area"
         "$mod, A, exec, rofi -show drun -show-icons"
       ]

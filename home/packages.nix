@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     # system stuff
+    alacritty
     inputs.swww.packages.${pkgs.system}.default
     # swww
     waybar

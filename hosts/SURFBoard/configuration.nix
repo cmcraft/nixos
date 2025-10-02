@@ -220,6 +220,7 @@
   };
   services.xserver.enable = true;
   programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.fuse = {
     enable = true;
     userAllowOther = true;

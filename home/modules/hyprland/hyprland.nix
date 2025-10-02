@@ -19,7 +19,7 @@
         "wl-paste --watch cliphist store &"
         "waybar &"
         "swww-daemon &"
-        "hyprlock"
+        # "hyprlock"
       ];
     };
   };
