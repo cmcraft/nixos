@@ -13,7 +13,7 @@
   
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
-  home.directory."Pictures/wallapapers".source = ./wallpapers
+  home.directory."Pictures/wallapapers".source = ./wallpapers;
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
     default = {
