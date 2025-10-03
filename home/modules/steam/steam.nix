@@ -24,5 +24,5 @@
             proton-ge-bin
         ];
     };
-    hardware.steam-hardware.enable = true;
+    # hardware.steam-hardware.enable = true;
 }
