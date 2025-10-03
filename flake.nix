@@ -20,7 +20,6 @@
     };
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    discordo.url = "github:ayn2op/discordo";
 
     # swww = {
     #   url = "github:LGFae/swww";
@@ -41,7 +40,7 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, discordo, wpaperd, disko,... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, wpaperd, disko,... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
