@@ -21,8 +21,16 @@ in
   home.file."Pictures/wallapapers".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/wallpapers";
 
   xdg.enable = true;
-  programs.bash.enable = true;
+  home.sessionVariables = {
+    XDG_CACHE_HOME = "$HOME/.cache";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
+    XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
+  };
   
+  programs.bash.enable = true;
+
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
     default = {
