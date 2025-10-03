@@ -12,6 +12,7 @@ in
     ./packages.nix
     ./gtk.nix
     ./modules/hyprland/hyprland.nix
+    ./modules/steam/steam.nix
     ./modules/waybar/waybar.nix
     ./modules/yazi/yazi.nix
   ];
