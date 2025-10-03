@@ -21,7 +21,8 @@ in
   home.file."Pictures/wallapapers".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/wallpapers";
 
   xdg.enable = true;
-
+  programs.bash.enable = true;
+  
   services.wpaperd.enable = true;
   services.wpaperd.settings = {
     default = {
