@@ -28,6 +28,9 @@
 
     inputs.zen-browser.packages.${pkgs.system}.default
     webcord
-    krita
+    discordo
+
+    steamcmd
+    steam-tui
   ];
 }
