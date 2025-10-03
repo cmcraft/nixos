@@ -13,6 +13,7 @@ in
     ./gtk.nix
     ./modules/hyprland/hyprland.nix
     ./modules/waybar/waybar.nix
+    ./modules/yazi/yazi.nix
   ];
   
   home.username = "cmcraft";
