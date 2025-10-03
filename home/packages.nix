@@ -28,7 +28,7 @@
 
     inputs.zen-browser.packages.${pkgs.system}.default
     webcord
-    discordo
+    inputs.discordo.homeModules.default
     bitwarden
   ];
 }
