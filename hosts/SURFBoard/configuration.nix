@@ -243,7 +243,16 @@
     userAllowOther = true;
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
+  environment.sessionVariables = {
+    XDG_CACHE_HOME = "$HOME/.cache";
+    XDG_CONFIG_DIRS = "/etc/xdg";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_DIRS = "/usr/local/share/:/usr/share/";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
+    XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
