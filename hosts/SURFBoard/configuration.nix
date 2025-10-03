@@ -245,7 +245,6 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables = {
     XDG_CACHE_HOME = "$HOME/.cache";
-    XDG_CONFIG_DIRS = "/etc/xdg";
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_DIRS = "/usr/local/share/:/usr/share/";
     XDG_DATA_HOME = "$HOME/.local/share";
