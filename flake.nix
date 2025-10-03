@@ -20,7 +20,7 @@
     };
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    discordo.url = "github:ayn2op/discordo"
+    discordo.url = "github:ayn2op/discordo";
 
     # swww = {
     #   url = "github:LGFae/swww";
