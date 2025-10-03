@@ -243,7 +243,7 @@
     userAllowOther = true;
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.XDG_SCREENSHOTS_DIR = "~/Pictures/screenshots";
+  environment.sessionVariables.XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
