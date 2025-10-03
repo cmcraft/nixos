@@ -27,5 +27,6 @@
     swappy
 
     inputs.zen-browser.packages.${pkgs.system}.default
+    webcord
   ];
 }
