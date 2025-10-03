@@ -34,7 +34,7 @@ in
           "hyprland/workspaces"
         ];
         modules-center = [
-
+          "hyprland/window"
          ];
         modules-right = [
           "tray" 
