@@ -24,6 +24,7 @@
     slurp
     wl-clip-persist
     cliphist
+    swappy
 
     inputs.zen-browser.packages.${pkgs.system}.default
   ];

@@ -24,6 +24,7 @@ in
   home.sessionVariables = {
     XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
     XDG_PICTURES_DIR = "$HOME/Pictures";
+    GRIMBLAST_EDITOR = "swappy";
   };
 
   programs.bash.enable = true;
