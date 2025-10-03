@@ -29,8 +29,5 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     webcord
     discordo
-
-    steamcmd
-    steam-tui
   ];
 }

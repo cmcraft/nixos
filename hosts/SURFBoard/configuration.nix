@@ -158,6 +158,8 @@
 
       #gaming stuffc
       steam
+      steam-tui
+      steamcmd
       gamescope
       mangohud 
       protonup-qt 
