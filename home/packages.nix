@@ -24,9 +24,10 @@
     slurp
     wl-clip-persist
     cliphist
-    swappy
+    feh
 
     inputs.zen-browser.packages.${pkgs.system}.default
     webcord
+    krita
   ];
 }
