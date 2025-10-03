@@ -4,10 +4,17 @@
     "$mod" = "SUPER";
     bind =
       [
-        "$mod, B, exec, zen"
+        "SUPER, Q, killactive,"
         "$mod, RETURN, exec, alacritty"
-        ", Print, exec, grimblast copy area"
+        
         "$mod, A, exec, rofi -show drun -show-icons"
+        "ALT, Tab, exec, rofi -show window"
+
+        "$mod, B, exec, zen"
+
+        ", Print, exec, grimblast --notify copysave area"
+        "SHIFT, Print, exec, grimblast --notify copysave active"
+        "CTRL, Print, exec, grimblast --notify copysave screen"
       ]
       ++ (
         # workspaces

@@ -221,6 +221,21 @@
     ];
   };
   services.xserver.enable = true;
+
+    services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "Hyprland";
+        user = "cmcraft";
+      };
+      default_session = initial_session;
+    };
+  };
+  environment.etc."greetd/environments".text = ''
+    Hyprland
+  '';
+
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.fuse = {
@@ -228,6 +243,7 @@
     userAllowOther = true;
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.XDG_SCREENSHOTS_DIR = "~/Pictures/screenshots";
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

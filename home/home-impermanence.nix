@@ -5,6 +5,7 @@
       "Downloads"
       "Music"
       "Pictures"
+      "Pictures/screenshots"
       "Documents"
       "Videos"
       ".gnupg"

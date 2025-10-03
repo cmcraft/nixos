@@ -19,6 +19,11 @@
     hyprpicker
     hypridle
     hyprlock
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    grim
+    slurp
+    wl-clip-persist
+    cliphist
 
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
