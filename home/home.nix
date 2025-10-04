@@ -12,8 +12,9 @@ in
     ./packages.nix
     ./gtk.nix
     ./modules/hyprland/hyprland.nix
+    ./modules/nnn/nnn.nix
     ./modules/waybar/waybar.nix
-    ./modules/yazi/yazi.nix
+    # ./modules/yazi/yazi.nix
   ];
   
   home.username = "cmcraft";
@@ -51,6 +52,15 @@ in
       safe.directory = "/etc/nixos";
       # safe.directory = "/home/cmcraft/.dotfiles";
     };
+  };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      dracula-theme.theme-dracula
+      vscodevim.vim
+      yzhang.markdown-all-in-one
+    ];
   };
 
   programs.home-manager.enable = true;

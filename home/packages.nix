@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     # system stuff
     alacritty
+    btop
     # inputs.swww.packages.${pkgs.system}.default
     # swww
     # xdg-desktop-portal
