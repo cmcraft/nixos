@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./disko-elysium.nix
       inputs.home-manager.nixosModules.home-manager
+      ../../modules/steam/steam.nix
       ./impermanence.nix
     ];
   
