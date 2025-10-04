@@ -13,7 +13,6 @@ in
     ./gtk.nix
     ./modules/hyprland/hyprland.nix
     ./modules/nnn/nnn.nix
-    ./modules/steam/steam.nix
     ./modules/waybar/waybar.nix
     # ./modules/yazi/yazi.nix
   ];
