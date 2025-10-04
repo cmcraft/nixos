@@ -179,7 +179,7 @@
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
-    useGlobalPkgs.enable = true;
+    useGlobalPkgs = true;
     users = {
       "cmcraft" = import ../../home/home.nix;
     };
