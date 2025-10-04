@@ -16,7 +16,7 @@ in
     ./modules/waybar/waybar.nix
     # ./modules/yazi/yazi.nix
   ];
-  
+
   home.username = "cmcraft";
   home.homeDirectory = "/home/cmcraft";
 
