@@ -11,7 +11,6 @@
       ./disko-elysium.nix
       inputs.home-manager.nixosModules.home-manager
       ./impermanence.nix
-      ../../modules/steam/steam.nix
     ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
