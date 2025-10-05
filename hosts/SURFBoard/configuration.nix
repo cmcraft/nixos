@@ -160,8 +160,6 @@
       git
 
       #gaming stuffc
-      steam
-      steam-tui
       steamcmd
       gamescope
       mangohud 

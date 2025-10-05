@@ -11,9 +11,18 @@ in
   imports = [
     ./packages.nix
     ./gtk.nix
+    ./modules/alacritty/alacritty.nix
+    ./modules/btop/btop.nix
+    ./modules/cliphist/cliphist.nix
+    ./modules/feh/feh.nix
+    ./modules/hypridle/hypridle.nix
     ./modules/hyprland/hyprland.nix
+    ./modules/hyprlock/hyprlock.nix
+    ./modules/hyprpicker/hyprpicker.nix
     ./modules/mako/mako.nix
+    ./modules/network-manager-applet/network-manager-applet.nix
     ./modules/nnn/nnn.nix
+    ./modules/rofi/rofi.nix
     ./modules/waybar/waybar.nix
     # ./modules/yazi/yazi.nix
   ];
