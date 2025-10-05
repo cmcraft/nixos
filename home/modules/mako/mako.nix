@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.mako = {
+  service.mako = {
     enable = true;
   };
 }
