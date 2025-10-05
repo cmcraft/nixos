@@ -22,8 +22,8 @@ in
     * {
       font-family: UbuntuMono Nerd Font Propo;
       font-size: 14;
-      border-radius: 20;
-      margin: 2;
+      border-radius: 20px;
+      margin: 2px;
     }
 
     window#waybar {
@@ -45,7 +45,7 @@ in
     }
 
     #workspaces button {
-      margin: 2 5;
+      margin: 2 5px;
     }
 
     #workspaces button.active {
@@ -67,7 +67,7 @@ in
     #memory,
     #temperature,
     #tray {
-      padding: 0 10;
+      padding: 0 10px;
       color: ${purple};
       background-color: ${purple-background};
     }
