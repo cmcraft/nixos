@@ -5,9 +5,9 @@
     # system stuff
     pavucontrol
     pamixer
+    nerd-fonts.symbols-only
 
     #hyprland stuff
-    # hyprpaper # maybe this as opposed to swww
     waypaper
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
     grim

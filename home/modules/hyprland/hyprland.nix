@@ -7,7 +7,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    # set the flake package
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 
@@ -17,14 +16,8 @@
         "wl-paste --watch cliphist store &"
         "waybar &"
         "wpaperd -d"
-        # "swww-daemon &"
-        # "hyprlock"
       ];
     };
   };
 
-  # xdg.portal = {
-  #     enable = true;
-  #     extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
-  # };
 }
