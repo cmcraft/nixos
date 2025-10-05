@@ -112,9 +112,9 @@ in
     };
     pulseaudio = {
       format = "{icon} {volume}%";
-      format-muted = "<span foreground='${blue}'> </span> {volume}%";
+      format-muted = "<span foreground='${red}'> </span> {volume}%";
       format-icons = {
-        default = [ "<span foreground='${blue}'> </span>" ];
+        default = [ "<span foreground='${cyan}'> </span>" ];
       };
       scroll-step = 2;
       on-click = "pamixer -t";
