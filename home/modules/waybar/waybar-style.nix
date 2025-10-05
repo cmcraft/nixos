@@ -27,6 +27,7 @@ in
     }
 
     window#waybar {
+      color: ${cyan};
       background-color: rgba(0, 0, 0, 0);
       transition-property: background-color;
       transition-duration: 0.5s;

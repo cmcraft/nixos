@@ -121,7 +121,7 @@ in
       on-click-right = "pavucontrol";
     };
     "custom/launcher" = {
-      format = "";
+      format = "  ";
       on-click = "wpaperctl next";
       on-click-right = "rofi -show drun -show-icons";
       tooltip = "true";
