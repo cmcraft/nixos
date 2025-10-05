@@ -27,7 +27,7 @@ in
     }
 
     window#waybar {
-      background-color: rgba(0, 0, 0, 0);
+      background-color: ${purple-background};
       transition-property: background-color;
       transition-duration: 0.5s;
     }
@@ -41,7 +41,8 @@ in
     }
 
     #custom-launcher {
-      color: ${foreground};
+      color: ${cyan};
+      background-color: ${purple-background};
     }
 
     #workspaces button {
