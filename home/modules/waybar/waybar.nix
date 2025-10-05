@@ -47,7 +47,6 @@ in
       calendar = {
         format = {
           today = "<span color='${purple}'><b>{}</b></span>";
-          weeks = "<span color='${cyan}'>{:%U}</span>";
           days = "<span color='${cyan}'></span>";
         };
       };
