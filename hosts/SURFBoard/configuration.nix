@@ -29,7 +29,8 @@
     nixos.source = "/persist/etc/nixos";
   };
   environment.systemPackages = [ 
-    inputs.home-manager.packages.${pkgs.system}.default 
+    inputs.home-manager.packages.${pkgs.system}.default
+    pkgs.base16-schemes 
   ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -190,10 +191,7 @@
   # programs.firefox.enable = true;
 
   # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-    base16-schemes
-  ];
+  # You can use https://search.nixos.org/ to find more packages (and options)
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
