@@ -246,6 +246,12 @@
     enable = true;
     userAllowOther = true;
   };
+
+  stylix = {
+    enable = true;
+    image = "$XDG_STATE_HOME/wpaperd/wallpapers/HDMI-A-1";
+  }
+
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Open ports in the firewall.
