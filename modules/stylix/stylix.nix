@@ -55,13 +55,5 @@ in
         terminal = fontSize;
       };
     };
-
-    targets = {
-      firefox = {
-        profileNames = [
-          "cmcraft"
-        ];
-      };
-    };
   };
 }

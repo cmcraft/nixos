@@ -6,4 +6,13 @@
 
     };
   };
+  stylix = {
+    targets = {
+      firefox = {
+        profileNames = [
+          "cmcraft"
+        ];
+      };
+    };
+  };
 }
