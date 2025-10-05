@@ -21,7 +21,7 @@ in
   programs.waybar.style = with custom; ''
     * {
       font-family: UbuntuMono Nerd Font Propo;
-      font-size: 14;
+      font-size: 14px;
       border-radius: 20px;
       margin: 2px;
     }
@@ -29,7 +29,7 @@ in
     window#waybar {
       background-color: rgba(0, 0, 0, 0);
       transition-property: background-color;
-      transition-duration: 0.5;
+      transition-duration: 0.5s;
     }
 
     window#waybar.hidden {
