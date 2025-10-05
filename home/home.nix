@@ -12,6 +12,7 @@ in
     ./packages.nix
     ./gtk.nix
     ./modules/hyprland/hyprland.nix
+    ./modules/mako/mako.nix
     ./modules/nnn/nnn.nix
     ./modules/waybar/waybar.nix
     # ./modules/yazi/yazi.nix
