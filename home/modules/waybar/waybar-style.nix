@@ -27,13 +27,16 @@ in
     }
 
     window#waybar {
-      background-color: ${purple-background};
       transition-property: background-color;
       transition-duration: 0.5s;
     }
 
     window#waybar.hidden {
       opacity: 0.2;
+    }
+
+    #window {
+      background-color: ${purple-background};
     }
 
     button:hover {
