@@ -27,7 +27,7 @@ in
     }
 
     window#waybar {
-      color: ${purple};
+      color: ${selection};
       background-color: rgba(0, 0, 0, 0);
       transition-property: background-color;
       transition-duration: 0.5s;
@@ -38,7 +38,7 @@ in
     }
 
     #window {
-      background-color: ${purple-background};
+      background-color: ${background};
     }
 
     button:hover {
@@ -46,8 +46,8 @@ in
     }
 
     #custom-launcher {
-      color: ${cyan};
-      background-color: ${purple-background};
+      color: ${selection};
+      background-color: ${background};
     }
 
     #workspaces button {
@@ -75,8 +75,8 @@ in
     #disk,
     #tray {
       padding: 0 10px;
-      color: ${purple};
-      background-color: ${purple-background};
+      color: ${selection};
+      background-color: ${background};
     }
 
     #temperature.critical {

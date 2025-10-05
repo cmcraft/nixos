@@ -26,7 +26,7 @@ in
   programs.waybar.settings.mainbar = with custom; {
         layer = "top";
         position = "top";
-        height = 30;
+        height = 45;
         modules-left = [  
           "custom/launcher"
           "hyprland/workspaces"
@@ -82,29 +82,29 @@ in
       };
     };
     cpu = {
-      format = "<span foreground='${green}'> </span> {usage}%";
-      format-alt = "<span foreground='${green}'> </span> {avg_frequency} GHz";
+      format = "<span foreground='${selection}'> </span> {usage}%";
+      format-alt = "<span foreground='${selection}'> </span> {avg_frequency} GHz";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty -e btop'";
     };
     memory = {
-      format = "<span foreground='${cyan}'>󰟜 </span>{}%";
-      format-alt = "<span foreground='${cyan}'>󰟜 </span>{used} GiB"; # 
+      format = "<span foreground='${selection}'>󰟜 </span>{}%";
+      format-alt = "<span foreground='${selection}'>󰟜 </span>{used} GiB"; # 
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty -e btop'";
     };
     disk = {
       # path = "/";
-      format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
+      format = "<span foreground='${selection}'>󰋊 </span>{percentage_used}%";
       interval = 60;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty -e btop'";
     };
     network = {
-      format-wifi = "<span foreground='${purple}'> </span> {signalStrength}%";
-      format-ethernet = "<span foreground='${purple}'>󰀂 </span>";
+      format-wifi = "<span foreground='${selection}'> </span> {signalStrength}%";
+      format-ethernet = "<span foreground='${selection}'>󰀂 </span>";
       tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
-      format-disconnected = "<span foreground='${purple}'>󰖪 </span>";
+      format-disconnected = "<span foreground='${red}'>󰖪 </span>";
     };
     tray = {
       icon-size = 20;
@@ -114,7 +114,7 @@ in
       format = "{icon} {volume}%";
       format-muted = "<span foreground='${red}'> </span> {volume}%";
       format-icons = {
-        default = [ "<span foreground='${cyan}'> </span>" ];
+        default = [ "<span foreground='${selection}'> </span>" ];
       };
       scroll-step = 2;
       on-click = "pamixer -t";
