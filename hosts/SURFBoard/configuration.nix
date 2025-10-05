@@ -184,6 +184,9 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     useGlobalPkgs = true;
+    sharedModules [
+      stylix.enable = true;
+    ];
     users = {
       "cmcraft" = import ../../home/home.nix;
     };
