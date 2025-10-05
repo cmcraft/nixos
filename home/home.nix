@@ -15,6 +15,7 @@ in
     ./modules/btop/btop.nix
     ./modules/cliphist/cliphist.nix
     ./modules/feh/feh.nix
+    ./modules/firefox/firefox.nix
     ./modules/git/git.nix
     ./modules/home-manager/home-manager.nix
     ./modules/hypridle/hypridle.nix
