@@ -40,7 +40,7 @@ in
       background: inherit;
     }
 
-    #custom/launcher {
+    #custom-launcher {
       color: ${foreground};
     }
 
