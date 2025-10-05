@@ -13,7 +13,7 @@
     ../../modules/fuse/fuse.nix
     ../../modules/gamescope/gamescope.nix
     ../../modules/greetd/greetd.nix
-    ../../modules/heroic/heroic.nix
+    # ../../modules/heroic/heroic.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/lutris/lutris.nix
     ../../modules/mangohud/mangohud.nix
