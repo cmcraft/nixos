@@ -46,13 +46,15 @@ in
         clock = {
       calendar = {
         format = {
-          today = "<span color='#98971A'><b>{}</b></span>";
+          today = "<span color='${purple}'><b>{}</b></span>";
+          weeks = "<span color='${cyan}'>{:%U}</span>";
+          days = "<span color='${cyan}'></span>";
         };
       };
-      format = "  {:%H:%M} ";
+      format = "<span foreground='${purple}'> </span> {:%H:%M} ";
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = "  {:%d/%m} ";
+      format-alt = "<span foreground='${purple}'> </span> {:%d/%m} ";
     };
     "hyprland/workspaces" = {
       active-only = false;
@@ -107,7 +109,6 @@ in
       format-disconnected = "<span foreground='${red}'>󰖪 </span>";
     };
     tray = {
-      format = " 󱊖 ";
       icon-size = 20;
       spacing = 8;
     };
