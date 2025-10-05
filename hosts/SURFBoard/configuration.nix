@@ -31,7 +31,6 @@
   environment.systemPackages = [ 
     inputs.home-manager.packages.${pkgs.system}.default
     pkgs.base16-schemes
-    pkgs.nerd-fonts.symbols-only 
   ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
