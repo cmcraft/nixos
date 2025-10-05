@@ -12,6 +12,7 @@
       inputs.home-manager.nixosModules.home-manager
       ../../modules/nm-applet/nm-applet.nix
       ../../modules/steam/steam.nix
+      ../../modules/stylix/stylix.nix
       ./impermanence.nix
     ];
   
@@ -190,10 +191,9 @@
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-  # environment.systemPackages = with pkgs; [
-  #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #   wget
-  # ];
+  environment.systemPackages = with pkgs; [
+    base16-schemes
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -249,7 +249,6 @@
 
   stylix = {
     enable = true;
-    image = "/home/cmcraft/.local/state/wpaperd/wallpapers/HDMI-A-1";
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
