@@ -15,7 +15,7 @@
     ../../modules/greetd/greetd.nix
     # ../../modules/heroic/heroic.nix
     ../../modules/hyprland/hyprland.nix
-    ../../modules/lutris/lutris.nix
+    # ../../modules/lutris/lutris.nix
     ../../modules/mangohud/mangohud.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
