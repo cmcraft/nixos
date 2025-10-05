@@ -14,7 +14,6 @@ in
     ./modules/hyprland/hyprland.nix
     ./modules/nnn/nnn.nix
     ./modules/waybar/waybar.nix
-    ./modules/nm-applet/nm-applet.nix
     # ./modules/yazi/yazi.nix
   ];
 
