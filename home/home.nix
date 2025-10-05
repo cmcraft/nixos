@@ -10,7 +10,7 @@ in
 
   imports = [
     ./packages.nix
-    # ./gtk.nix
+    ./gtk.nix
     ./modules/hyprland/hyprland.nix
     ./modules/nnn/nnn.nix
     ./modules/waybar/waybar.nix
