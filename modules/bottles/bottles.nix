@@ -1,0 +1,6 @@
+{ ... }:
+{
+  programs.bottles = {
+    enable = true;
+  };
+}

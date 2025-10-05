@@ -1,0 +1,6 @@
+{ ... }:
+{
+  programs.steamcmd = {
+    enable = true;
+  };
+}
