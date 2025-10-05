@@ -13,7 +13,6 @@
 
     settings = {
       exec-once = [
-        "nm-applet &"
         "wl-clip-persist --clipboard both &"
         "wl-paste --watch cliphist store &"
         "waybar &"

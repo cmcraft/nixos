@@ -82,26 +82,26 @@ in
       };
     };
     cpu = {
-      format = "<span foreground='${selection}'> </span> {usage}%";
-      format-alt = "<span foreground='${selection}'> </span> {avg_frequency} GHz";
+      format = "<span foreground='${purple}'> </span> {usage}%";
+      format-alt = "<span foreground='${purple}'> </span> {avg_frequency} GHz";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty -e btop'";
     };
     memory = {
-      format = "<span foreground='${selection}'>󰟜 </span>{}%";
-      format-alt = "<span foreground='${selection}'>󰟜 </span>{used} GiB"; # 
+      format = "<span foreground='${purple}'>󰟜 </span>{}%";
+      format-alt = "<span foreground='${purple}'>󰟜 </span>{used} GiB"; # 
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty -e btop'";
     };
     disk = {
       # path = "/";
-      format = "<span foreground='${selection}'>󰋊 </span>{percentage_used}%";
+      format = "<span foreground='${purple}'>󰋊 </span>{percentage_used}%";
       interval = 60;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty -e btop'";
     };
     network = {
-      format-wifi = "<span foreground='${selection}'> </span> {signalStrength}%";
-      format-ethernet = "<span foreground='${selection}'>󰀂 </span>";
+      format-wifi = "<span foreground='${purple}'> </span> {signalStrength}%";
+      format-ethernet = "<span foreground='${purple}'>󰀂 </span>";
       tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
       format-disconnected = "<span foreground='${red}'>󰖪 </span>";
@@ -128,5 +128,5 @@ in
       tooltip = "true";
       tooltip-format = "Random Wallpaper";
     };
-        };
+  };
 }
