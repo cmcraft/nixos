@@ -10,8 +10,6 @@ let
   fontSize = 11;
 in 
 {
-  imports = with nix-config.inputs.stylix.nixosModules; [ stylix ];
-
   stylix = {
     enable = true;
     polarity = "dark";
