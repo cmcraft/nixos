@@ -1,6 +1,0 @@
-{ ... }:
-{
-  programs.heroic = {
-    enable = true;
-  };
-}

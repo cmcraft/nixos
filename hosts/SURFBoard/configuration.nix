@@ -9,21 +9,14 @@
     ./hardware-configuration.nix
     ./disko-elysium.nix
     inputs.home-manager.nixosModules.home-manager
-    # ../../modules/bottles/bottles.nix
     ../../modules/fuse/fuse.nix
     ../../modules/gamescope/gamescope.nix
     ../../modules/greetd/greetd.nix
-    # ../../modules/heroic/heroic.nix
     ../../modules/hyprland/hyprland.nix
-    # ../../modules/lutris/lutris.nix
-    # ../../modules/mangohud/mangohud.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
-    # ../../modules/protonup-qt/protonup-qt.nix
     ../../modules/steam/steam.nix
-    # ../../modules/steam/steamcmd.nix
-    # ../../modules/steam/steamguard-cli.nix
     ../../modules/stylix/stylix.nix
     ../../modules/xserver/xserver.nix
     ./impermanence.nix
@@ -60,6 +53,15 @@
   environment.systemPackages = [ 
     inputs.home-manager.packages.${pkgs.system}.default
     pkgs.base16-schemes
+
+    # gaming stuff that isn't modules
+    pkgs.bottles
+    pkgs.heroic
+    pkgs.lutris
+    pkgs.mangohud
+    pkgs.protonup-qt
+    pkgs.steamcmd
+    pkgs.steamguard-cli
   ];
 
   boot.loader.systemd-boot.enable = true;
