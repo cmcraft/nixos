@@ -1,7 +1,7 @@
 { ... }:
 let
   custom = {
-    background-darker = "#1e1f29e6";
+    background-darker = "#1e1f29";
     background = "#282a36";
     selection = "#44475a";
     foreground = "#f8f8f2";
