@@ -35,10 +35,6 @@ in
       opacity: 0.2;
     }
 
-    #window {
-      background-color: ${purple-background};
-    }
-
     button:hover {
       background: inherit;
     }
