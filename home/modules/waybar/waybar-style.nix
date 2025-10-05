@@ -27,7 +27,7 @@ in
     }
 
     window#waybar {
-      color: ${cyan};
+      color: ${purple};
       background-color: rgba(0, 0, 0, 0);
       transition-property: background-color;
       transition-duration: 0.5s;
@@ -35,6 +35,10 @@ in
 
     window#waybar.hidden {
       opacity: 0.2;
+    }
+
+    #window {
+      background-color: ${purple-background};
     }
 
     button:hover {
