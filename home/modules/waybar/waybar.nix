@@ -1,22 +1,20 @@
 { config, lib, pkgs, inputs, ... }:
 let
   custom = {
-    font = "Maple Mono";
-    font_size = "18px";
-    font_weight = "bold";
-    text_color = "#FBF1C7";
-    background_0 = "#1D2021";
-    background_1 = "#282828";
-    border_color = "#928374";
-    red = "#CC241D";
-    green = "#98971A";
-    yellow = "#FABD2F";
-    blue = "#458588";
-    magenta = "#B16286";
-    cyan = "#689D6A";
-    orange = "#D65D0E";
-    opacity = "1";
-    indicator_height = "2px";
+    background-darker = "#1e1f29e6";
+    background = "#282a36";
+    selection = "#44475a";
+    foreground = "#f8f8f2";
+    comment = "#6272a4";
+    cyan = "#8be9fd";
+    green = "#50fa7b";
+    orange = "#ffb86c";
+    pink = "#ff79c6";
+    purple = "#bd93f9";
+    red = "#ff5555";
+    yellow = "#f1fa8c";
+
+    purple-background = "#201030";
   };
 in
 {
@@ -101,11 +99,11 @@ in
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] alacritty --override font_size=14 --title float_alacritty -e btop'";
     };
     network = {
-      format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
-      format-ethernet = "<span foreground='${magenta}'>󰀂 </span>";
+      format-wifi = "<span foreground='${purple}'> </span> {signalStrength}%";
+      format-ethernet = "<span foreground='${purple}'>󰀂 </span>";
       tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
-      format-disconnected = "<span foreground='${magenta}'>󰖪 </span>";
+      format-disconnected = "<span foreground='${purple}'>󰖪 </span>";
     };
     tray = {
       icon-size = 20;

@@ -6,6 +6,7 @@
     nerd-fonts.fira-code
     nerd-fonts.caskaydia-cove
     nerd-fonts.symbols-only
+    nerd-fonts.ubuntu
     twemoji-color-font
     noto-fonts-emoji
     fantasque-sans-mono
@@ -15,35 +16,25 @@
   gtk = {
     enable = true;
     font = {
-      name = "Maple Mono";
+      name = "UbuntuMono Nerd Font Propo";
       size = 12;
     };
     theme = {
-      name = "Colloid-Green-Dark-Gruvbox";
-      package = pkgs.colloid-gtk-theme.override {
-        colorVariants = [ "dark" ];
-        themeVariants = [ "green" ];
-        tweaks = [
-          "gruvbox"
-          "rimless"
-          "float"
-        ];
-      };
+      name = "dracula";
     };
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override { color = "green"; };
+      name = "dracula";
     };
     cursorTheme = {
-      name = "Bibata-Modern-Ice";
+      name = "Bibata-Modern-Clasic";
       package = pkgs.bibata-cursors;
-      size = 24;
+      size = 18;
     };
   };
 
   home.pointerCursor = {
-    name = "Bibata-Modern-Ice";
+    name = "Bibata-Modern-Classic";
     package = pkgs.bibata-cursors;
-    size = 24;
+    size = 18;
   };
 }

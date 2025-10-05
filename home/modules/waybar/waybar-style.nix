@@ -1,108 +1,103 @@
 { ... }:
 let
   custom = {
-    font = "Maple Mono";
-    font_size = "18px";
-    font_weight = "bold";
-    text_color = "#FBF1C7";
-    background_0 = "#1D2021";
-    background_1 = "#282828";
-    border_color = "#A89984";
-    red = "#CC241D";
-    green = "#98971A";
-    yellow = "#FABD2F";
-    blue = "#458588";
-    magenta = "#B16286";
-    cyan = "#689D6A";
-    orange = "#D65D0E";
-    orange_bright = "#FE8019";
-    opacity = "1";
-    indicator_height = "2px";
+    background-darker = "#1e1f29e6";
+    background = "#282a36";
+    selection = "#44475a";
+    foreground = "#f8f8f2";
+    comment = "#6272a4";
+    cyan = "#8be9fd";
+    green = "#50fa7b";
+    orange = "#ffb86c";
+    pink = "#ff79c6";
+    purple = "#bd93f9";
+    red = "#ff5555";
+    yellow = "#f1fa8c";
+
+    purple-background = "#201030";
   };
 in
 {
   programs.waybar.style = with custom; ''
     * {
-      border: none;
-      border-radius: 0px;
-      padding: 0;
-      margin: 0;
-      font-family: ${font};
-      font-weight: ${font_weight};
-      opacity: ${opacity};
-      font-size: ${font_size};
+      font-family: UbuntuMono Nerd Font Propo;
+      font-size: 14;
+      border-radius: 20;
+      margin: 2;
     }
 
     window#waybar {
-      background: #282828;
-      border-top: 1px solid ${border_color};
+      background-color: rgba(0, 0, 0, 0);
+      transition-property: background-color;
+      transition-duration: 0.5;
     }
 
-    tooltip {
-      background: ${background_1};
-      border: 1px solid ${border_color};
-    }
-    tooltip label {
-      margin: 5px;
-      color: ${text_color};
+    window#waybar.hidden {
+      opacity: 0.2;
     }
 
-    #workspaces {
-      padding-left: 15px;
+    button:hover {
+      background: inherit;
     }
+
+    #custom-logo {
+      color: foreground;
+    }
+
     #workspaces button {
-      color: ${yellow};
-      padding-left:  5px;
-      padding-right: 5px;
-      margin-right: 10px;
+      margin: 2 5;
     }
-    #workspaces button.empty {
-      color: ${text_color};
-    }
+
     #workspaces button.active {
-      color: ${orange_bright};
+      color: cyan;
     }
 
-    #clock {
-      color: ${text_color};
+    #workspaces button.urgent {
+      background-color: red;
     }
 
+    #workspaces button,
+    #cava,
+    #clock,
+    #custom-playerctl,
+    #pulseaudio,
+    #network,
+    #cpu,
+    #custom-dualsense,
+    #memory,
+    #temperature,
     #tray {
-      margin-left: 10px;
-      color: ${text_color};
-    }
-    #tray menu {
-      background: ${background_1};
-      border: 1px solid ${border_color};
-      padding: 8px;
-    }
-    #tray menuitem {
-      padding: 1px;
+      padding: 0 10;
+      color: purple;
+      background-color: purple-background;
     }
 
-    #pulseaudio, #network, #cpu, #memory, #disk, #battery, #language, #custom-notification {
-      padding-left: 5px;
-      padding-right: 5px;
-      margin-right: 10px;
-      color: ${text_color};
+    #temperature.critical {
+      color: red;
     }
 
-    #pulseaudio, #language {
-      margin-left: 15px;
+    #pulseaudio.muted {
+      color: red;
     }
 
-    #custom-notification {
-      margin-left: 15px;
-      padding-right: 2px;
-      margin-right: 5px;
+    #network.disconnected {
+      color: red;
     }
 
-    #custom-launcher {
-      font-size: 20px;
-      color: ${text_color};
-      font-weight: bold;
-      margin-left: 15px;
-      padding-right: 10px;
+    keyframes blink {
+      to {
+        background-color: foreground;
+        color: background;
+      }
+    }
+
+    #tray>.passive {
+      -gtk-icon-effect: dim;
+    }
+
+    #tray>.needs-attention {
+      -gtk-icon-effect: highlight;
+      background-color: red;
     }
   '';
 }
