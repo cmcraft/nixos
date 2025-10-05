@@ -22,7 +22,7 @@
     ../../modules/pipewire/pipewire.nix
     # ../../modules/protonup-qt/protonup-qt.nix
     ../../modules/steam/steam.nix
-    ../../modules/steam/steamcmd.nix
+    # ../../modules/steam/steamcmd.nix
     ../../modules/steam/steamguard-cli.nix
     ../../modules/stylix/stylix.nix
     ../../modules/xserver/xserver.nix
