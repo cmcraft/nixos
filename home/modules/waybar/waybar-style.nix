@@ -28,7 +28,7 @@ in
 
     window#waybar {
       background-color: rgba(0, 0, 0, 0);
-      transition-property: background-color;
+      transition-property: ${background-color};
       transition-duration: 0.5;
     }
 
@@ -41,7 +41,7 @@ in
     }
 
     #custom-logo {
-      color: foreground;
+      color: ${foreground};
     }
 
     #workspaces button {
@@ -49,11 +49,11 @@ in
     }
 
     #workspaces button.active {
-      color: cyan;
+      color: ${cyan};
     }
 
     #workspaces button.urgent {
-      background-color: red;
+      background-color: ${red};
     }
 
     #workspaces button,
@@ -68,26 +68,26 @@ in
     #temperature,
     #tray {
       padding: 0 10;
-      color: purple;
-      background-color: purple-background;
+      color: ${purple};
+      background-color: ${purple-background};
     }
 
     #temperature.critical {
-      color: red;
+      color: ${red};
     }
 
     #pulseaudio.muted {
-      color: red;
+      color: ${red};
     }
 
     #network.disconnected {
-      color: red;
+      color: ${red};
     }
 
     keyframes blink {
       to {
-        background-color: foreground;
-        color: background;
+        background-color: ${foreground};
+        color: ${background};
       }
     }
 
@@ -97,7 +97,7 @@ in
 
     #tray>.needs-attention {
       -gtk-icon-effect: highlight;
-      background-color: red;
+      background-color: ${red};
     }
   '';
 }
