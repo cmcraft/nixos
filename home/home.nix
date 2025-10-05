@@ -63,6 +63,12 @@ in
     ];
   };
 
+  home.pointerCursor = {
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 18;
+  };
+
   programs.home-manager.enable = true;
 
   # Nicely reload system units when changing configs
