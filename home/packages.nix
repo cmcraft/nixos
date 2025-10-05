@@ -9,7 +9,6 @@
     # swww
     # xdg-desktop-portal
     rofi
-    mako
     networkmanagerapplet
     pavucontrol
     pamixer
