@@ -84,7 +84,7 @@ in
       color: ${red};
     }
 
-    keyframes blink {
+    @keyframes blink {
       to {
         background-color: ${foreground};
         color: ${background};
