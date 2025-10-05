@@ -56,7 +56,6 @@ in
       background-color: ${red};
     }
 
-    #window
     #workspaces button,
     #cava,
     #clock,
