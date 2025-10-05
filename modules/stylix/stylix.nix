@@ -6,7 +6,7 @@
 }:
 
 let 
-  opacity = 0.80;
+  opacity = 0.70;
   fontSize = 11;
 in 
 {
