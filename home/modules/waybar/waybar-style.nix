@@ -38,7 +38,7 @@ in
     }
 
     #window {
-      background-color: ${background};
+      background-color: ${background-darker};
     }
 
     button:hover {
@@ -47,7 +47,7 @@ in
 
     #custom-launcher {
       color: ${selection};
-      background-color: ${background};
+      background-color: ${background-darker};
     }
 
     #workspaces button {
@@ -76,7 +76,7 @@ in
     #tray {
       padding: 0 10px;
       color: ${selection};
-      background-color: ${background};
+      background-color: ${background-darker};
     }
 
     #temperature.critical {
@@ -94,7 +94,7 @@ in
     @keyframes blink {
       to {
         background-color: ${foreground};
-        color: ${background};
+        color: ${background-darker};
       }
     }
 
