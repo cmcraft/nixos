@@ -115,14 +115,14 @@ in
       format = "{icon} {volume}%";
       format-muted = "<span foreground='${red}'> </span> {volume}%";
       format-icons = {
-        default = [ "<span foreground='${selection}'> </span>" ];
+        default = [ "<span foreground='${purple}'> </span>" ];
       };
       scroll-step = 2;
       on-click = "pamixer -t";
       on-click-right = "pavucontrol";
     };
     "custom/launcher" = {
-      format = "  ";
+      format = "<span foreground='${purple}'>  </span>";
       on-click = "wpaperctl next";
       on-click-right = "rofi -show drun -show-icons";
       tooltip = "true";
