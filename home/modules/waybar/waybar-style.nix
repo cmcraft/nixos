@@ -40,7 +40,7 @@ in
       background: inherit;
     }
 
-    #custom-logo {
+    #custom/launcher {
       color: ${foreground};
     }
 
@@ -66,6 +66,7 @@ in
     #custom-dualsense,
     #memory,
     #temperature,
+    #disk,
     #tray {
       padding: 0 10px;
       color: ${purple};
