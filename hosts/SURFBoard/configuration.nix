@@ -20,7 +20,7 @@
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
-    ../../modules/protonup-qt/protonup-qt.nix
+    # ../../modules/protonup-qt/protonup-qt.nix
     ../../modules/steam/steam.nix
     ../../modules/steam/steamcmd.nix
     ../../modules/steam/steamguard-cli.nix
