@@ -49,10 +49,10 @@ in
           today = "<span color='#98971A'><b>{}</b></span>";
         };
       };
-      format = "  {:%H:%M}";
+      format = "  {:%H:%M} ";
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = "  {:%d/%m}";
+      format-alt = "  {:%d/%m} ";
     };
     "hyprland/workspaces" = {
       active-only = false;
@@ -60,16 +60,17 @@ in
       format = "{icon}";
       on-click = "activate";
       format-icons = {
-        "1" = "I";
-        "2" = "II";
-        "3" = "III";
-        "4" = "IV";
-        "5" = "V";
-        "6" = "VI";
-        "7" = "VII";
-        "8" = "VIII";
-        "9" = "IX";
-        "10" = "X";
+        "1" = "1";
+        "2" = "2";
+        "3" = "3";
+        "4" = "4";
+        "5" = "5";
+        "6" = "6";
+        "7" = "7";
+        "8" = "8";
+        "9" = "9";
+        "10" = "10";
+        active = "";
         sort-by-number = true;
       };
       persistent-workspaces = {
