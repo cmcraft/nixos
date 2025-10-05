@@ -2,15 +2,17 @@
 {
     wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
+    "$browser" = "firefox";
+    "$tty" = "alacritty";
     bind =
       [
-        "SUPER, Q, killactive,"
-        "$mod, RETURN, exec, alacritty"
+        "$mod, Q, killactive,"
+        "$mod, RETURN, exec, $tty"
         
         "$mod, A, exec, rofi -show drun -show-icons"
         "ALT, Tab, exec, rofi -show window"
 
-        "$mod, B, exec, zen"
+        "$mod, B, exec, $browser"
 
         ", Print, exec, grimblast --notify copysave area"
         "SHIFT, Print, exec, grimblast --notify copysave active"
