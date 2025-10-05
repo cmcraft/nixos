@@ -156,7 +156,7 @@
     home = "/home/cmcraft";
     useDefaultShell = true;
     group = "cmcraft";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "users" "wheel" "networkmanager" ];
     packages = with pkgs; [
       git
 
