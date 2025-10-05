@@ -27,7 +27,7 @@ in
     }
 
     window#waybar {
-      color: ${selection};
+      color: ${cyan};
       background-color: rgba(0, 0, 0, 0);
       transition-property: background-color;
       transition-duration: 0.5s;
@@ -46,7 +46,7 @@ in
     }
 
     #custom-launcher {
-      color: ${selection};
+      color: ${cyan};
       background-color: ${background-darker};
     }
 
@@ -75,7 +75,7 @@ in
     #disk,
     #tray {
       padding: 0 10px;
-      color: ${selection};
+      color: ${cyan};
       background-color: ${background-darker};
     }
 
@@ -93,8 +93,8 @@ in
 
     @keyframes blink {
       to {
-        background-color: ${foreground};
-        color: ${background-darker};
+        background-color: ${background-darker};
+        color: ${cyan};
       }
     }
 

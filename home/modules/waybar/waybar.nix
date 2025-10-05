@@ -107,7 +107,7 @@ in
       format-disconnected = "<span foreground='${red}'>󰖪 </span>";
     };
     tray = {
-      format = "{icon}";
+      format = " 󱊖 ";
       icon-size = 20;
       spacing = 8;
     };
