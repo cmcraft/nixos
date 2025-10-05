@@ -1,6 +1,0 @@
-{ ... }:
-{
-  programs.hyprpicker = {
-    enable = true;
-  };
-}

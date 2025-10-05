@@ -18,7 +18,6 @@ in
     ./modules/hypridle/hypridle.nix
     ./modules/hyprland/hyprland.nix
     ./modules/hyprlock/hyprlock.nix
-    ./modules/hyprpicker/hyprpicker.nix
     ./modules/mako/mako.nix
     ./modules/network-manager-applet/network-manager-applet.nix
     ./modules/nnn/nnn.nix
