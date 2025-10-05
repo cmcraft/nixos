@@ -54,7 +54,7 @@
     inputs.home-manager.packages.${pkgs.system}.default
     pkgs.base16-schemes
 
-    # gaming stuff that isn't modules
+    # gaming stuff that aren't modules
     pkgs.bottles
     pkgs.heroic
     pkgs.lutris
