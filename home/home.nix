@@ -14,6 +14,7 @@ in
     ./modules/bash/bash.nix
     ./modules/btop/btop.nix
     ./modules/cliphist/cliphist.nix
+    ./modules/fastfetch/fastfetch.nix
     ./modules/feh/feh.nix
     ./modules/firefox/firefox.nix
     ./modules/git/git.nix
