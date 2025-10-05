@@ -184,7 +184,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     useGlobalPkgs = true;
-    sharedModules [
+    sharedModules = [
       stylix.enable = true;
     ];
     users = {
