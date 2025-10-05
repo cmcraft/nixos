@@ -9,7 +9,7 @@
     ./hardware-configuration.nix
     ./disko-elysium.nix
     inputs.home-manager.nixosModules.home-manager
-    ../../modules/bottles/bottles.nix
+    # ../../modules/bottles/bottles.nix
     ../../modules/fuse/fuse.nix
     ../../modules/gamescope/gamescope.nix
     ../../modules/greetd/greetd.nix
