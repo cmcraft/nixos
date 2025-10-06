@@ -63,7 +63,7 @@
         {
           type = "cpu";
           key = "CPU";
-          format = "{name} ({cores}) @ {freq-max}";
+          format = "{name} ({cores-physical}C/{cores-logical}T) @ {freq-max}";
         }
         {
           type = "gpu"; 
