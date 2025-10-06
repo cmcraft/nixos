@@ -46,9 +46,9 @@
       # windowrule move to workspace
 			"workspace 1, tag:projects*"
       "workspace 1, tag:terminal*"
-			"workspace 2, tag:browser*"
       "workspace 2, tag:gamestore*"
       "workspace 3, tag:games*"
+      "workspace 4, tag:browser*"
 			"workspace 4, tag:im*"
       "workspace 5, tag:settings*"
     ];
