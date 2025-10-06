@@ -8,7 +8,7 @@
         source = "nixos";
         color = {
           "1" = "cyan";
-          "2" = "purple";
+          "2" = "blue";
         };
         padding = {
           right = 3;
@@ -41,7 +41,7 @@
         };
         color = {
           keys = "cyan";
-          title = "purple";
+          title = "blue";
         };
         separator = " -> ";
       };
