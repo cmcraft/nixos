@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ./disko-elysium.nix
     inputs.home-manager.nixosModules.home-manager
+    ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
     ../../modules/gamescope/gamescope.nix
     ../../modules/greetd/greetd.nix
