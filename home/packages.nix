@@ -14,7 +14,7 @@
     slurp
     wl-clip-persist
 
-    inputs.zen-browser.packages.${pkgs.system}.default
+    # inputs.zen-browser.packages.${pkgs.system}.default
     webcord
     bitwarden
   ];
