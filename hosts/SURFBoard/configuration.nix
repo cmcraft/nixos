@@ -130,7 +130,8 @@
     createHome = true;
     password = "password"; # Change this. Duh.
     home = "/home/cmcraft";
-    useDefaultShell = true;
+    useDefaultShell = false;
+    shell = pkgs.fish;
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
   };
