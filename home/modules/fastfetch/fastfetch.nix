@@ -4,19 +4,90 @@
     enable = true;
     settings = {
       logo = {
-        source = "nixos_small";
+        type = "builtin";
+        source = "nixos";
+        color = {
+          "1" = "cyan";
+          "2" = "purple";
+        };
         padding = {
-          right = 1;
+          right = 3;
         };
       };
       display = {
         size = {
-          binaryPrefix = "si";
+          maxPrefix = "GB";
+          binaryPrefix = "iec";
+          ndigits = "2";
         };
-        color = "blue";
-        separator = "  ";
+        percent = {
+          type = [
+            "num" "bar" "num-color"
+          ];
+          green = "50";
+          yellow = "80";
+        };
+        bar = {
+          width = 15;
+          char = {
+            elapsed = "-";
+            total = "-";
+          };
+        };
+        temp = {
+          unit = "C";
+          green = "60";
+          yellow = "80";
+        };
+        color = {
+          keys = "cyan";
+          title = "purple";
+        };
+        separator = " -> ";
       };
       modules = [
+        {
+          type = "title";
+          format = "{user-name}@{host-name}"
+        }
+        "separator"
+        {
+          type = "os";
+          key = "OS";
+          format = "{name} {version}";
+        }
+        {
+          type = "kernel";
+          format = "{release}";
+        }
+        {
+          type = "cpu";
+          key = "CPU";
+          format = "{name} ({cores}) @ {freq-max}";
+        }
+        {
+          type = "gpu"; 
+          format = "{vendor} {name}";
+          temp = {
+            green = "65";
+            yellow = "85";
+          };
+        }
+        {
+          type = "memory"; 
+          format =  "{used} / {total}";
+          percent = {
+            type = [
+              "num" 
+              "bar"
+            ];
+          };
+        }
+        {
+          type = "disk"; 
+          folders = "/";
+          format = "{size-used} / {size-total}";
+        }
         {
           type = "datetime";
           key = "Date";
