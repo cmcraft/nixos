@@ -17,6 +17,9 @@
         ", Print, exec, grimblast --notify copysave area"
         "SHIFT, Print, exec, grimblast --notify copysave active"
         "CTRL, Print, exec, grimblast --notify copysave screen"
+        "$mod, right, workspace, e+1"
+        "$mod, left, workspace, e-1"
+
       ]
       ++ (
         # workspaces
