@@ -48,7 +48,7 @@
       modules = [
         {
           type = "title";
-          format = "{user-name}@{host-name}"
+          format = "{user-name}@{host-name}";
         }
         "separator"
         {
