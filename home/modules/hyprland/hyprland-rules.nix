@@ -13,7 +13,7 @@
       "tag +browser, class:^([Bb]itwarden)$"
 
       #im tags
-      "tag +im, class:^([Ww]ebcord)$"
+      "tag +im, class:^([Ww]eb[Cc]ord)$"
       "tag +im, class:^([Dd]iscord(-[Cc]anary)?)$"
       
       # terminals
