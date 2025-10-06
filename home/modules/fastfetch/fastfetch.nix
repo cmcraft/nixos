@@ -18,7 +18,7 @@
         size = {
           maxPrefix = "GB";
           binaryPrefix = "iec";
-          ndigits = "2";
+          ndigits = 2;
         };
         percent = {
           type = [
@@ -36,8 +36,8 @@
         };
         temp = {
           unit = "C";
-          green = "60";
-          yellow = "80";
+          green = 60;
+          yellow = 80;
         };
         color = {
           keys = "cyan";
@@ -69,8 +69,8 @@
           type = "gpu"; 
           format = "{vendor} {name}";
           temp = {
-            green = "65";
-            yellow = "85";
+            green = 65;
+            yellow = 85;
           };
         }
         {
