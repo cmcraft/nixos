@@ -22,6 +22,7 @@
       # project tags
       "tag +projects, class:^(codium|codium-url-handler|VSCodium)$"
       "tag +projects, class:^(VSCode|code-url-handler)$"
+      "tag +projects, class:^([Cc]ode)$"
       "tag +projects, class:^(jetbrains-.+)$" # JetBrains IDEs
 
       # game tags
@@ -31,8 +32,8 @@
       #gamestore
       "tag +gamestore, class:^([Ss]team(-native)?)$"
       "tag +gamestore, class:^([Hh]eroic)$"
-      "tag +gamestore, class:^([Ll]utris)$"
-      "tag +gamestore, class:^([Bb]ottles)$"
+      "tag +gamestore, class:^(net.lutris.[Ll]utris)$"
+      "tag +gamestore, class:^(com.usebottles.[Bb]ottles)$"
 
       # multimedia tags
       "tag +multimedia, class:^([Aa]udacious)$"
