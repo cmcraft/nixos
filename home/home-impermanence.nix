@@ -13,6 +13,7 @@
       ".nixops"
       ".local/share/keyrings"
       ".local/share/direnv"
+      ".config/Code"
       {
         directory = ".local/share/Steam";
         method = "symlink";
