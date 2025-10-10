@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     # system stuff
     pavucontrol
-    pamixer
+    # pamixer
     nerd-fonts.symbols-only
 
     #hyprland stuff
