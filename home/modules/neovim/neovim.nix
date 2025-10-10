@@ -6,5 +6,8 @@
         vimAlias = true;
         extraConfig = ''
         '';
+        plugins = with pkgs.vimPlugins; [
+            LazyVim
+        ];
     };
 }
