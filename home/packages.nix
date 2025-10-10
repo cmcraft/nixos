@@ -7,13 +7,6 @@
     # pamixer
     nerd-fonts.symbols-only
 
-    #neovim and friends
-    ripgrep
-    fd
-    # fdfind
-    lazygit
-    fzf
-
     #hyprland stuff
     waypaper
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
