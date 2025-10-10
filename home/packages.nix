@@ -6,7 +6,13 @@
     pavucontrol
     # pamixer
     nerd-fonts.symbols-only
+
+    #neovim and friends
     ripgrep
+    fd
+    fdfind
+    lazygit
+    fzf
 
     #hyprland stuff
     waypaper
