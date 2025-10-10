@@ -50,7 +50,8 @@
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
+  environment.variables.EDITOR = "nvim";
+  
   environment.systemPackages = [ 
     inputs.home-manager.packages.${pkgs.system}.default
     pkgs.base16-schemes

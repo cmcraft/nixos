@@ -23,6 +23,7 @@ in
     ./modules/hyprland/hyprland.nix
     ./modules/hyprlock/hyprlock.nix
     ./modules/mako/mako.nix
+    ./modules/neovim/neovim.nix
     # ./modules/network-manager-applet/network-manager-applet.nix
     ./modules/nnn/nnn.nix
     ./modules/rofi/rofi.nix
