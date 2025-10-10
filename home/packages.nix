@@ -6,6 +6,7 @@
     pavucontrol
     # pamixer
     nerd-fonts.symbols-only
+    ripgrep
 
     #hyprland stuff
     waypaper
