@@ -10,7 +10,7 @@
     #neovim and friends
     ripgrep
     fd
-    fdfind
+    # fdfind
     lazygit
     fzf
 
