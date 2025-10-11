@@ -67,6 +67,7 @@
 
     pkgs.sops
     pkgs.age
+    pkgs.ssh-to-age
   ];
 
   boot.loader.systemd-boot.enable = true;
