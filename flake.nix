@@ -41,11 +41,18 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    disko.url = "github:nix-community/disko";
-    disko.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, disko,... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko,... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -66,6 +73,7 @@
                 ];
               };
           }
+        sops-nix.nixosModules.sops
         inputs.disko.nixosModules.disko
       ];
     };

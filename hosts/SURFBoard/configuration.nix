@@ -64,6 +64,9 @@
     pkgs.protonup-qt
     pkgs.steamcmd
     pkgs.steamguard-cli
+
+    pkgs.sops
+    pkgs.age
   ];
 
   boot.loader.systemd-boot.enable = true;
