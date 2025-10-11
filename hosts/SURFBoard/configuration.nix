@@ -141,7 +141,7 @@
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4afgPcjcVWQKrpKXme8BW4eSHT8yMKQN/yBtO/WXW cmcraft@SURFBoard" ]; 
-    passwordFile = "/persist/passwords/user";
+    hashedPasswordFile = "/persist/passwords/cmcraft";
   };
   
   users.users.colord = {
