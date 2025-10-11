@@ -129,17 +129,19 @@
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
 
+  users.mutableUsers = false;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cmcraft = {
     isNormalUser = true;
     createHome = true;
-    password = "password"; # Change this. Duh.
+    # password = "password"; # Change this. Duh.
     home = "/home/cmcraft";
     useDefaultShell = false;
     shell = pkgs.fish;
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4afgPcjcVWQKrpKXme8BW4eSHT8yMKQN/yBtO/WXW cmcraft@SURFBoard ]; 
+    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4afgPcjcVWQKrpKXme8BW4eSHT8yMKQN/yBtO/WXW cmcraft@SURFBoard" ];
+    passwordFile = "/persist/passwords/cmcraft"; 
   };
   
   users.users.colord = {
