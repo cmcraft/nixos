@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       PermitRootLogin = "no";
-      kbdInteractiveAuthentication = false;
+      KbdInteractiveAuthentication = false;
       PasswordAuthentication = false;
     };
     hostKeys = [
