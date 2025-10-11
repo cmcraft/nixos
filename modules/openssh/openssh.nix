@@ -4,6 +4,7 @@
     enable = true;
     settings = {
       PermitRootLogin = "no";
+      kbdInteractiveAuthentication = false;
       # passwordAuthentication = false;
     };
     hostKeys = [
@@ -18,7 +19,6 @@
       }
     ];
     allowSFTP = false; # Don't set this if you need sftp
-    kbdInteractiveAuthentication = false;
     extraConfig = ''
       AllowTcpForwarding yes
       X11Forwarding no
