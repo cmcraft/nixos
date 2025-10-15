@@ -77,5 +77,51 @@
         inputs.disko.nixosModules.disko
       ];
     };
+    nixosConfigurations.romulus = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/romulus/configuration.nix
+        stylix.nixosModules.stylix
+        impermanence.nixosModules.impermanence
+        {
+            imports = [ home-manager.nixosModules.home-manager ];
+            
+            home-manager.users.cmcraft =
+              { ... }:
+              {
+                imports = [
+                  impermanence.homeManagerModules.impermanence
+                  ./home/home-impermanence.nix # Your home-manager impermanence-configuration
+                ];
+              };
+          }
+        sops-nix.nixosModules.sops
+        inputs.disko.nixosModules.disko
+      ];
+    };
+    nixosConfigurations.remus = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/remus/configuration.nix
+        stylix.nixosModules.stylix
+        impermanence.nixosModules.impermanence
+        {
+            imports = [ home-manager.nixosModules.home-manager ];
+            
+            home-manager.users.cmcraft =
+              { ... }:
+              {
+                imports = [
+                  impermanence.homeManagerModules.impermanence
+                  ./home/home-impermanence.nix # Your home-manager impermanence-configuration
+                ];
+              };
+          }
+        sops-nix.nixosModules.sops
+        inputs.disko.nixosModules.disko
+      ];
+    };
   };
 }

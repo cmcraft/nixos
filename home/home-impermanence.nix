@@ -14,6 +14,7 @@
       ".local/share/keyrings"
       ".local/share/direnv"
       ".config/Code"
+      ".config/sops/age"
       {
         directory = ".local/share/Steam";
         method = "symlink";
