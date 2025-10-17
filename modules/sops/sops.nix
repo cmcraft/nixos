@@ -4,7 +4,7 @@
   sops.defaultSopsFile = ./secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 
-  sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/keys.txt";
+  sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/secrets/keys.txt";
   sops.secrets.cmcraft-password.neededForUsers = true;
 
   sops.secrets.example_key = {
