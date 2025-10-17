@@ -7,21 +7,21 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./disko-elysium.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
+    ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
     ../../modules/gamescope/gamescope.nix
     ../../modules/greetd/greetd.nix
     ../../modules/hyprland/hyprland.nix
+    ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/steam/steam.nix
     ../../modules/stylix/stylix.nix
     ../../modules/xserver/xserver.nix
-    ./impermanence.nix
   ];
   
   nix.gc = {
@@ -143,7 +143,6 @@
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4afgPcjcVWQKrpKXme8BW4eSHT8yMKQN/yBtO/WXW cmcraft@SURFBoard" ]; 
-    hashedPasswordFile = "/persist/passwords/cmcraft";
   };
   
   users.users.colord = {

@@ -1,5 +1,5 @@
 # git clone https://github.com/cmcraft/nixos.git
-# sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./hosts/SURFBoard/disko-elysium.nix
+# sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./modules/disko/disko-elysium.nix
 
 # _____ FOR REF ONLY _____ #
 # btrfs subvolume snapshot -r /mnt/root /mnt/root-blank
@@ -8,6 +8,12 @@
 
 # cp repo to /persist/etc/nixos
 # sudo nixos-install --no-root-password --root /mnt
+
+# or to convert an ssh ed25519 key to an age key
+# mkdir -p ~/.config/sops/age
+# nix run nixpkgs#ssh-to-age -- -private-key -i ~/.ssh/id_ed25519 > ~/.config/sops/age/keys.txt"
+# then
+# nix run nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt
 {
   disko.devices = {
     disk = {
