@@ -56,15 +56,6 @@
     inputs.home-manager.packages.${pkgs.system}.default
     pkgs.base16-schemes
 
-    # gaming stuff that aren't modules
-    pkgs.bottles
-    pkgs.heroic
-    pkgs.lutris
-    pkgs.mangohud
-    pkgs.protonup-qt
-    pkgs.steamcmd
-    pkgs.steamguard-cli
-
     pkgs.sops
     pkgs.age
     pkgs.ssh-to-age
