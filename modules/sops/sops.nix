@@ -1,7 +1,7 @@
 { config, ... }:
 {
 
-  sops.defaultSopsFile = "/persist/etc/nixos/secrets/secrets.yaml";
+  sops.defaultSopsFile = "./secrets/secrets.yaml";
   sops.defaultSopsFormat = "yaml";
 
   sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/secrets/keys.txt";
