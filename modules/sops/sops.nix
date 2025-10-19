@@ -7,10 +7,17 @@
   sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/secrets/keys.txt";
   sops.secrets.cmcraft-password.neededForUsers = true;
 
-  sops.secrets.example_key = {
-    owner = config.users.users.cmcraft.name;
+  sops.secrets = {
+    "cmcraft-password" = { };
+    "cmcraft-private-key" = { };
+    "cmcraft-public-key" = { };
+    "factorio-password" = { };
+    "factorio-token" = { };
+    "redbot-token" = { };
+    "cloudflare-zone-identifier" = { };
+    "cloudflare-token" = { };
+    "terraria-password" = { };
   };
-
   users.users.cmcraft = {
     hashedPasswordFile = config.sops.secrets.cmcraft-password.path;
   };
