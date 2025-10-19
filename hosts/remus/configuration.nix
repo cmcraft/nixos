@@ -33,6 +33,7 @@
   };
 
   nix.settings = {
+    download-buffer-size = 524288000;
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
     substituters = ["https://hyprland.cachix.org"];
