@@ -145,7 +145,7 @@
     shell = pkgs.fish;
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [ config.sops.secrets."cmcraft/public-key" ]; 
+    openssh.authorizedKeys.keyFiles = [ config.sops.secrets."cmcraft/public-key".path ]; 
   };
   
   users.users.colord = {
