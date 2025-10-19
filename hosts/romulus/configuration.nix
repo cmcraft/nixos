@@ -62,6 +62,7 @@
   environment.variables.EDITOR = "nvim";
   
   environment.systemPackages = with pkgs; [ 
+    kitty
     inputs.home-manager.packages.${pkgs.system}.default
     base16-schemes
 
@@ -144,7 +145,7 @@
   users.users.cmcraft = {
     isNormalUser = true;
     createHome = true;
-    # password = "password"; # Change this. Duh.
+    password = "password"; # Change this. Duh.
     hashedPasswordFile = config.sops.secrets."cmcraft/password".path;
     home = "/home/cmcraft";
     useDefaultShell = false;

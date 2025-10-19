@@ -57,6 +57,7 @@
   environment.variables.EDITOR = "nvim";
   
   environment.systemPackages = [ 
+    pkgs.kitty
     inputs.home-manager.packages.${pkgs.system}.default
     pkgs.base16-schemes
 
