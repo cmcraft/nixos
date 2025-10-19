@@ -144,6 +144,7 @@
     isNormalUser = true;
     createHome = true;
     # password = "password"; # Change this. Duh.
+    hashedPasswordFile = config.sops.secrets."cmcraft/password".path;
     home = "/home/cmcraft";
     useDefaultShell = false;
     shell = pkgs.fish;
