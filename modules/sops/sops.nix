@@ -1,6 +1,5 @@
 { config, ... }:
 {
-  imports = [ <sops-nix/modules/sops> ];
   sops.defaultSopsFile = ./secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 
