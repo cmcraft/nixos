@@ -43,7 +43,7 @@ in
     XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
     XDG_PICTURES_DIR = "$HOME/Pictures";
     GRIMBLAST_EDITOR = "feh";
-    SOPS_AGE_KEY_FILE= "$HOME/.config/sops/age/secrets/keys.txt;
+    SOPS_AGE_KEY_FILE= "$HOME/.config/sops/age/secrets/keys.txt";
   };
 
   # Nicely reload system units when changing configs
