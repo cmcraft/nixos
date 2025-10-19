@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
+    ../../modules/avahi/avahi.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
@@ -128,23 +129,7 @@
 
   networking.hostName = "SURFBoard";
 
-  networking.wireless.iwd.enable = true;
-  networking.wireless.iwd.settings = {
-    IPv4 = {
-      Enabled = true;
-    };
-    IPv6 = {
-      Enabled = true;
-    };
-    Settings = {
-      AutoConnect = true;
-      SendHostname = true;
-    };
-  };
-
   networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.backend = "iwd";
-  networking.networkmanager.dns = "none"; #maybe not needed since we're using iwd
 
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
