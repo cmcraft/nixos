@@ -8,17 +8,17 @@
   sops.secrets.cmcraft-password.neededForUsers = true;
 
   sops.secrets = {
-    cmcraft-password = { };
-    cmcraft-private-key = { };
-    cmcraft-public-key = { };
-    factorio-password = { };
-    factorio-token = { };
-    redbot-token = { };
-    cloudflare-zone-identifier = { };
-    cloudflare-token = { };
-    terraria-password = { };
+    "cmcraft/password" = { };
+    "cmcraft/private-key" = { };
+    "cmcraft/public-key" = { };
+    "factorio/password" = { };
+    "factorio/token" = { };
+    "redbot/token" = { };
+    "cloudflare/zone-identifier" = { };
+    "cloudflare/token" = { };
+    "terraria/password" = { };
   };
   users.users.cmcraft = {
-    hashedPasswordFile = config.sops.secrets.cmcraft-password.path;
+    hashedPasswordFile = config.sops.secrets."cmcraft/password".path;
   };
 }

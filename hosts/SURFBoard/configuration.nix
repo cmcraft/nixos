@@ -19,6 +19,7 @@
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
+    ../../modules/sops/sops.nix
     ../../modules/steam/steam.nix
     ../../modules/stylix/stylix.nix
     ../../modules/xserver/xserver.nix
