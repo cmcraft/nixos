@@ -19,8 +19,8 @@
     "cloudflare/token" = { };
     "terraria/password" = { };
   };
-  
+
   users.users.cmcraft = {
-    hashedPasswordFile = config.sops.secrets."cmcraft/password".path;
+    hashedPasswordFile = config.sops.secrets."cmcraft/password";
   };
 }
