@@ -164,7 +164,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     users = {
-      "cmcraft" = import ../../home/home.nix;
+      cmcraft = import ../../home/home.nix;
     };
   };
 
