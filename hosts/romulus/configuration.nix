@@ -9,11 +9,15 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
+    ../../modules/ddns-updater/ddns-updater.nix
     ../../modules/disko/disko-elysium.nix
+    ../../modules/docker/docker.nix
+    ../../modules/factorio/factorio.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
     ../../modules/gamescope/gamescope.nix
     ../../modules/greetd/greetd.nix
+    ../../modules/home-assistant/home-assistant.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
@@ -21,8 +25,10 @@
     ../../modules/pipewire/pipewire.nix
     ../../modules/steam/steam.nix
     ../../modules/stylix/stylix.nix
+    ../../modules/terraria/terraria.nix
     ../../modules/xserver/xserver.nix
   ];
+  modules = [ arion.nixosModules.arion ];
   
   nix.gc = {
     automatic = true;
@@ -53,13 +59,21 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.variables.EDITOR = "nvim";
   
-  environment.systemPackages = [ 
+  environment.systemPackages = with pkgs; [ 
     inputs.home-manager.packages.${pkgs.system}.default
-    pkgs.base16-schemes
+    base16-schemes
 
-    pkgs.sops
-    pkgs.age
-    pkgs.ssh-to-age
+    sops
+    age
+    ssh-to-age
+
+    docker-client
+    arion
+
+    ddns-updater
+    factorio-headless
+    home-assistant
+    terraria-server
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -117,7 +131,8 @@
   };
 
   networking.hostName = "romulus"; 
-  networking.networkmanager.enable = true;  
+  networking.networkmanager.enable = true;
+  networking.dhcpcd.setHostname = true;  
 
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
@@ -133,7 +148,7 @@
     shell = pkgs.fish;
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4afgPcjcVWQKrpKXme8BW4eSHT8yMKQN/yBtO/WXW cmcraft@romulus" ]; 
+    openssh.authorizedKeys.keys = [ config.sops.secrets.cmcraft-public-key ]; 
   };
   
   users.users.colord = {

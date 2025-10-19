@@ -9,6 +9,11 @@
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
+      "/docker"
+      "/var/lib/factorio"
+      "/var/lib/hass"
+      "/var/lib/terraria"
+      "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
 

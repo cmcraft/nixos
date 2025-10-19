@@ -126,7 +126,8 @@
   };
 
   networking.hostName = "SURFBoard"; 
-  networking.networkmanager.enable = true;  
+  networking.networkmanager.enable = true;
+  networking.dhcpcd.setHostname = true;  
 
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
@@ -142,7 +143,7 @@
     shell = pkgs.fish;
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDp4afgPcjcVWQKrpKXme8BW4eSHT8yMKQN/yBtO/WXW cmcraft@SURFBoard" ]; 
+    openssh.authorizedKeys.keys = [ config.sops.secrets.cmcraft-public-key ]; 
   };
   
   users.users.colord = {
