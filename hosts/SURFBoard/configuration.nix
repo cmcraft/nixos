@@ -126,9 +126,25 @@
     };
   };
 
-  networking.hostName = "SURFBoard"; 
+  networking.hostName = "SURFBoard";
+
+  networking.wireless.iwd.enable = true;
+  networking.wireless.iwd.settings = {
+    IPv4 = {
+      Enabled = true;
+    };
+    IPv6 = {
+      Enabled = true;
+    };
+    Settings = {
+      AutoConnect = true;
+      SendHostname = true;
+    };
+  };
+
   networking.networkmanager.enable = true;
-  networking.dhcpcd.setHostname = true;  
+  networking.networkmanager.wifi.backend = "iwd";
+  networking.networkmanager.dns = "none"; #maybe not needed since we're using iwd
 
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
