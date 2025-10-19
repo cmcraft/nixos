@@ -19,17 +19,17 @@
     };
   };
 
-  virtualisation.arion = {
-    backend = "docker";
-    projects = {
-      redbot = {
-        serviceName = "redbot";
-        settings = {
-          imports = [
-            ./containers/redbot.nix
-          ];
-        };
-      };
-    };
-  };
+  #virtualisation.arion = {
+  #  backend = "docker";
+  #  projects = {
+  #    redbot = {
+  #      serviceName = "redbot";
+  #      settings = {
+  #        imports = [
+  #          ./containers/redbot.nix
+  #        ];
+  #      };
+  #    };
+  #  };
+  #};
 }
