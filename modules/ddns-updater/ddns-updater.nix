@@ -4,21 +4,7 @@
     environment = {
       BACKUP_PERIOD = "0";
       BACKUP_DIRECTORY = "/updater/data";
-      CONFIG = ''
-        {
-          "settings": [
-            {
-              "provider": "cloudflare",
-              "zone_identifier": "${config.sops.secrets.cloudflare-zone-identifier}",
-              "domain": "knit-purl-binary.com",
-              "ttl": 600,
-              "ip_version": "ipv4",
-              "token": "${config.sops.secrets.cloudflare-token}",
-              "proxied": true
-            }
-          ]
-        }
-      '';
+      CONFIG = config.sops.templates."ddns-updater/config".path;
       LISTENING_ADDRESS = ":8500";
       LOG_CALLER = "hidden";
       LOG_LEVEL = "info";

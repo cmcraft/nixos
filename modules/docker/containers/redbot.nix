@@ -6,7 +6,7 @@
       environment = {
         PREFIX = "!";
         PUID = "1000";
-        TOKEN = config.sops.secrets.redbot-token;
+        # TOKEN = config.sops.secrets."redbot/token";
         TZ = "America/Chicago";
       };
       image = "phasecorex/red-discordbot:full";

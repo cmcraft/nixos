@@ -18,4 +18,24 @@
     "cloudflare/token" = { };
     "terraria/password" = { };
   };
+
+  sops.templates."factorio/extraSettingsFile".content = ''
+    "game-password" : ${config.sops.placeholder."factorio/password"}
+    "token" : ${config.sops.placeholder."factorio/token"}
+  '';
+
+  sops.templates."ddns-updater/config".content = ''
+    {
+      "settings": [
+        {
+          "provider": "cloudflare",
+          "zone_identifier": "${config.sops.placeholder."cloudflare/zone-identifier"}",
+          "domain": "knit-purl-binary.com",
+          "ttl": 600,
+          "ip_version": "ipv4",
+          "token": "${config.sops.placeholder."cloudflare/token"}",
+          "proxied": true
+        }
+      ]
+  '';
 }

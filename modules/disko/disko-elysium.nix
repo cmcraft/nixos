@@ -1,5 +1,5 @@
 # git clone https://github.com/cmcraft/nixos.git
-# sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./modules/disko/disko-elysium.nix
+# sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode destroy,format,mount --yes-wipe-all-disks ./modules/disko/disko-elysium.nix
 
 # _____ FOR REF ONLY _____ #
 # btrfs subvolume snapshot -r /mnt/root /mnt/root-blank

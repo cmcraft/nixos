@@ -1,12 +1,11 @@
 { config, ... }:
 {
   services.factorio = {
-    enable = true;
+    enable = false;
 
     admins = ["cmcraft"];
 
     game-name = "Constantine's Rimworld";
-    game-password = config.sops.secrets.factorio-password;
     description = "Constantine's Crazy Cosmonauts!";
 
     lan = true;
@@ -16,6 +15,6 @@
     requireUserVerification = true;
 
     username = "cmcraft";
-    token = config.sops.secrets.factorio-token;
+    extraSettingsFile = config.sops.secrets."factorio/extraSettingsFile".path;
   };
 }

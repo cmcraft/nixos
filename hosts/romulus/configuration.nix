@@ -30,7 +30,6 @@
     ../../modules/terraria/terraria.nix
     ../../modules/xserver/xserver.nix
   ];
-  modules = [ arion.nixosModules.arion ];
   
   nix.gc = {
     automatic = true;
