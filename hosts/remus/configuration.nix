@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
+    ../../modules/avahi/avahi.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
