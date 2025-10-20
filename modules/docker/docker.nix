@@ -34,13 +34,13 @@
     passt    # For Pasta rootless networking
   ];
   
-  virtualisation.oci-containers.containers = {
-    redbot = {
-      image = "phasecorex/red-discordbot:full";
-      autoStart = true;
-      volumes = [ "${toString ./.}/redbot:/data" ];
-    };
-  };
+  #virtualisation.oci-containers.containers = {
+  #  redbot = {
+  #    image = "phasecorex/red-discordbot:full";
+  #    autoStart = true;
+  #    volumes = [ "${toString ./.}/redbot:/data" ];
+  #  };
+  #};
   # Add 'newuidmap' and 'sh' to the PATH for users' Systemd units. 
   # Required for Rootless podman.
   #systemd.user.extraConfig = ''
