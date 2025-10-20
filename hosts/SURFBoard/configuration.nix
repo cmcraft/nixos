@@ -141,7 +141,7 @@
   users.users.cmcraft = {
     isNormalUser = true;
     createHome = true;
-    initialPassword = "password"; # Change this. Duh.
+    # initialPassword = "password"; # Change this. Duh.
     hashedPasswordFile = config.sops.secrets."cmcraft/password".path;
     home = "/home/cmcraft";
     useDefaultShell = false;
