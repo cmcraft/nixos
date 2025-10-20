@@ -35,7 +35,7 @@
   ];
   
   virtualisation.oci-containers.containers = {
-    container-name = {
+    redbot = {
       image = "phasecorex/red-discordbot:full";
       autoStart = true;
       volumes = [ "${toString ./.}/redbot:/data" ];
