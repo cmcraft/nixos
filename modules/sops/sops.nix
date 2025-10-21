@@ -29,7 +29,7 @@ in
 
   sops.templates."factorio/extraSettingsFile".content = ''
     {
-      "game-password" : "${config.sops.placeholder."factorio/password"}"
+      "game-password" : "${config.sops.placeholder."factorio/password"}",
       "token" : "${config.sops.placeholder."factorio/token"}"
     }
   '';
