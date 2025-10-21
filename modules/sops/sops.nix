@@ -24,7 +24,7 @@ in
   };
 
   sops.templates."terraria".content = ''
-    "${config.sops.placeholder."terraria/password"}"
+    ${config.sops.placeholder."terraria/password"}
   '';
 
   sops.templates."factorio/extraSettingsFile".content = ''
