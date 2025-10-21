@@ -1,7 +1,7 @@
 { config, ... }:
 {
   services.terraria = {
-    enable = false;
+    enable = true;
     openFirewall = true;
 
     messageOfTheDay = "Wizards Unite!";
