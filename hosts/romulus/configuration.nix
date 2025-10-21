@@ -75,7 +75,6 @@
 
     ddns-updater
     factorio-headless
-    factorio
     home-assistant
     terraria-server
   ];
