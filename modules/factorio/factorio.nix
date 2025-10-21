@@ -1,7 +1,7 @@
 { config, ... }:
 {
   services.factorio = {
-    enable = false;
+    enable = true;
 
     admins = ["cmcraft"];
 
@@ -15,6 +15,6 @@
     requireUserVerification = true;
 
     username = "cmcraft";
-    extraSettingsFile = config.sops.secrets."factorio/extraSettingsFile".path;
+    extraSettingsFile = config.sops.templates."factorio/extraSettingsFile".path;
   };
 }
