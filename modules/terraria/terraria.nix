@@ -5,7 +5,7 @@
     openFirewall = true;
 
     messageOfTheDay = "Wizards Unite!";
-    # password = config.sops.secrets.terraria-password;
+    password = "$( cat ${config.sops.secrets."terraria/password".path})";
     secure = true;
   };
 }

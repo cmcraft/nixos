@@ -1,6 +1,10 @@
-{ config, ... }:
+{ inputs, config, ... }:
+let 
+  secretspath = builtins.toString inputs.secrets;
+in
 {
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
+  # sops.defaultSopsFile = "${secretspath}/secrets.yaml";
   sops.defaultSopsFormat = "yaml";
 
   sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/secrets/keys.txt";
