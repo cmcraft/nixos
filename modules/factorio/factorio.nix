@@ -1,7 +1,7 @@
 { config, ... }:
 {
   services.factorio = {
-    enable = false;
+    enable = true;
     stateDirName = "factorio";
 
     admins = ["cmcraft"];

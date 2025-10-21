@@ -159,9 +159,15 @@
     isSystemUser = true;
     group = "colord";
   };
+
+  users.users.factorio = {
+    isSystemUser = true;
+    group = "factorio";
+  };
   
   users.groups.cmcraft = {};
   users.groups.colord = {};
+  users.groups.factorio = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };

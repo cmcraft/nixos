@@ -10,7 +10,7 @@
       "/var/lib/containers"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
-      "/var/lib/factorio"
+      { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
       "/var/lib/hass"
       "/etc/home-assistant"
       "/var/lib/terraria"
