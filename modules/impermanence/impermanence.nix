@@ -9,6 +9,7 @@
       "/var/lib/bluetooth"
       "/var/lib/containers"
       "/var/lib/nixos"
+      "/var/lib/private"
       "/var/lib/systemd/coredump"
       "/var/lib/factorio"
       "/var/lib/hass"
