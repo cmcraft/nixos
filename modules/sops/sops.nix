@@ -23,6 +23,10 @@ in
     "terraria/password" = { };
   };
 
+  sops.templates."terraria".content = ''
+    "${config.sops.placeholder."terraria/password"}"
+  '';
+
   sops.templates."factorio/extraSettingsFile".content = ''
     "game-password" : ${config.sops.placeholder."factorio/password"}
     "token" : ${config.sops.placeholder."factorio/token"}
