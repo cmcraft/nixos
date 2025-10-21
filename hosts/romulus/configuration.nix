@@ -160,14 +160,14 @@
     group = "colord";
   };
 
-  users.users.factorio = {
-    isSystemUser = true;
-    group = "factorio";
-  };
+  #users.users.factorio = {
+  #  isSystemUser = true;
+  #  group = "factorio";
+  #};
   
   users.groups.cmcraft = {};
   users.groups.colord = {};
-  users.groups.factorio = {};
+  #users.groups.factorio = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
