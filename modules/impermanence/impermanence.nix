@@ -10,7 +10,7 @@
       "/var/lib/containers"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
-      # "/var/lib/factorio"
+      "/var/lib/factorio"
       "/var/lib/hass"
       "/etc/home-assistant"
       "/var/lib/terraria"
