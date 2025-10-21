@@ -28,8 +28,10 @@ in
   '';
 
   sops.templates."factorio/extraSettingsFile".content = ''
-    "game-password" : ${config.sops.placeholder."factorio/password"}
-    "token" : ${config.sops.placeholder."factorio/token"}
+    {
+      "game-password" : "${config.sops.placeholder."factorio/password"}"
+      "token" : "${config.sops.placeholder."factorio/token"}"
+    }
   '';
 
   sops.templates."ddns-updater/config".content = ''
