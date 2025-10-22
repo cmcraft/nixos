@@ -11,6 +11,7 @@
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/containers/storage"
+      "/var/lib/containers/storage/redbot"
       # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
       "/var/lib/hass"
       "/etc/home-assistant"
