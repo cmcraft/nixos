@@ -12,6 +12,7 @@
       "/var/lib/systemd/coredump"
       "/var/lib/containers/storage/redbot"
       "/var/lib/containers/storage/factorio"
+      "/var/lib/containers/storage/terraria"
       # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
       "/var/lib/hass"
       "/etc/home-assistant"

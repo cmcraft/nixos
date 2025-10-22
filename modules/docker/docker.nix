@@ -63,4 +63,20 @@
       ];
     };
   };
+
+  virtualisation.oci-containers.containers = {
+    terraria = {
+      image = "ryshe/terraria:latest";
+      autoStart = true;
+      ports = [ 
+        "7777:7777"
+      ];
+      volumes = [ 
+        "/var/lib/containers/storage/terraria:/root/.local/share/Terraria/Worlds" 
+      ];
+      environment = {
+        CONFIGPATH = "${config.sops.templates."terraria".path}";
+      };
+    };
+  };
 }
