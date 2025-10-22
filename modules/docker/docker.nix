@@ -57,10 +57,6 @@
         "/var/lib/containers/storage/factorio:/factorio"
         "${config.sops.templates."factorio/server-settings".path}:/server-settings.json" 
       ];
-      environment = {
-        TOKEN = config.sops.templates."factorio".path;
-        PREFIX = "!";
-      };
     };
   };
 }
