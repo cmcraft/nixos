@@ -44,7 +44,7 @@
       volumes = [ "${toString ./.}/redbot:/data" ];
       environment = {
         token = config.sops.templates."redbot".path;
-      }
+      };
     };
   };
 }
