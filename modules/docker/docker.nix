@@ -78,6 +78,7 @@
       environment = {
         CONFIGPATH = "/config";
         CONFIG_FILENAME = "serverconfig.txt";
+        WORLD_FILENAME = "The_Turtle_Moves.wld";
       };
     };
   };
