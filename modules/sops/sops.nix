@@ -27,6 +27,10 @@ in
     ${config.sops.placeholder."terraria/password"}
   '';
 
+  sops.templates."redbot".content = ''
+    ${config.sops.placeholder."redbot/token"}
+  '';
+
   sops.templates."factorio/extraSettingsFile".content = ''
     {
       "game-password" : "${config.sops.placeholder."factorio/password"}",

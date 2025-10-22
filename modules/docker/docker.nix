@@ -2,6 +2,7 @@
 {
   virtualisation =  {
     containers.enable = true;
+
     oci-containers.backend = "podman";
     podman = {
       enable = true;
@@ -30,34 +31,20 @@
   environment.systemPackages = with pkgs; [
     dive # look into docker image layers
     podman
+    podman-compose
     podman-tui   # Terminal mgmt UI for Podman
     passt    # For Pasta rootless networking
+    compose2nix
   ];
   
-  #virtualisation.oci-containers.containers = {
-  #  redbot = {
-  #    image = "phasecorex/red-discordbot:full";
-  #    autoStart = true;
-  #    volumes = [ "${toString ./.}/redbot:/data" ];
-  #  };
-  #};
-  # Add 'newuidmap' and 'sh' to the PATH for users' Systemd units. 
-  # Required for Rootless podman.
-  #systemd.user.extraConfig = ''
-  #  DefaultEnvironment="PATH=/run/current-system/sw/bin:/run/wrappers/bin:${lib.makeBinPath [ pkgs.bash ]}"
-  #'';
+  virtualisation.oci-containers.containers = {
+    redbot = {
+      image = "phasecorex/red-discordbot:full";
+      autoStart = true;
+      volumes = [ "${toString ./.}/redbot:/data" ];
+      environment = {
+        token = config.sops.templates."redbot".path;
+      }
+    };
+  };
 }
-
-  #virtualisation.arion = {
-  #  backend = "docker";
-  #  projects = {
-  #    redbot = {
-  #      serviceName = "redbot";
-  #      settings = {
-  #        imports = [
-  #          ./containers/redbot.nix
-  #        ];
-  #      };
-  #    };
-  #  };
-  #};
