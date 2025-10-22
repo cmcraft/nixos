@@ -43,7 +43,8 @@
       autoStart = true;
       volumes = [ "/var/lib/containers/storage/redbot:/data" ];
       environment = {
-        token = config.sops.templates."redbot".path;
+        TOKEN = config.sops.templates."redbot".path;
+        PREFIX = "!";
       };
     };
   };
