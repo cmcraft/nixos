@@ -72,10 +72,12 @@
         "7777:7777"
       ];
       volumes = [ 
-        "/var/lib/containers/storage/terraria:/root/.local/share/Terraria/Worlds" 
+        "/var/lib/containers/storage/terraria:/root/.local/share/Terraria/Worlds"
+        "${config.sops.templates."terraria".path}:/config/serverconfig.txt"  
       ];
       environment = {
-        CONFIGPATH = "${config.sops.templates."terraria".path}";
+        CONFIGPATH = "/config";
+        CONFIG_FILENAME = "serverconfig.txt";
       };
     };
   };
