@@ -11,6 +11,7 @@
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/containers/storage/redbot"
+      "/var/lib/containers/storage/redbot/core/logs"
       "/var/lib/containers/storage/factorio"
       "/var/lib/containers/storage/terraria"
       "/var/lib/containers/storage/terraria/config"
