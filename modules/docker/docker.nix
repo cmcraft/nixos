@@ -73,11 +73,11 @@
       ];
       volumes = [ 
         "/var/lib/containers/storage/terraria:/root/.local/share/Terraria/Worlds"
-        "${config.sops.templates."terraria".path}:/config/serverconfig.txt"  
+        "${config.sops.templates."terraria".path}:/config/config.json"  
       ];
       environment = {
         CONFIGPATH = "/config";
-        CONFIG_FILENAME = "serverconfig.txt";
+        CONFIG_FILENAME = "config.json";
         WORLD_FILENAME = "The_Turtle_Moves.wld";
       };
     };
