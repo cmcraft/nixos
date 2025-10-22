@@ -41,7 +41,7 @@
     redbot = {
       image = "phasecorex/red-discordbot:full";
       autoStart = true;
-      #volumes = [ "${toString ./.}/redbot:/data" ];
+      volumes = [ "${graphroot}${toString ./.}/redbot:/data" ];
       environment = {
         token = config.sops.templates."redbot".path;
       };
