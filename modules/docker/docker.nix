@@ -52,7 +52,7 @@
   virtualisation.oci-containers.containers = {
     factorio = {
       image = "factoriotools/factorio:stable";
-      autoStart = true;
+      autoStart = false;
       ports = [ 
         "34197:34197/udp"
         "27015:27015/tcp"
@@ -67,7 +67,7 @@
   virtualisation.oci-containers.containers = {
     terraria = {
       image = "ryshe/terraria:latest";
-      autoStart = true;
+      autoStart = false;
       ports = [ 
         "7777:7777"
       ];

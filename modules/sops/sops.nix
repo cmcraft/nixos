@@ -55,9 +55,7 @@ in
     }
   '';
 
-  sops.templates."redbot".content = ''
-    ${config.sops.placeholder."redbot/token"}
-  '';
+  sops.templates."redbot".content = ''${config.sops.placeholder."redbot/token"}'';
 
   sops.templates."factorio/server-settings".content = ''
     {
