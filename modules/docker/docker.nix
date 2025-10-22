@@ -53,6 +53,10 @@
     factorio = {
       image = "factoriotools/factorio:stable";
       autoStart = true;
+      ports = [ 
+        "34197:34197/udp"
+        "27015:27015/tcp"
+      ];
       volumes = [ 
         "/var/lib/containers/storage/factorio:/factorio"
         "${config.sops.templates."factorio/server-settings".path}:/server-settings.json" 
