@@ -5,7 +5,7 @@
     extraComponents = [
       # Components required to complete the onboarding
       "analytics"
-      "google_translate"
+      # "google_translate"
       "met"
       "radio_browser"
       "shopping_list"
@@ -13,6 +13,9 @@
       # https://www.home-assistant.io/integrations/isal
       "isal"
     ];
+    extraPackages = python3Packages: with python3Packages; [
+    # keep in case we need it later
+  ];
     config = {
       # Includes dependencies for a basic setup
       # https://www.home-assistant.io/integrations/default_config/
