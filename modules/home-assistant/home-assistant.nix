@@ -63,7 +63,7 @@
         server = "mqtt://localhost:1883";
         baseTopic = "zigbee2mqtt";
         user = "cmcraft";
-        password = "${sops.templates."mosquitto".content}";
+        password = "${config.sops.templates."mosquitto".content}";
       };
     };
   };
