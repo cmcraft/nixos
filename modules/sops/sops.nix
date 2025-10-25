@@ -17,7 +17,7 @@ in
     "cmcraft/public-key" = { };
     "factorio/password" = { };
     "factorio/token" = { };
-    "mosquitto/hashedPassword" = {};
+    "mosquitto/password" = {};
     "redbot/token" = { };
     "cloudflare/zone-identifier" = { };
     "cloudflare/token" = { };
@@ -55,7 +55,6 @@ in
       "journeypermission_increaseplacementrange" : "2"
     }
   '';
-  sops.templates."mosquitto".content = ''${config.sops.placeholder."mosquitto/hashedPassword"}'';
   sops.templates."redbot".content = ''${config.sops.placeholder."redbot/token"}'';
 
   sops.templates."factorio/server-settings".content = ''
