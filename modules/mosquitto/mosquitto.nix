@@ -5,7 +5,7 @@
     listeners = [
       {
         users.cmcraft = {
-          acl = [ "pattern readwrite #" ];
+          acl = [ "readwrite #" ];
           passwordFile = config.sops.templates."mosquitto".path;
         };
       }
