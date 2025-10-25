@@ -7,7 +7,7 @@ in
   # sops.defaultSopsFile = "${secretspath}/secrets.yaml";
   sops.defaultSopsFormat = "yaml";
 
-  sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/secrets/keys.txt";
+  sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/keys.txt";
 
   sops.secrets = {
     "cmcraft/password" = {
@@ -17,6 +17,7 @@ in
     "cmcraft/public-key" = { };
     "factorio/password" = { };
     "factorio/token" = { };
+    "mosquitto/hashedPassword" = {};
     "redbot/token" = { };
     "cloudflare/zone-identifier" = { };
     "cloudflare/token" = { };
@@ -54,7 +55,7 @@ in
       "journeypermission_increaseplacementrange" : "2"
     }
   '';
-
+  sops.templates."mosquitto".content = ''${config.sops.placeholder."mosquitto/hashedPassword"}'';
   sops.templates."redbot".content = ''${config.sops.placeholder."redbot/token"}'';
 
   sops.templates."factorio/server-settings".content = ''
