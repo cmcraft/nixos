@@ -55,6 +55,7 @@ in
       "journeypermission_increaseplacementrange" : "2"
     }
   '';
+  sops.templates."mosquitto".content = ''${config.sops.placeholder."mosquitto/password"}'';
   sops.templates."redbot".content = ''${config.sops.placeholder."redbot/token"}'';
 
   sops.templates."factorio/server-settings".content = ''
