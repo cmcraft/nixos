@@ -6,7 +6,7 @@
       {
         users.cmcraft = {
           acl = [ "pattern readwrite #" ];
-          password_file = config.sops.templates."mosquitto".path;
+          passwordFile = config.sops.templates."mosquitto".path;
         };
       }
     ];
