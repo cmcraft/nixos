@@ -36,6 +36,24 @@
     settings = {
       homeassistant.enabled = config.services.home-assistant.enable;
       permit_join = true;
+      serial = {
+        port = "tcp://192.168.1.200:6638";
+        baudrate = "115200";
+        adapter = "ember";
+        disableLed = "false";
+        advanced = {
+          transmitPower = "20";
+        };  
+      };
+      serial = {
+        port = "tcp://192.168.1.200:7638";
+        baudrate = "115200";
+        adapter = "zstack";
+        disableLed = "false";
+        advanced = {
+          transmitPower = "20";
+        };  
+      };
     };
   };
 }
