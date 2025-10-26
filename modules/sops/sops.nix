@@ -60,7 +60,7 @@ in
       password: ${config.sops.placeholder."mosquitto/password"}
     '';
     owner = "zigbee2mqtt";
-    path = "/var/lib/zigbee2mqtt/secrets.yaml";
+    path = "/var/lib/zigbee2mqtt/secret.yaml";
   };
   sops.templates."redbot".content = ''${config.sops.placeholder."redbot/token"}'';
 
