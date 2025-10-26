@@ -3,10 +3,10 @@
   services.mosquitto = {
     enable = true;
 
-    allowAnonymous = true;
 
     listeners = [
       {
+        allowAnonymous = true;
         users.cmcraft = {
           acl = [ "readwrite #" ];
           passwordFile = config.sops.secrets."mosquitto/password".path;
