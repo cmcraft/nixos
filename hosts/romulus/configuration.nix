@@ -78,6 +78,8 @@
     factorio-headless
     home-assistant
     terraria-server
+
+    netstat
   ];
 
   boot.loader.systemd-boot.enable = true;
