@@ -37,6 +37,7 @@
       homeassistant = {
         enabled = config.services.home-assistant.enable;
         discoveryTopic = "homeassistant";
+        statusTopic = "homeassistant/status";
       };
       permit_join = true;
       # 
@@ -67,8 +68,11 @@
       };
       frontend = {
         enabled = true;
-        # port = "8124";
+        port = "8124";
       };
     };
+  };
+  networking.firewall = {
+    allowedTCPPorts = [ 8124 ];
   };
 }
