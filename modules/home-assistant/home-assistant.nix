@@ -33,7 +33,6 @@
 
   services.zigbee2mqtt = {
     enable = true;
-    openFirewall = true;
     settings = {
       homeassistant = {
         enabled = config.services.home-assistant.enable;
