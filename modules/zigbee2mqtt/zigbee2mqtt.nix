@@ -39,6 +39,7 @@
         clean = true;
         retain = false;
         qos = 0;
+        rejectUnauthorized = true;
       };
       frontend = {
         enabled = true;

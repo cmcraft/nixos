@@ -2,6 +2,9 @@
 {
   services.mosquitto = {
     enable = true;
+
+    allowAnonymous = true;
+
     listeners = [
       {
         users.cmcraft = {
