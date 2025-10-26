@@ -72,7 +72,4 @@
       };
     };
   };
-  networking.firewall = {
-    allowedTCPPorts = [ 8124 ];
-  };
 }
