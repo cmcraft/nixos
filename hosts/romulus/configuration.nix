@@ -79,7 +79,6 @@
     home-assistant
     terraria-server
 
-    netstat
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -141,10 +140,10 @@
   networking.dhcpcd.setHostname = true;
 
   # mosquitto 1883
-  # zigbee2mqtt 8124
+  # zigbee2mqtt 8080
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 1883 8124 ];
+    allowedTCPPorts = [ 1883 8080 ];
   };  
 
   time.timeZone = "America/Chicago";
