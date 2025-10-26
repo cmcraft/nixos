@@ -58,6 +58,7 @@ in
   sops.templates."mosquitto.yaml".content = ''
     password: ${config.sops.placeholder."mosquitto/password"}
   '';
+  sops.templates."mosquitto.yaml".owner = "hass";
   sops.templates."redbot".content = ''${config.sops.placeholder."redbot/token"}'';
 
   sops.templates."factorio/server-settings".content = ''
