@@ -33,7 +33,7 @@
         server = "mqtt://localhost:1883";
         baseTopic = "zigbee2mqtt";
         user = "cmcraft";
-        password = "'!${sops.templates."mosquitto".name} password'";
+        password = "'!${config.sops.templates."mosquitto".name} password'";
       };
       frontend = {
         enabled = true;
