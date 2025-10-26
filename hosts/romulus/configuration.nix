@@ -30,6 +30,7 @@
     ../../modules/stylix/stylix.nix
     ../../modules/terraria/terraria.nix
     ../../modules/xserver/xserver.nix
+    ../../modules/zigbee2mqtt/zigbee2mqtt.nix
   ];
   
   nix.gc = {
