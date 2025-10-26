@@ -32,7 +32,7 @@
       default_config = {};
     };
     openFirewall = true;
-  
+    lovelaceConfigWritable = true;
     lovelaceConfig = {
       title = "Zoraya";
       views = [
@@ -76,6 +76,7 @@
               type = "entities";
               entities = [
                 {
+                  type = "";
                   entity = "";
                 }
               ];
