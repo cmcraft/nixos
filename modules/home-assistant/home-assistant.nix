@@ -21,13 +21,65 @@
       "nest"
     ];
     extraPackages = python3Packages: with python3Packages; [
-    # keep in case we need it later
-  ];
+      # keep in case we need it later
+    ];
     config = {
       # Includes dependencies for a basic setup
       # https://www.home-assistant.io/integrations/default_config/
       default_config = {};
     };
     openFirewall = true;
+  
+    lovelaceConfig = {
+      title = "Zoraya";
+      views = [
+        {
+          title = "Zoraya";
+          cards = [
+            {
+              type = "weather-forecast";
+              entity = "weather.openweathermap";
+              showCurrent = true;
+              showForecast = true;
+              forecastType = "legacy";
+            }
+            {
+              type = "picture-entity";
+              entity = "camera.front_door";
+            }
+            {
+              type = "thermostat";
+              entity = "climate.hallway";
+              name = "Hallway";
+              features = [
+                {
+                  type = "climate-fan-modes";
+                  style = "dropdown";
+                }
+                {
+                  type = "climate-hvac-modes";
+                }
+              ];
+            }
+          ];
+        }
+        {
+          title = "Office";
+          path = "office";
+          subview = false;
+          cards = [
+            {
+              title = "Office";
+              type = "entities";
+              entities = [
+                {
+                  entity = "";
+                }
+              ];
+            }
+          ];
+        }
+      ];
+    };
   };
 }
