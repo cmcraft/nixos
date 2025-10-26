@@ -65,6 +65,10 @@
         user = "cmcraft";
         password = "${config.sops.templates."mosquitto".content}";
       };
+      frontend = {
+        enabled = true;
+        port = "8124";
+      };
     };
   };
 }
