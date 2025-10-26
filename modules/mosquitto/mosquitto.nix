@@ -5,12 +5,12 @@
 
 
     listeners = [
-      {
-        users.cmcraft = {
-          acl = [ "readwrite #" ];
-          passwordFile = config.sops.secrets."mosquitto/password".path;
-        };
-      }
+      #{
+      #  users.cmcraft = {
+      #    acl = [ "readwrite #" ];
+      #    passwordFile = config.sops.secrets."mosquitto/password".path;
+      #  };
+      #}
       {
         acl = [ "readwrite #" ];
         omitPasswordAuth = true;
