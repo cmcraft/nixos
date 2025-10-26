@@ -141,10 +141,10 @@
   networking.dhcpcd.setHostname = true;
 
   # mosquitto 1883
-  # zigbee2mqtt 8080
+  # zigbee2mqtt 8124 7638 6638
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 1883 8080 ];
+    allowedTCPPorts = [ 1883 8124 7638 6638 ];
   };  
 
   time.timeZone = "America/Chicago";

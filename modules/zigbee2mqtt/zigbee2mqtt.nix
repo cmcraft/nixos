@@ -37,7 +37,7 @@
       };
       frontend = {
         enabled = true;
-        # port = "8124";
+        port = "8124";
       };
     };
   };
