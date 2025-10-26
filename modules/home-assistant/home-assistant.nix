@@ -33,6 +33,7 @@
 
   services.zigbee2mqtt = {
     enable = true;
+    openFirewall = true;
     settings = {
       homeassistant = {
         enabled = config.services.home-assistant.enable;
@@ -67,7 +68,7 @@
       };
       frontend = {
         enabled = true;
-        port = "8124";
+        # port = "8124";
       };
     };
   };
