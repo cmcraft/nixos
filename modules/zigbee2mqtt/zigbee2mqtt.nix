@@ -9,7 +9,7 @@
         statusTopic = "homeassistant/status";
       };
       permit_join = true;
-      # 
+      # EFR32MG24 
       #serial = {
       #  port = "tcp://192.168.1.200:6638";
       #  baudrate = "115200";
@@ -19,7 +19,7 @@
       #    transmitPower = "20";
       #  };  
       #};
-      # CC2674P10 -- Zigbee
+      # CC2674P10
       serial = {
         port = "tcp://192.168.1.200:7638";
         baudrate = 115200;
