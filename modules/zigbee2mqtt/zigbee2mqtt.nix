@@ -33,7 +33,7 @@
         server = "mqtt://localhost:1883";
         baseTopic = "zigbee2mqtt";
         user = "cmcraft";
-        password = "'!secret password'";
+        password = "'!secrets.yaml password'";
       };
       frontend = {
         enabled = true;
