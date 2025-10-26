@@ -19,6 +19,9 @@
       "mqtt_statestream"
       "myq"
       "nest"
+      "openweathermap"
+      "climate"
+      "camera"
     ];
     extraPackages = python3Packages: with python3Packages; [
       # keep in case we need it later
