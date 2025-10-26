@@ -30,9 +30,9 @@
         };  
       };
       mqtt = {
-        server = "mqtt://localhost:1883";
+        server = "!secrets.yaml server";
         baseTopic = "zigbee2mqtt";
-        user = "cmcraft";
+        user = "!secrets.yaml user";
         password = "'!secrets.yaml password'";
       };
       frontend = {

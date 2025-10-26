@@ -57,6 +57,8 @@ in
   '';
   sops.templates."mosquitto.yaml" = {
     content = ''
+      server: mqtt://localhost:1883
+      user: cmcraft
       password: ${config.sops.placeholder."mosquitto/password"}
     '';
     owner = "zigbee2mqtt";
