@@ -22,7 +22,7 @@
       # CC2674P10 -- Zigbee
       serial = {
         port = "tcp://192.168.1.200:7638";
-        baudrate = "115200";
+        baudrate = 115200;
         adapter = "zstack";
         disableLed = "false";
         advanced = {
