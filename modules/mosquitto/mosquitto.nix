@@ -6,11 +6,15 @@
 
     listeners = [
       {
-        allowAnonymous = true;
         users.cmcraft = {
           acl = [ "readwrite #" ];
           passwordFile = config.sops.secrets."mosquitto/password".path;
         };
+      }
+      {
+        acl = [ "pattern readwrite #" ];
+        omitPasswordAuth = true;
+        settings.allow_anonymous = true;  
       }
     ];
   };
