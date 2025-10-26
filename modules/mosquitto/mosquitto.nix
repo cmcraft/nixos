@@ -12,7 +12,7 @@
         };
       }
       {
-        acl = [ "pattern readwrite #" ];
+        acl = [ "readwrite #" ];
         omitPasswordAuth = true;
         settings.allow_anonymous = true;  
       }
