@@ -34,7 +34,7 @@
         baseTopic = "zigbee2mqtt";
         clientId = "zigbee2mqtt";
         user = "!secrets.yaml user";
-        password = "'!secrets.yaml password'";
+        password = "!secrets.yaml password";
         keepalive = 60;
         clean = true;
         retain = false;
