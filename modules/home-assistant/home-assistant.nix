@@ -94,6 +94,19 @@
               title = "Workbench";
               type = "button";
               entity = "switch.workbench_relay";
+              tap_action = "toggle";
+            }
+            {
+              title = "Utility Room";
+              type = "entities";
+              entities = [
+                {
+                  entity = "light.utility_room_front";
+                }
+                {
+                  entity = "light.utility_room_rear";
+                }
+              ];
             }
           ];
         }
