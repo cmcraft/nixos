@@ -18,6 +18,7 @@
       "mqtt_room"
       "mqtt_statestream"
       "myq"
+      "google"
       "nest"
       "openweathermap"
       "climate"
