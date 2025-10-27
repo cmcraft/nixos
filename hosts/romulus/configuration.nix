@@ -80,6 +80,7 @@
     home-assistant
     terraria-server
 
+    bluez
   ];
 
   boot.loader.systemd-boot.enable = true;
