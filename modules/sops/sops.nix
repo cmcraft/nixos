@@ -18,10 +18,37 @@ in
     "factorio/password" = { };
     "factorio/token" = { };
     "mosquitto/password" = {};
+    "nest/id" = {};
+    "nest/client_id" = { };
+    "nest/project_id" = { };
+    "nest/client_secret" = { };
     "redbot/token" = { };
     "cloudflare/zone-identifier" = { };
     "cloudflare/token" = { };
     "terraria/password" = { };
+  };
+
+  sops.templates."nest" = {
+    content = ''
+    {
+      "version": 1,
+      "minor_version": 1,
+      "key": "application_credentials",
+      "data": {
+        "items": [
+          {
+            "id": "${config.sops.placeholder."nest/id"}",
+            "domain": "nest",
+            "client_id": "${config.sops.placeholder."nest/client_id"}",
+            "client_secret": "${config.sops.placeholder."nest/client_secret"}",
+            "name": "${config.sops.placeholder."nest/project_id"}"
+          }
+        ]
+      }
+    }
+  '';
+  owner = "hass";
+  path = "/var/lib/hass/.storage/application_credentials";
   };
 
   sops.templates."terraria".content = ''
