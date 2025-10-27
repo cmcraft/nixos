@@ -72,13 +72,28 @@
           subview = false;
           cards = [
             {
-              title = "Office";
+              title = "Desk";
               type = "entities";
               entities = [
                 {
                   entity = "light.office_desk_left";
                 }
+                {
+                  entity = "light.office_desk_right";
+                }
               ];
+            }
+          ];
+        }
+        {
+          title = "Utility Room";
+          path = "utility-room";
+          subview = false;
+          cards = [
+            {
+              title = "Workbench";
+              type = "light";
+              entity = "switch.workbench_relay";
             }
           ];
         }
