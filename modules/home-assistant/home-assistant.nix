@@ -67,6 +67,22 @@
           ];
         }
         {
+          title = "Living Room";
+          path = "living-room";
+          subview = false;
+          cards = [
+            
+          ];
+        }
+        {
+          title = "Master Bedoom";
+          path = "master-bedroom";
+          subview = false;
+          cards = [
+            
+          ];
+        }
+        {
           title = "Office";
           path = "office";
           subview = false;
@@ -122,6 +138,14 @@
                 }
               ];
             }
+          ];
+        }
+        {
+          title = "Lines";
+          path = "lines";
+          subview = false;
+          cards = [
+
           ];
         }
       ];
