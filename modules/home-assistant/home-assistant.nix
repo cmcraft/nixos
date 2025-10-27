@@ -168,7 +168,7 @@
             {
               title = "Temperatures";
               type = "statistics-graph";
-              period = "hourly";
+              period = "hour";
               chartType = "line";
               statTypes = [
                 "mean"
@@ -184,7 +184,7 @@
             {
               title = "Humidity";
               type = "statistics-graph";
-              period = "hourly";
+              period = "hour";
               chartType = "line";
               statTypes = [
                 "mean"
