@@ -72,6 +72,21 @@
           subview = false;
           cards = [
             {
+              title = "Office";
+              type = "entities";
+              entities = [
+                {
+                  entity = "light.office_fan_1";
+                }
+                {
+                  entity = "light.office_fan_2";
+                }
+                {
+                  entity = "light.office_fan_3";
+                }
+              ];
+            }
+            {
               title = "Desk";
               type = "entities";
               entities = [
