@@ -64,6 +64,26 @@
                 }
               ];
             }
+            {
+              type = "grid";
+              square = false;
+              cards = [
+                {
+                  type = "entity";
+                  entity = "sensor.office_temperature_temperature"
+                }
+              ];
+            }
+            {
+              type = "grid";
+              square = false;
+              cards = [
+                {
+                  type = "entity";
+                  entity = "sensor.office_temperature_humidity"
+                }
+              ];
+            }
           ];
         }
         {
