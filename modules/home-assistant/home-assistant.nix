@@ -76,8 +76,8 @@
               type = "entities";
               entities = [
                 {
-                  type = "";
-                  entity = "";
+                  type = "light";
+                  entity = "light.office_desk_left";
                 }
               ];
             }
