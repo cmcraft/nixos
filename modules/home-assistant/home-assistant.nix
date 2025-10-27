@@ -94,7 +94,6 @@
               title = "Workbench";
               type = "button";
               entity = "switch.workbench_relay";
-              tap_action = "toggle";
             }
             {
               title = "Utility Room";
