@@ -70,7 +70,7 @@
               cards = [
                 {
                   type = "entity";
-                  entity = "sensor.office_temperature_temperature"
+                  entity = "sensor.office_temperature_temperature";
                 }
               ];
             }
@@ -80,7 +80,7 @@
               cards = [
                 {
                   type = "entity";
-                  entity = "sensor.office_temperature_humidity"
+                  entity = "sensor.office_temperature_humidity";
                 }
               ];
             }
