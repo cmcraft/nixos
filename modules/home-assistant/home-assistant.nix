@@ -5,7 +5,8 @@
     extraComponents = [
       # Components required to complete the onboarding
       "analytics"
-      # "google_translate"
+      "bluetooth"
+      "google_translate"
       "met"
       "radio_browser"
       "shopping_list"
