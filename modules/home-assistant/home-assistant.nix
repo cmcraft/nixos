@@ -92,7 +92,7 @@
           cards = [
             {
               title = "Workbench";
-              type = "switch";
+              type = "button";
               entity = "switch.workbench_relay";
             }
           ];
