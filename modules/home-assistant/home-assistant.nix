@@ -145,7 +145,38 @@
           path = "lines";
           subview = false;
           cards = [
-
+            {
+              title = "Temperatures";
+              type = "statistics-graph";
+              period = "hourly";
+              chartType = "line";
+              statTypes = [
+                "mean"
+              ];
+              hideLegend = true;
+              daysToShow = 1;
+              entities = [
+                {
+                  entity = "sensor.office_temperature_temperature";
+                }
+              ];
+            }
+            {
+              title = "Humidity";
+              type = "statistics-graph";
+              period = "hourly";
+              chartType = "line";
+              statTypes = [
+                "mean"
+              ];
+              hideLegend = true;
+              daysToShow = 1;
+              entities = [
+                {
+                  entity = "sensor.office_temperature_humidity";
+                }
+              ];
+            }
           ];
         }
       ];
