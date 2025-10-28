@@ -2,6 +2,18 @@
 {
   services.home-assistant = {
     enable = true;
+
+    #likely broken
+    package = pkgs.home-assistant.override {
+      extraPackages = ps: with ps; [
+        google-auth
+        google-auth-oauthlib
+        aiohttp
+        grpcio
+        protobuf
+      ];
+    };
+
     extraComponents = [
       # Components required to complete the onboarding
       "analytics"
@@ -22,6 +34,8 @@
       "google"
       "nest"
       "openweathermap"
+      # likely broken
+      "http"
       "climate"
       "camera"
     ];
