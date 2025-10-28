@@ -56,13 +56,6 @@
           title = "Zoraya";
           cards = [
             {
-              type = "weather-forecast";
-              entity = "weather.openweathermap";
-              showCurrent = true;
-              showForecast = true;
-              forecastType = "legacy";
-            }
-            {
               type = "picture-entity";
               entity = "camera.front_door";
             }
@@ -86,6 +79,26 @@
               cards = [
                 {
                   type = "entity";
+                  entity = "sensor.basement_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.garage_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.guest_bedroom_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.kitchen_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.master_bedroom_temperature_temperature";
+                }
+                {
+                  type = "entity";
                   entity = "sensor.office_temperature_temperature";
                 }
               ];
@@ -94,6 +107,26 @@
               type = "grid";
               square = false;
               cards = [
+                {
+                  type = "entity";
+                  entity = "sensor.basement_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.garage_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.guest_bedroom_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.kitchen_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.master_bedroom_temperature_humidity";
+                }
                 {
                   type = "entity";
                   entity = "sensor.office_temperature_humidity";
@@ -107,7 +140,30 @@
           path = "living-room";
           subview = false;
           cards = [
-            
+            {
+              title = "Living Room Lamp";
+              type = "entities";
+              entities = [
+                {
+                  entity = "light.living_room_lamp_1";
+                }
+              ];
+            }
+            {
+              title = "Living Room Fan";
+              type = "entities";
+              entities = [
+                {
+                  entity = "fan.living_room_fan";
+                }
+                {
+                  entity = "light.living_room_fan_1";
+                }
+                {
+                  entity = "light.living_room_fan_2";
+                }
+              ];
+            }
           ];
         }
         {
@@ -115,7 +171,21 @@
           path = "master-bedroom";
           subview = false;
           cards = [
-            
+            {
+              title = "Master Bedroom";
+              type = "entities";
+              entities = [
+                {
+                  entity = "light.master_bedroom_fan_1";
+                }
+                {
+                  entity = "light.master_bedroom_fan_2";
+                }
+                {
+                  entity = "light.master_bedroom_fan_3";
+                }
+              ];
+            }
           ];
         }
         {
@@ -190,9 +260,30 @@
                 "mean"
               ];
               hideLegend = true;
-              daysToShow = 1;
+              daysToShow = 7;
               entities = [
                 {
+                  type = "entity";
+                  entity = "sensor.basement_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.garage_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.guest_bedroom_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.kitchen_temperature_temperature";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.master_bedroom_temperature_temperature";
+                }
+                {
+                  type = "entity";
                   entity = "sensor.office_temperature_temperature";
                 }
               ];
@@ -206,9 +297,30 @@
                 "mean"
               ];
               hideLegend = true;
-              daysToShow = 1;
+              daysToShow = 7;
               entities = [
                 {
+                  type = "entity";
+                  entity = "sensor.basement_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.garage_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.guest_bedroom_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.kitchen_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.master_bedroom_temperature_humidity";
+                }
+                {
+                  type = "entity";
                   entity = "sensor.office_temperature_humidity";
                 }
               ];
