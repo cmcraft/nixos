@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  systemd.services.home-assistant.after = [ "zigbee2mqtt" ];
   services.home-assistant = {
     enable = true;
 
