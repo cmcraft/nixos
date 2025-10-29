@@ -80,6 +80,7 @@
     home-assistant
     terraria-server
 
+    lsusb
   ];
 
   boot.loader.systemd-boot.enable = true;
