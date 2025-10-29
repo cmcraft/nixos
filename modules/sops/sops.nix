@@ -91,7 +91,11 @@ in
     owner = "zigbee2mqtt";
     path = "/var/lib/zigbee2mqtt/secrets.yaml";
   };
-  sops.templates."redbot".content = ''${config.sops.placeholder."redbot/token"}'';
+  
+  sops.templates."redbot".content = ''
+    TOKEN=${config.sops.placeholder."redbot/token"}
+    PREFIX=!
+  '';
 
   sops.templates."factorio/server-settings".content = ''
     {
