@@ -91,6 +91,10 @@
                 }
                 {
                   type = "entity";
+                  entity = "sensor.hallway_temperature";
+                }
+                {
+                  type = "entity";
                   entity = "sensor.kitchen_temperature_temperature";
                 }
                 {
@@ -118,6 +122,10 @@
                 {
                   type = "entity";
                   entity = "sensor.guest_bedroom_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.hallway_humidity";
                 }
                 {
                   type = "entity";
@@ -155,12 +163,6 @@
               entities = [
                 {
                   entity = "fan.living_room_fan";
-                }
-                {
-                  entity = "light.living_room_fan_1";
-                }
-                {
-                  entity = "light.living_room_fan_2";
                 }
               ];
             }
@@ -276,6 +278,10 @@
                 }
                 {
                   type = "entity";
+                  entity = "sensor.hallway_temperature";
+                }
+                {
+                  type = "entity";
                   entity = "sensor.kitchen_temperature_temperature";
                 }
                 {
@@ -310,6 +316,10 @@
                 {
                   type = "entity";
                   entity = "sensor.guest_bedroom_temperature_humidity";
+                }
+                {
+                  type = "entity";
+                  entity = "sensor.hallway_humidity";
                 }
                 {
                   type = "entity";

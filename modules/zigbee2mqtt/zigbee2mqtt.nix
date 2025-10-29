@@ -8,7 +8,7 @@
         discoveryTopic = "homeassistant";
         statusTopic = "homeassistant/status";
       };
-      permit_join = true;
+      permit_join = false;
       # EFR32MG24 
       #serial = {
       #  port = "tcp://192.168.1.200:6638";
@@ -43,6 +43,7 @@
       };
       frontend = {
         enabled = true;
+        authToken = "!secrets.yaml password";
         port = 8124;
       };
     };
