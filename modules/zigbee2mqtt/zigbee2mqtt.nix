@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  systemd.services.zigbee2mqtt.after = ["mosquitto"];
+  systemd.services.zigbee2mqtt.after = ["mosquitto.service"];
   services.zigbee2mqtt = {
     enable = true;
     settings = {
