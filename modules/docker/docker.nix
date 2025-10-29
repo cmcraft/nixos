@@ -41,6 +41,7 @@
     redbot = {
       image = "phasecorex/red-discordbot:full";
       autoStart = false; # it doesn't like the token?
+      privileged = true;
       volumes = [ "/var/lib/containers/storage/redbot:/data" ];
       environmentFiles = [
         config.sops.templates."redbot".path
