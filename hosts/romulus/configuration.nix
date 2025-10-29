@@ -80,6 +80,7 @@
     home-assistant
     terraria-server
 
+    usbutils
   ];
 
   boot.loader.systemd-boot.enable = true;
