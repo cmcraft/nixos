@@ -4,7 +4,6 @@
   services.home-assistant = {
     enable = true;
 
-    #likely broken
     package = pkgs.home-assistant.override {
       extraPackages = ps: with ps; [
         google-auth
@@ -35,7 +34,6 @@
       "google"
       "nest"
       "openweathermap"
-      # likely broken
       "http"
       "climate"
       "camera"
