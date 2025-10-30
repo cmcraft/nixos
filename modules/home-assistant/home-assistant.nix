@@ -163,6 +163,12 @@
                 {
                   entity = "fan.living_room_fan";
                 }
+                {
+                  entity = "light.living_room_fan_1";
+                }
+                {
+                  entity = "light.living_room_fan_2";
+                }
               ];
             }
           ];
