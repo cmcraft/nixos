@@ -16,6 +16,6 @@
 
     # inputs.zen-browser.packages.${pkgs.system}.default
     webcord
-    bitwarden
+    bitwarden-desktop
   ];
 }
