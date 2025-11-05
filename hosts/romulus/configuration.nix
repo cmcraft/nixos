@@ -22,7 +22,7 @@
     ../../modules/home-assistant/home-assistant.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
-    ../../modules/meshtastic/meshtastic.nix
+    # ../../modules/meshtastic/meshtastic.nix
     ../../modules/mosquitto/mosquitto.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
