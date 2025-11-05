@@ -1,7 +1,7 @@
 { inputs, config, ... }:
 {
   services.meshtastic = {
-    enabled = true;
+    enable = true;
     openFirewall = true;
     enableAutodiscovery = true;
   };
