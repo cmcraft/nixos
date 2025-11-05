@@ -9,7 +9,6 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
-    inputs.meshtastic.nixosModules.default
     ../../modules/avahi/avahi.nix
     ../../modules/ddns-updater/ddns-updater.nix
     ../../modules/disko/disko-elysium.nix
@@ -22,7 +21,6 @@
     ../../modules/home-assistant/home-assistant.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
-    ../../modules/meshtastic/meshtastic.nix
     ../../modules/mosquitto/mosquitto.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix

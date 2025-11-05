@@ -55,14 +55,9 @@
     #   url = "git+ssh://git@github.com/cmcraft/secrets.git?ref=main&shallow=1";
     #   flake = false;
     # };
-
-    meshtastic = {
-      url = "github:benjajaja/nixos-meshtastic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, meshtastic, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -85,7 +80,6 @@
           }
         sops-nix.nixosModules.sops
         inputs.disko.nixosModules.disko
-        meshtastic.nixosModules.default
       ];
     };
     nixosConfigurations.romulus = nixpkgs.lib.nixosSystem {
