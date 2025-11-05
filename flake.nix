@@ -108,7 +108,7 @@
           }
         sops-nix.nixosModules.sops
         inputs.disko.nixosModules.disko
-        nixos-meshtastic.nixosModules.meshtastic
+        meshtastic.nixosModules.meshtastic
       ];
     };
     nixosConfigurations.remus = nixpkgs.lib.nixosSystem {
