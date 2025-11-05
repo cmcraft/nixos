@@ -4,6 +4,6 @@
     enable = true;
     openFirewall = true;
     enableAutodiscovery = true;
-    apiPort = "4403";
+    apiPort = 4403;
   };
 }
