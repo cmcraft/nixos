@@ -9,12 +9,12 @@
 
     #hyprland stuff
     waypaper
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    inputs.hyprland-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
     grim
     slurp
     wl-clip-persist
 
-    # inputs.zen-browser.packages.${pkgs.system}.default
+    # inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     webcord
     bitwarden-desktop
   ];

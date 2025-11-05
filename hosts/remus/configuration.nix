@@ -58,7 +58,7 @@
   
   environment.systemPackages = [ 
     pkgs.kitty
-    inputs.home-manager.packages.${pkgs.system}.default
+    inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
 
     # gaming stuff that aren't modules
