@@ -8,7 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
-    inputs.nixos-meshtastic.nixosModules.meshtastic
+    inputs.meshtastic.nixosModules.nixos-meshtastic
     inputs.sops-nix.nixosModules.sops
     ../../modules/avahi/avahi.nix
     ../../modules/ddns-updater/ddns-updater.nix
