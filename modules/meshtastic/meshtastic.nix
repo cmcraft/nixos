@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, config, ... }:
 {
   services.meshtastic = {
     enabled = true;
