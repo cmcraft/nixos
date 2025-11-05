@@ -85,6 +85,7 @@
           }
         sops-nix.nixosModules.sops
         inputs.disko.nixosModules.disko
+        meshtastic.nixosModules.default
       ];
     };
     nixosConfigurations.romulus = nixpkgs.lib.nixosSystem {
