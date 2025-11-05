@@ -57,7 +57,7 @@
     # };
 
     meshtastic = {
-      url = "github:nvmd/nixos-meshtastic";
+      url = "github:benjajaja/nixos-meshtastic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -108,7 +108,6 @@
           }
         sops-nix.nixosModules.sops
         inputs.disko.nixosModules.disko
-        meshtastic.nixosModules.meshtastic
       ];
     };
     nixosConfigurations.remus = nixpkgs.lib.nixosSystem {
