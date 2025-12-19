@@ -21,7 +21,6 @@
     ../../modules/home-assistant/home-assistant.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
-    ../../modules/minecraft-servers/minecraft-servers.nix
     ../../modules/mosquitto/mosquitto.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
