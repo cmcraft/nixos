@@ -8,7 +8,6 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
-    inputs.nix-mc.nixosModules.nix-mc
     inputs.sops-nix.nixosModules.sops
     ../../modules/avahi/avahi.nix
     ../../modules/ddns-updater/ddns-updater.nix

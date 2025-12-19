@@ -64,6 +64,26 @@
   };
 
   virtualisation.oci-containers.containers = {
+    burnt-toast = {
+      image = "itzg/minecraft-server:java8";
+      autoStart = false;
+      ports = [ 
+        "25565:25565"
+      ];
+      volumes = [ 
+        "/var/lib/containers/storage/minecraft/burnt-toast/modpacks:/modpacks"
+        "/var/lib/containers/storage/minecraft/burnt-toast/data:/data"  
+      ];
+      environment = {
+        EULA = "true";
+        TYPE = "CURSEFORGE";
+        CF_SERVER_MOD = "/modpacks/CottageWitchTCC2.zip";
+        VERSION = "1.19.2";
+      };
+    };
+  };
+
+  virtualisation.oci-containers.containers = {
     terraria = {
       image = "ryshe/terraria:latest";
       autoStart = false;

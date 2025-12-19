@@ -50,19 +50,9 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nix-mc = {
-      url = "github:aster-void/nix-mc";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    cozycraft = {
-      url = "github:cmcraft/cozycraft/v1.0.0";
-      flake = false;
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, nix-mc, cozycraft, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
