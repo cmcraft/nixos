@@ -76,7 +76,7 @@
       ];
       environment = {
         EULA = "true";
-        TYPE = "CURSEFORGE";
+        TYPE = "FORGE";
         CF_SERVER_MOD = "/modpacks/CottageWitchTCC2.zip";
         VERSION = "1.19.2";
       };
