@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    inputs.nix-mc.nixosModules.nix-mc
     inputs.sops-nix.nixosModules.sops
     ../../modules/avahi/avahi.nix
     ../../modules/ddns-updater/ddns-updater.nix
@@ -21,6 +22,7 @@
     ../../modules/home-assistant/home-assistant.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
+    ../../modules/minecraft-servers/minecraft-servers.nix
     ../../modules/mosquitto/mosquitto.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
@@ -33,6 +35,8 @@
     ../../modules/zigbee2mqtt/zigbee2mqtt.nix
   ];
   
+  nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
+
   nix.gc = {
     automatic = true;
     dates = "weekly";

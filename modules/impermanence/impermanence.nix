@@ -8,6 +8,7 @@
       "/var/db/sudo"
       "/var/lib/bluetooth"
       "/var/lib/containers"
+      "/var/lib/minecraft"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/containers/storage/redbot"
