@@ -1,4 +1,4 @@
-{config, inputs.cozycraft, ... }:
+{config, inputs, ... }:
 {
   services.minecraft = {
     enable = true;
