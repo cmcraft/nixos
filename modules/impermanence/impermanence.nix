@@ -10,6 +10,7 @@
       "/var/lib/containers"
       "/var/lib/minecraft"
       "/var/lib/minecraft/burnt-toast"
+      "/srv/minecraft/burnt-toast"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/containers/storage/redbot"
