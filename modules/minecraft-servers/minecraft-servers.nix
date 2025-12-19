@@ -2,7 +2,6 @@
 {
   services.minecraft = {
     enable = true;
-    eula = true;
     openFirewall = true;
 
     servers = {
