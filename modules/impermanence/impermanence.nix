@@ -12,6 +12,7 @@
       "/var/lib/systemd/coredump"
       "/var/lib/containers/storage/minecraft"
       "/var/lib/containers/storage/minecraft/burnt-toast"
+      "/var/lib/containers/storage/minecraft/burnt-toast/data"
       "/var/lib/containers/storage/minecraft/burnt-toast/modpacks"
       "/var/lib/containers/storage/redbot"
       "/var/lib/containers/storage/redbot/core/logs"
