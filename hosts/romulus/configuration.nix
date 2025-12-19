@@ -7,7 +7,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.cozycraft.nixosModules.cozycraft
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-mc.nixosModules.nix-mc
     inputs.sops-nix.nixosModules.sops

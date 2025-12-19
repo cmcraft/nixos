@@ -1,4 +1,4 @@
-{config, cozycraft, ... }:
+{config, inputs.cozycraft, ... }:
 {
   services.minecraft = {
     enable = true;
@@ -8,8 +8,8 @@
       burnt-toast = {
         type = "forge";
         symlinks = {
-          mods = "${cozycraft}/mods";
-          config = "${cozycraft}/config";
+          mods = "${inputs.cozycraft}/mods";
+          config = "${inputs.cozycraft}/config";
         };
         serverProperties = {
           "server-port" = 25565;
