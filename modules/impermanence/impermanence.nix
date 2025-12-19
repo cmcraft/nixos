@@ -11,6 +11,8 @@
       "/var/lib/minecraft"
       "/var/lib/minecraft/burnt-toast"
       "/srv/minecraft/burnt-toast"
+      "/srv/minecraft/burnt-toast/config"
+      "/srv/minecraft/burnt-toast/mods"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/containers/storage/redbot"
