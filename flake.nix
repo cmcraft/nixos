@@ -59,7 +59,7 @@
     cozycraft = {
       url = "github:cmcraft/cozycraft/v1.0.0";
       flake = false;
-    }
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, nix-mc, cozycraft, ... }@inputs: 
