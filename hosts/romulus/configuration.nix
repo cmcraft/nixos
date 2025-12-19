@@ -35,7 +35,6 @@
     ../../modules/zigbee2mqtt/zigbee2mqtt.nix
   ];
   
-  nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 
   nix.gc = {
     automatic = true;
