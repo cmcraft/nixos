@@ -47,7 +47,6 @@ in
       }
     }
   '';
-  owner = "hass";
   path = "/var/lib/hass/.storage/application_credentials";
   };
 
@@ -88,7 +87,6 @@ in
       user: cmcraft
       password: ${config.sops.placeholder."mosquitto/password"}
     '';
-    owner = "zigbee2mqtt";
     path = "/var/lib/zigbee2mqtt/secrets.yaml";
   };
   
