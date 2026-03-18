@@ -4,16 +4,26 @@
 # _____ FOR REF ONLY _____ #
 # btrfs subvolume snapshot -r /mnt/root /mnt/root-blank
 # umount /mnt
-# _____ _____ #
+# __________ #
+
+# _____ FOR REF ONLY _____ #
+# nix run --extra-experimental-features "nix-command flakes" nixpkgs#sops secrets/secrets.yaml
+# __________ #
 
 # cp repo to /persist/etc/nixos
-# sudo nixos-install --no-root-password --root /mnt
+# mkdir -p /mnt/persist/home/cmcraft/.config/sops/age/
+# touch /mnt/persist/home/cmcraft/.config/sops/age/keys.txt
+# cp secret to keys.txt
+# sudo nixos-install --no-root-password --root /mnt --flake .#hostname
 
+# _____ FOR REF ONLY _____ #
 # or to convert an ssh ed25519 key to an age key
 # mkdir -p ~/.config/sops/age
 # nix run nixpkgs#ssh-to-age -- -private-key -i ~/.ssh/id_ed25519 > ~/.config/sops/age/keys.txt"
 # then
 # nix run nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt
+# __________ #
+
 {
   disko.devices = {
     disk = {
