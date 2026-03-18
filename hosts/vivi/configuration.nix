@@ -79,7 +79,7 @@
     shell = pkgs.fish;
     group = "cmcraft";
     extraGroups = [ "users" "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [ config.sops.secrets."cmcraft/public-key".content ];
+    openssh.authorizedKeys.keyFiles = [ config.sops.secrets."cmcraft/public-key".path ];
   };
 
   users.groups.cmcraft = {};
