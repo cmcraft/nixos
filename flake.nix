@@ -62,8 +62,6 @@
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         {
-            imports = [ home-manager.nixosModules.home-manager ];
-            
             home-manager.users.cmcraft =
               { ... }:
               {
@@ -85,8 +83,6 @@
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         {
-            imports = [ home-manager.nixosModules.home-manager ];
-            
             home-manager.users.cmcraft =
               { ... }:
               {
@@ -108,8 +104,6 @@
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         {
-            imports = [ home-manager.nixosModules.home-manager ];
-
             home-manager.users.cmcraft =
               { ... }:
               {
@@ -132,8 +126,6 @@
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         {
-            imports = [ home-manager.nixosModules.home-manager ];
-
             home-manager.users.cmcraft =
               { ... }:
               {
