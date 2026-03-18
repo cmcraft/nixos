@@ -45,19 +45,10 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.variables.EDITOR = "nvim";
 
-  # GPU / ROCm packages for LLM workloads
-  boot.kernelPackages.nixpkgs.modules = [
-    "hardware.firmware.amdgpu-firmware"
-  ];
-
   environment.systemPackages = [
     pkgs.kitty
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
-
-    # Vulkan and ROCm for LLM workloads
-    pkgs.vulkan-loader
-    pkgs.radeon-vulkan
 
     # LM Studio CLI
     pkgs.lmstudio
