@@ -188,4 +188,9 @@ in
         }
       ]
   '';
+  sops.templates."cmcraft/public-key"= {
+    content = ''
+      ${config.cops.placeholder."cmcraft/public-key"}
+    '';
+  };
 }
