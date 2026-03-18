@@ -9,7 +9,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
-    ../../modules/disko/disko-vivi.nix
+    ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
