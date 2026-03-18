@@ -1,6 +1,6 @@
 { ... }:
 {
-  home.persistence."/persist/home/cmcraft" = {
+  home.persistence."/persist" = {
     directories = [
       "Downloads"
       "Music"
@@ -17,13 +17,11 @@
       ".config/sops/age"
       {
         directory = ".local/share/Steam";
-        method = "symlink";
       }
     ];
     files = [
       ".screenrc"
     ];
-    allowOther = true;
   };
   home.stateVersion = "25.11";
 }
