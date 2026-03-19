@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   wayland.windowManager.hyprland.settings = {
-    windowrulev2 = [
+    windowrule = [
       # browser tags
       "tag +browser, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr|[Ff]irefox-bin)$"
       "tag +browser, class:^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$"
