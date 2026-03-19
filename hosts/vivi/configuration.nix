@@ -57,9 +57,9 @@
   #  };
   environment.systemPackages = [
     pkgs.llama-cpp
-    pkgs.llamacpp-rocm.gfx1151
+    pkgs.llamacpp-rocm
     pkgs.clinfo
-    
+
     pkgs.git
     pkgs.kitty
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
