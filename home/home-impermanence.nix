@@ -11,6 +11,7 @@
       ".gnupg"
       ".ssh"
       ".nixops"
+      ".lmstudio"
       ".local/share/keyrings"
       ".local/share/direnv"
       ".config/Code"
