@@ -10,6 +10,7 @@
     inputs.sops-nix.nixosModules.sops
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
+    ../../modules/fwupd/fwupd.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
@@ -46,7 +47,6 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = [
-    pkgs.fwupdmgr
     pkgs.git
     pkgs.kitty
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
