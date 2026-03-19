@@ -59,7 +59,8 @@
     pkgs.llama-cpp
     pkgs.llamacpp-rocm
     pkgs.clinfo
-
+    pkgs.claude-code
+    pkgs.open-code
     pkgs.git
     pkgs.kitty
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
