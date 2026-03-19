@@ -3,54 +3,54 @@
   wayland.windowManager.hyprland.settings = {
     windowrule = [
       # browser tags
-      "tag +browser, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr|[Ff]irefox-bin)$"
-      "tag +browser, class:^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$"
-      "tag +browser, class:^(chrome-.+-Default)$" # Chrome PWAs
-      "tag +browser, class:^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable))$"
-      "tag +browser, class:^(Brave-browser(-beta|-dev|-unstable)?)$"
-      "tag +browser, class:^([Tt]horium-browser|[Cc]achy-browser)$"
-      "tag +browser, class:^(zen-alpha|zen)$"
-      "tag +browser, class:^([Bb]itwarden)$"
+      "tag +browser, match:class ^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr|[Ff]irefox-bin)$"
+      "tag +browser, match:class ^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$"
+      "tag +browser, match:class ^(chrome-.+-Default)$" # Chrome PWAs
+      "tag +browser, match:class ^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable))$"
+      "tag +browser, match:class ^(Brave-browser(-beta|-dev|-unstable)?)$"
+      "tag +browser, match:class ^([Tt]horium-browser|[Cc]achy-browser)$"
+      "tag +browser, match:class ^(zen-alpha|zen)$"
+      "tag +browser, match:class ^([Bb]itwarden)$"
 
       #im tags
-      "tag +im, class:^([Ww]eb[Cc]ord)$"
-      "tag +im, class:^([Dd]iscord(-[Cc]anary)?)$"
+      "tag +im, match:class ^([Ww]eb[Cc]ord)$"
+      "tag +im, match:class ^([Dd]iscord(-[Cc]anary)?)$"
       
       # terminals
-      "tag +terminal, class:^(Alacritty|kitty|kitty-dropterm)$"
+      "tag +terminal, match:class ^(Alacritty|kitty|kitty-dropterm)$"
       
       # project tags
-      "tag +projects, class:^(codium|codium-url-handler|VSCodium)$"
-      "tag +projects, class:^(VSCode|code-url-handler)$"
-      "tag +projects, class:^([Cc]ode)$"
-      "tag +projects, class:^(jetbrains-.+)$" # JetBrains IDEs
+      "tag +projects, match:class ^(codium|codium-url-handler|VSCodium)$"
+      "tag +projects, match:class ^(VSCode|code-url-handler)$"
+      "tag +projects, match:class ^([Cc]ode)$"
+      "tag +projects, match:class ^(jetbrains-.+)$" # JetBrains IDEs
 
       # game tags
-      "tag +games, class:^(gamescope)$"
-      "tag +games, class:^(steam_app_\d+)$"
+      "tag +games, match:class ^(gamescope)$"
+      "tag +games, match:class ^(steam_app_\d+)$"
 
       #gamestore
-      "tag +gamestore, class:^([Ss]team(-native)?)$"
-      "tag +gamestore, class:^([Hh]eroic)$"
-      "tag +gamestore, class:^(net.lutris.[Ll]utris)$"
-      "tag +gamestore, class:^(com.usebottles.[Bb]ottles)$"
+      "tag +gamestore, match:class ^([Ss]team(-native)?)$"
+      "tag +gamestore, match:class ^([Hh]eroic)$"
+      "tag +gamestore, match:class ^(net.lutris.[Ll]utris)$"
+      "tag +gamestore, match:class ^(com.usebottles.[Bb]ottles)$"
 
       # multimedia tags
-      "tag +multimedia, class:^([Aa]udacious)$"
-      "tag +multimedia_video, class:^([Mm]pv|vlc)$"
+      "tag +multimedia, match:class ^([Aa]udacious)$"
+      "tag +multimedia_video, match:class ^([Mm]pv|vlc)$"
 
       # settings tags
-      "tag +settings, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$"
-      "tag +settings, class:^(qt5ct|qt6ct|[Yy]ad)$"
+      "tag +settings, match:class ^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$"
+      "tag +settings, match:class ^(qt5ct|qt6ct|[Yy]ad)$"
 
       # windowrule move to workspace
-			"workspace 1, tag:projects*"
-      "workspace 1, tag:terminal*"
-      "workspace 2, tag:gamestore*"
-      "workspace 3, tag:games*"
-      "workspace 4, tag:browser*"
-			"workspace 4, tag:im*"
-      "workspace 5, tag:settings*"
+			"workspace 1, match:tag projects*"
+      "workspace 1, match:tag terminal*"
+      "workspace 2, match:tag gamestore*"
+      "workspace 3, match:tag games*"
+      "workspace 4, match:tag browser*"
+			"workspace 4, match:tag im*"
+      "workspace 5, match:tag settings*"
     ];
   };
 }
