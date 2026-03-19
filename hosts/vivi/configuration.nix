@@ -10,13 +10,17 @@
     inputs.sops-nix.nixosModules.sops
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
+    ../../modules/fuse/fuse.nix
     ../../modules/fwupd/fwupd.nix
+    ../../modules/greetd/greetd.nix
+    ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
     ../../modules/stylix/stylix.nix
+    ../../modules/xserver/xserver.nix
   ];
 
   nix.gc = {
@@ -140,7 +144,13 @@
     openssh.authorizedKeys.keyFiles = [ ];
   };
 
+  users.users.colord = {
+    isSystemUser = true;
+    group = "colord";
+  };
+
   users.groups.cmcraft = {};
+  users.groups.colord = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
@@ -152,5 +162,4 @@
   };
 
   system.stateVersion = "25.05";
-
 }
