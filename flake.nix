@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -52,7 +53,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -125,6 +126,7 @@
         ./hosts/vivi/configuration.nix
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
+        nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series
         {
             imports = [ home-manager.nixosModules.home-manager ];
             home-manager.users.cmcraft =
