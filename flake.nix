@@ -51,9 +51,11 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    llamacpp-rocm.url = "github:hellas-ai/nix-strix-halo";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llamacpp-rocm, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -127,6 +129,28 @@
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series
+        # Import the overlay
+        ({ pkgs, ... }: {
+          nixpkgs.overlays = [ llamacpp-rocm.overlays.default ];
+        })
+        
+        # Import the RPC server module
+        llamacpp-rocm.nixosModules.rpc-server
+        
+        # Configure the service
+        ({ pkgs, ... }: {
+          services.llamacpp-rpc-server = {
+            enable = true;
+            package = pkgs.llamacpp-rocm.gfx1151;  # Choose your GPU target
+            threads = 32;
+            host = "0.0.0.0";  # Listen on all interfaces
+            port = 50052;
+            memory = 8192;  # 8GB backend memory
+            device = "0";  # GPU device ID
+            enableCache = true;
+            openFirewall = true;
+          };
+        })
         {
             imports = [ home-manager.nixosModules.home-manager ];
             home-manager.users.cmcraft =

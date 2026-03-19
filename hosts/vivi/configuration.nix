@@ -50,7 +50,13 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.variables.EDITOR = "nvim";
 
+  nixpkgs.config.packageOverrides = pkgs: {
+      llama-cpp = (
+        builtins.getFlake "github:ggerganov/llama.cpp"
+      ).packages.${builtins.currentSystem}.default;
+    };
   environment.systemPackages = [
+    pkgs.llama-cpp
     pkgs.clinfo
     pkgs.git
     pkgs.kitty
