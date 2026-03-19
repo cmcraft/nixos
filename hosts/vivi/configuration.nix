@@ -46,6 +46,7 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = [
+    pkgs.fwupdmgr
     pkgs.git
     pkgs.kitty
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
