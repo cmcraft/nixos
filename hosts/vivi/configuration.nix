@@ -141,6 +141,14 @@
 
   networking.hostName = "vivi";
   networking.networkmanager.enable = true;
+  networking.firewall = {
+    allowPing = true;
+    allowedTCPPorts = [ 80 443 ];
+    extraCommands = ''
+      add rule ip saddr 127.0.0.1 counter accept
+      add rule ip6 saddr ::1 counter accept
+    '';
+  };
 
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
