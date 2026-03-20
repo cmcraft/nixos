@@ -67,7 +67,6 @@
     pkgs.base16-schemes
     pkgs.unzip
     pkgs.patchelf
-    pkgs.appimage
 
     # LM Studio CLI
     pkgs.lmstudio
@@ -147,6 +146,9 @@
       add rule ip6 saddr ::1 counter accept
     '';
   };
+
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
 
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
