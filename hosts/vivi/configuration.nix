@@ -151,7 +151,7 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-
+    pkgs.glibc
   ];
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
