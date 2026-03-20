@@ -54,36 +54,6 @@
     ANTHROPIC_AUTH_TOKEN="lmstudio";
   };
 
-  nixpkgs.config.packageOverrides = pkgs: {
-    lmstudio = (
-      let
-        original = pkgs.lmstudio;
-        wrapper = pkgs.writeShellScriptBin "lms" ''
-          exec ${original}/bin/lm-studio "$@"
-        '';
-      in
-      (pkgs.stdenv.mkDerivation {
-        name = "lmstudio-fixed";
-        nativeBuildInputs = [ pkgs.makeWrapper ];
-        buildCommand =
-          let
-            bin = original + "/bin";
-            wrapperBin = wrapper + "/bin";
-          in
-          ''
-            mkdir -p $out/bin
-            cp ${bin}/lm-studio $out/bin/
-            ln -s lm-studio $out/bin/lms
-            cat > $out/bin/lms-wrapper <<EOF
-              #!/bin/sh
-              # This is a wrapper to ensure lms uses the bwrap environment
-              exec ${wrapperBin}/lms "$@"
-            EOF
-            chmod +x $out/bin/lms-wrapper
-          '';
-      })
-    );
-  };
   environment.systemPackages = [
     pkgs.llama-cpp
     pkgs.llamacpp-rocm
@@ -97,6 +67,7 @@
     pkgs.base16-schemes
     pkgs.unzip
     pkgs.patchelf
+    pkgs.appimage
 
     # LM Studio CLI
     pkgs.lmstudio
