@@ -48,7 +48,11 @@
 
   environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.variables.EDITOR = "nvim";
+  environment.variables = {
+    EDITOR = "nvim";
+    ANTHROPIC_BASE_URL="http://localhost:1234";
+    ANTHROPIC_AUTH_TOKEN="lmstudio";
+  };
 
   #nixpkgs.config.packageOverrides = pkgs: {
   #    llama-cpp = (
