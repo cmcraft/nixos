@@ -69,7 +69,7 @@
     pkgs.patchelf
 
     # LM Studio CLI
-    pkgs.lmstudio
+    inputs.lmstudio.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.fastfetch
 
     pkgs.sops
