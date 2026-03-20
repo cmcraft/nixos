@@ -71,7 +71,6 @@
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
     pkgs.unzip
-    pkgs.readelf
     pkgs.ldd
 
     # LM Studio CLI
