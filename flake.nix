@@ -52,11 +52,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lmstudio.url = "github:tomsch/lmstudio-nix";
     llamacpp-rocm.url = "github:hellas-ai/nix-strix-halo";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llamacpp-rocm, lmstudio, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llamacpp-rocm, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";

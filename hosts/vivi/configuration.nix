@@ -68,8 +68,7 @@
     pkgs.unzip
     pkgs.patchelf
 
-    # LM Studio CLI
-    inputs.lmstudio.packages.${pkgs.stdenv.hostPlatform.system}.default
+    pkgs.lmstudio
     pkgs.fastfetch
 
     pkgs.sops
