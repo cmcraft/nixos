@@ -70,6 +70,7 @@
     pkgs.kitty
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
+    pkgs.unzip
 
     # LM Studio CLI
     pkgs.lmstudio
