@@ -10,8 +10,11 @@
     image = "docker.io/kyuz0/amd-strix-halo-toolboxes:vulkan-radv";
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
-    # extraGroups = [ "video" "render" ];
-    # securityOpt = [ "seccomp=unconfined" ];
+    extraOptions = [
+      "--group-add=video"
+      "--group-add=render"
+      "--security-opt=seccomp=unconfined"
+    ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/base:/home/cmcraft"
     ];
@@ -21,8 +24,11 @@
     image = "docker.io/kyuz0/amd-strix-halo-comfyui:latest";
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
-    # extraGroups = [ "video" "render" ];
-    # securityOpt = [ "seccomp=unconfined" ];
+    extraOptions = [
+      "--group-add=video"
+      "--group-add=render"
+      "--security-opt=seccomp=unconfined"
+    ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/comfyui:/home/cmcraft"
     ];
@@ -33,8 +39,11 @@
     image = "docker.io/kyuz0/vllm-therock-gfx1151:latest";
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
-    # extraGroups = [ "video" "render" ];
-    # securityOpt = [ "seccomp=unconfined" ];
+    extraOptions = [
+      "--group-add=video"
+      "--group-add=render"
+      "--security-opt=seccomp=unconfined"
+    ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/vllm:/home/cmcraft"
     ];
@@ -45,8 +54,11 @@
     image = "docker.io/kyuz0/amd-strix-halo-llm-finetuning:latest";
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
-    # extraGroups = [ "video" "render" ];
-    # securityOpt = [ "seccomp=unconfined" ];
+    extraOptions = [
+      "--group-add=video"
+      "--group-add=render"
+      "--security-opt=seccomp=unconfined"
+    ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/finetuning:/home/cmcraft"
     ];
