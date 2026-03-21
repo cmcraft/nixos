@@ -68,6 +68,7 @@
     pkgs.base16-schemes
     pkgs.unzip
     pkgs.patchelf
+    pkgs.appimageTools
 
     pkgs.lmstudio
     pkgs.fastfetch
