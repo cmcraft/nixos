@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, appimageTools, fetchurl, pkgs, ... }:
 
 with lib;
 
