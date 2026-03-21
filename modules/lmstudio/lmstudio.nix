@@ -7,13 +7,16 @@ let
 
   # LM Studio AppImage - latest version as of 2026-03-20
   lmstudioVersion = "0.4.7-4";
-  lmstudioAppImage = pkgs.fetchurl {
-    url = "https://installers.lmstudio.ai/linux/x64/${lmstudioVersion}/LM-Studio-${lmstudioVersion}-x64.AppImage";
-    sha256 = "05gzqq1vhl2jhyk0rs8x8881cx2rqdjhc0pnicag5y41pl3a1m6r";
+  lmstudioAppImage = appimageTools.wrapAppImage {
+    name = "lm-studio"; 
+    src = fetchurl {
+      url = "https://installers.lmstudio.ai/linux/x64/${lmstudioVersion}/LM-Studio-${lmstudioVersion}-x64.AppImage";
+      sha256 = "05gzqq1vhl2jhyk0rs8x8881cx2rqdjhc0pnicag5y41pl3a1m6r";
+    };
   };
 
   # Package that wraps the AppImage and exposes lms CLI
-  lmstudioPackage = pkgs.runCommand "lm-studio-${lmstudioVersion}" { } ''
+  lmstudioPackage = pkgs.runCommand "lm-studio" { } ''
     mkdir -p $out/bin
     cp ${lmstudioAppImage} $out/bin/LM-Studio.AppImage
     chmod +x $out/bin/LM-Studio.AppImage
