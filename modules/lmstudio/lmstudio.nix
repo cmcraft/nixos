@@ -19,16 +19,16 @@ let
     chmod +x $out/bin/LM-Studio.AppImage
 
     # Create lms wrapper script - uses the bundled lms binary from AppImage
-    cat > $out/bin/lms << 'EOF'
+    cat > $out/bin/lms <<EOF
 #!/usr/bin/env bash
-exec "${pkgs.bash}/bin/bash" "$out/bin/LM-Studio.AppImage" lms "$@"
+exec ${pkgs.bash}/bin/bash "$out/bin/LM-Studio.AppImage" lms "\$@"
 EOF
     chmod +x $out/bin/lms
 
     # Create lm-studio wrapper for GUI
-    cat > $out/bin/lm-studio << 'EOF'
+    cat > $out/bin/lm-studio <<EOF
 #!/usr/bin/env bash
-exec "${pkgs.bash}/bin/bash" "$out/bin/LM-Studio.AppImage" "$@"
+exec ${pkgs.bash}/bin/bash "$out/bin/LM-Studio.AppImage" "\$@"
 EOF
     chmod +x $out/bin/lm-studio
 
@@ -38,10 +38,10 @@ EOF
       cp squashfs-root/usr/bin/lms $out/bin/lms-binary
       chmod +x $out/bin/lms-binary
       # Update lms wrapper to use extracted binary
-      cat > $out/bin/lms << 'EOFLMS'
+      cat > $out/bin/lms <<EOF
 #!/usr/bin/env bash
-exec "$out/bin/lms-binary" "$@"
-EOFLMS
+exec "$out/bin/lms-binary" "\$@"
+EOF
       chmod +x $out/bin/lms
     fi
     rm -rf squashfs-root
