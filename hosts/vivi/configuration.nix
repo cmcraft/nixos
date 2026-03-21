@@ -175,6 +175,8 @@
 
   users.groups.cmcraft = {};
   users.groups.colord = {};
+  users.groups.video = {};
+  users.groups.render = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
