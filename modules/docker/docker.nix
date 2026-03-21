@@ -40,7 +40,7 @@
   virtualisation.oci-containers.containers = {
     redbot = {
       image = "phasecorex/red-discordbot:full";
-      autoStart = true;
+      autoStart = false;
       volumes = [ "/var/lib/containers/storage/redbot:/data" ];
       environmentFiles = [
         config.sops.templates."redbot".path
