@@ -9,7 +9,7 @@ let
   lmstudioVersion = "0.4.7-4";
   lmstudioAppImage = pkgs.appimageTools.wrapAppImage {
     name = "lm-studio"; 
-    src = fetchurl {
+    src = pkgs.fetchurl {
       url = "https://installers.lmstudio.ai/linux/x64/${lmstudioVersion}/LM-Studio-${lmstudioVersion}-x64.AppImage";
       sha256 = "05gzqq1vhl2jhyk0rs8x8881cx2rqdjhc0pnicag5y41pl3a1m6r";
     };
