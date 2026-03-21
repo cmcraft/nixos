@@ -141,9 +141,11 @@ in {
       allowedTCPPorts = [ cfg.listenPort ];
     };
   };
+}
 
-  # LM Studio server configuration
-  services.lmstudio = {
+{ config, ... }:
+{
+   services.lmstudio = {
     enable = true;
     user = "cmcraft";
     group = "users";
