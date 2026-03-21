@@ -7,7 +7,7 @@ let
 
   # LM Studio AppImage - latest version as of 2026-03-20
   lmstudioVersion = "0.4.7-4";
-  lmstudioAppImage = appimageTools.wrapAppImage {
+  lmstudioAppImage = pkgs.appimageTools.wrapAppImage {
     name = "lm-studio"; 
     src = fetchurl {
       url = "https://installers.lmstudio.ai/linux/x64/${lmstudioVersion}/LM-Studio-${lmstudioVersion}-x64.AppImage";
