@@ -1,53 +1,62 @@
-{ config, lib, appimageTools, fetchurl, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
 let
   cfg = config.services.lmstudio;
+  appimageTools = pkgs.appimageTools;
+  fetchurl = pkgs.fetchurl;
 
   # LM Studio AppImage - latest version as of 2026-03-20
   lmstudioVersion = "0.4.7-4";
-  lmstudioAppImage = pkgs.appimageTools.wrapAppImage {
-    name = "lm-studio"; 
-    src = pkgs.fetchurl {
-      url = "https://installers.lmstudio.ai/linux/x64/${lmstudioVersion}/LM-Studio-${lmstudioVersion}-x64.AppImage";
-      sha256 = "05gzqq1vhl2jhyk0rs8x8881cx2rqdjhc0pnicag5y41pl3a1m6r";
+  lmstudioSrc = fetchurl {
+    url = "https://installers.lmstudio.ai/linux/x64/${lmstudioVersion}/LM-Studio-${lmstudioVersion}-x64.AppImage";
+    sha256 = "05gzqq1vhl2jhyk0rs8x8881cx2rqdjhc0pnicag5y41pl3a1m6r";
+  };
+
+  # Extract AppImage contents
+  lmstudioExtracted = appimageTools.extractType1 {
+    pname = "lm-studio";
+    version = lmstudioVersion;
+    src = lmstudioSrc;
+  };
+
+  # Wrap the extracted AppImage for system integration
+  lmstudioWrapped = appimageTools.wrapType2 rec {
+    name = "lm-studio";
+    pname = "lm-studio";
+    version = lmstudioVersion;
+    src = lmstudioSrc;
+
+    extraInstallCommands = ''
+      # Copy all extracted files to output
+      cp -r ${lmstudioExtracted}/* $out/
+      chmod +x $out/AppRun
+
+      # Update desktop file to use correct exec
+      substituteInPlace --replace-fail 'Exec=AppRun' 'Exec=${pname}' \
+        $out/share/applications/*.desktop || true
+    '';
+
+    meta = {
+      description = "LM Studio - GUI for local LLM inference";
+      homepage = "https://lmstudio.ai";
+      license = lib.licenses.unfree;
+      platforms = [ "x86_64-linux" ];
+      mainProgram = "lm-studio";
     };
   };
 
-  # Package that wraps the AppImage and exposes lms CLI
-  lmstudioPackage = pkgs.runCommand "lm-studio" { } ''
+  # Extract and bundle the lms binary from the AppImage
+  lmsBinary = pkgs.runCommand "lms-binary" { } ''
     mkdir -p $out/bin
-    cp ${lmstudioAppImage} $out/bin/LM-Studio.AppImage
-    chmod +x $out/bin/LM-Studio.AppImage
-
-    # Create lms wrapper script - uses the bundled lms binary from AppImage
-    cat > $out/bin/lms <<EOF
-#!/usr/bin/env bash
-exec ${pkgs.bash}/bin/bash "$out/bin/LM-Studio.AppImage" lms "\$@"
-EOF
+    cp ${lmstudioExtracted}/resources/app/.webpack/lms $out/bin/lms
     chmod +x $out/bin/lms
+  '';
 
-    # Create lm-studio wrapper for GUI
-    cat > $out/bin/lm-studio <<EOF
-#!/usr/bin/env bash
-exec ${pkgs.bash}/bin/bash "$out/bin/LM-Studio.AppImage" "\$@"
-EOF
-    chmod +x $out/bin/lm-studio
-
-    # Extract lms binary from AppImage for direct execution (more efficient)
-    ${lmstudioAppImage} --appimage-extract 2>/dev/null || true
-    if [ -f squashfs-root/usr/bin/lms ]; then
-      cp squashfs-root/usr/bin/lms $out/bin/lms-binary
-      chmod +x $out/bin/lms-binary
-      # Update lms wrapper to use extracted binary
-      cat > $out/bin/lms <<EOF
-#!/usr/bin/env bash
-exec "$out/bin/lms-binary" "\$@"
-EOF
-      chmod +x $out/bin/lms
-    fi
-    rm -rf squashfs-root
+  # CLI wrapper that uses the extracted lms binary directly
+  lmstudioCLI = pkgs.writeShellScriptBin "lms" ''
+    exec ${lmsBinary}/bin/lms "$@"
   '';
 
 in {
@@ -73,7 +82,7 @@ in {
     dataDir = mkOption {
       type = types.path;
       default = "/var/lib/lmstudio";
-      description = "Directory to store LM Studio data";
+      description = "Directory to store LM Studio data (persistent across reboots)";
     };
 
     listenHost = mkOption {
@@ -104,7 +113,7 @@ in {
     ];
 
     # Expose lm-studio and lms CLI packages
-    environment.systemPackages = [ lmstudioPackage ];
+    environment.systemPackages = [ lmstudioWrapped lmstudioCLI ];
 
     # Set up the data directory with proper ownership
     systemd.tmpfiles.rules = [
@@ -125,12 +134,12 @@ in {
       serviceConfig = {
         Type = "simple";
         ExecStart = ''
-          ${lmstudioPackage}/bin/lms server start \
-            --host ${cfg.listenHost} \
+          ${lmstudioCLI}/bin/lms server start \
+            --bind ${cfg.listenHost} \
             --port ${toString cfg.listenPort}
         '';
         ExecStop = ''
-          ${lmstudioPackage}/bin/lms server stop
+          ${lmstudioCLI}/bin/lms server stop
         '';
         Restart = "on-failure";
         User = cfg.user;

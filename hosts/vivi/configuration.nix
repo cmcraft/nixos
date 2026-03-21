@@ -61,16 +61,13 @@
     pkgs.clinfo
     pkgs.claude-code
     pkgs.opencode
-    
+
     pkgs.git
     pkgs.kitty
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
     pkgs.unzip
     pkgs.patchelf
-    pkgs.appimageTools
-
-    pkgs.lmstudio
     pkgs.fastfetch
 
     pkgs.sops
