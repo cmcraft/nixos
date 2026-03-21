@@ -142,16 +142,3 @@ in {
     };
   };
 }
-
-{ config, ... }:
-{
-   services.lmstudio = {
-    enable = true;
-    user = "cmcraft";
-    group = "users";
-    dataDir = "/var/lib/lmstudio";
-    listenHost = "0.0.0.0";
-    listenPort = 1234;
-    openFirewall = false;
-  };
-}
