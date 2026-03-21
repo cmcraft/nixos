@@ -15,6 +15,7 @@
     ../../modules/greetd/greetd.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
+    ../../modules/lmstudio/lmstudio.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
