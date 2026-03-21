@@ -15,13 +15,13 @@
     ../../modules/greetd/greetd.nix
     ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
-    ../../modules/lmstudio/lmstudio.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
     ../../modules/stylix/stylix.nix
     ../../modules/xserver/xserver.nix
+    ../../modules/docker/strix-halo-llm-toolbox.nix
   ];
 
   nix.gc = {
@@ -183,14 +183,6 @@
     users = {
       cmcraft = import ../../home/home.nix;
     };
-  };
-
-  services.lmstudio = {
-    enable = true;
-    dataDir = "/var/lib/lmstudio";
-    listenHost = "0.0.0.0";
-    listenPort = 1234;
-    openFirewall = false;
   };
 
   system.stateVersion = "25.05";

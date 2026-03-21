@@ -25,7 +25,10 @@
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
-      { directory = "/var/lib/lmstudio"; user = "cmcraft"; group = "users"; mode = "u=rwx,g=rx,o="; }
+      "/var/lib/containers/storage/strix-halo/base"
+      "/var/lib/containers/storage/strix-halo/comfyui"
+      "/var/lib/containers/storage/strix-halo/vllm"
+      "/var/lib/containers/storage/strix-halo/finetuning"
     ];
 
     files = [
