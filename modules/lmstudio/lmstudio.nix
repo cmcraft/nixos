@@ -57,7 +57,7 @@ in {
 
     user = mkOption {
       type = types.str;
-      default = "cmcraft";
+      default = "root";
       description = "User to run LM Studio as";
     };
 
