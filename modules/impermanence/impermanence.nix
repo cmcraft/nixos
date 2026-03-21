@@ -40,4 +40,4 @@
       # if you use docker or LXD, also persist their directories
     ];
   };
-}⏎                
+}
