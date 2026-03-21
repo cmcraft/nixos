@@ -11,7 +11,7 @@
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
     # extraGroups = [ "video" "render" ];
-    securityOpt = [ "seccomp=unconfined" ];
+    # securityOpt = [ "seccomp=unconfined" ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/base:/home/cmcraft"
     ];
@@ -22,7 +22,7 @@
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
     # extraGroups = [ "video" "render" ];
-    securityOpt = [ "seccomp=unconfined" ];
+    # securityOpt = [ "seccomp=unconfined" ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/comfyui:/home/cmcraft"
     ];
@@ -34,7 +34,7 @@
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
     # extraGroups = [ "video" "render" ];
-    securityOpt = [ "seccomp=unconfined" ];
+    # securityOpt = [ "seccomp=unconfined" ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/vllm:/home/cmcraft"
     ];
@@ -46,7 +46,7 @@
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];
     # extraGroups = [ "video" "render" ];
-    securityOpt = [ "seccomp=unconfined" ];
+    # securityOpt = [ "seccomp=unconfined" ];
     volumes = [
       "/var/lib/containers/storage/strix-halo/finetuning:/home/cmcraft"
     ];
