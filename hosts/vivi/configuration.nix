@@ -13,13 +13,13 @@
     ../../modules/fuse/fuse.nix
     ../../modules/fwupd/fwupd.nix
     ../../modules/greetd/greetd.nix
-    ../../modules/hyprland/hyprland.nix
+    # ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
-    ../../modules/stylix/stylix.nix
+    # ../../modules/stylix/stylix.nix
     ../../modules/xserver/xserver.nix
     ../../modules/docker/strix-halo-llm-toolbox.nix
   ];
@@ -49,6 +49,7 @@
 
   environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   environment.variables = {
     EDITOR = "nvim";
     ANTHROPIC_BASE_URL="http://localhost:1234";
@@ -58,6 +59,7 @@
   environment.systemPackages = [
     pkgs.llama-cpp
     pkgs.llamacpp-rocm
+    pkgs.llamacpp-vulcan
     pkgs.clinfo
     pkgs.claude-code
     pkgs.opencode
