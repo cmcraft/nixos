@@ -132,16 +132,16 @@
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series
         # Import the overlay
         ({ pkgs, ... }: {
-          nixpkgs.overlays = [ llamacpp-rocm.overlays.default ];
+          nixpkgs.overlays = [ 
+            llamacpp-rocm.overlays.default 
+            comfyui-nix.overlays.default
+          ];
 
           environment.systemPackages = with pkgs; [
             llamacpp-rocm.gfx1151
+            comfy-ui-rocm
           ];
         })
-        {
-          nixpkgs.overlays = [ comfyui-nix.overlays.default ];
-          environment.systemPackages = [ pkgs.comfy-ui-rocm ];
-        }
 
         llamacpp-rocm.nixosModules.rpc-server
 
