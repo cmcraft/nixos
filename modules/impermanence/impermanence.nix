@@ -7,6 +7,7 @@
       "/etc/secureboot"
       "/var/db/sudo"
       "/var/lib/bluetooth"
+      "/var/lib/comfyui"
       "/var/lib/containers"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
@@ -25,10 +26,7 @@
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
-      "/var/lib/containers/storage/strix-halo/base"
       "/var/lib/containers/storage/strix-halo/comfyui"
-      "/var/lib/containers/storage/strix-halo/vllm"
-      "/var/lib/containers/storage/strix-halo/finetuning"
     ];
 
     files = [

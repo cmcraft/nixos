@@ -53,9 +53,10 @@
     };
 
     llamacpp-rocm.url = "github:hellas-ai/nix-strix-halo";
+    comfyui-nix.url = "github:utensils/comfyui-nix";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llamacpp-rocm, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llamacpp-rocm, comfyui-nix, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -137,6 +138,10 @@
             llamacpp-rocm.gfx1151
           ];
         })
+        {
+          nixpkgs.overlays = [ comfyui-nix.overlays.default ];
+          environment.systemPackages = [ pkgs.comfy-ui-rocm ];
+        }
 
         llamacpp-rocm.nixosModules.rpc-server
 
