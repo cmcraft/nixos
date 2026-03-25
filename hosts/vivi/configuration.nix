@@ -12,7 +12,7 @@
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
     ../../modules/fwupd/fwupd.nix
-    ../../modules/greetd/greetd.nix
+    # ../../modules/greetd/greetd.nix
     # ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
@@ -20,8 +20,8 @@
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
     # ../../modules/stylix/stylix.nix
-    ../../modules/xserver/xserver.nix
-    ../../modules/docker/strix-halo-llm-toolbox.nix
+    # ../../modules/xserver/xserver.nix
+    # ../../modules/docker/strix-halo-llm-toolbox.nix
   ];
 
   nix.gc = {
