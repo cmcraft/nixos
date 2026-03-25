@@ -146,7 +146,7 @@
         llamacpp-rocm.nixosModules.rpc-server
 
         ({ pkgs, ... }: {
-          services.llamacpp-rpc-server = {
+          services.llamacpp-rpc-servers = {
             enable = true;
             package = pkgs.llamacpp-rocm;  # Choose your GPU target
             threads = 32;
