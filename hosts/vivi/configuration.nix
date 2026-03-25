@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
+    ../../modules/comfyui/comfyui.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
@@ -17,6 +18,7 @@
     ../../modules/impermanence/impermanence.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
+    ../../modules/open-webui/open-webui.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
     # ../../modules/stylix/stylix.nix
@@ -150,10 +152,10 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    glibc
-  ];
+  # programs.nix-ld.enable = true;
+  # programs.nix-ld.libraries = with pkgs; [
+  #   glibc
+  # ];
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
 
