@@ -30,6 +30,7 @@
       ".config/environment.d"
       ".config/fastfetch"
       ".config/fontconfig"
+      ".config/forge"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
