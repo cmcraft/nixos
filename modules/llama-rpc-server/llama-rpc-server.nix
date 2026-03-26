@@ -1,6 +1,6 @@
 { pkgs, ... }: 
 {
-  service.llamacpp-rocm = {
+  services.llamacpp-rocm = {
     enable = true;
   };
   services.llamacpp-rpc-server = {
