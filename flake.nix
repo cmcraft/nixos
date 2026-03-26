@@ -139,9 +139,9 @@
             comfyui-nix.overlays.default
           ];
 
-          environment.systemPackages = with pkgs; [
-            llamacpp-rocm
-            comfy-ui-rocm
+          environment.systemPackages = [
+            pkgs.llamacpp-rocm.gfx1151
+            pkgs.comfy-ui-rocm
           ];
         })
 

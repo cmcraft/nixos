@@ -1,6 +1,6 @@
 { pkgs, ... }: 
 {
-  services.llamacpp-rpc-servers.main = {
+  services.llamacpp-rpc-server = {
     enable = true;
     package = pkgs.llamacpp-rocm;  # Choose your GPU target
     threads = 32;

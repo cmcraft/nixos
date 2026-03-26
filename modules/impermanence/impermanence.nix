@@ -7,6 +7,7 @@
       "/etc/NetworkManager/system-connections"
       "/etc/nixos"
       "/etc/secureboot"
+      "/var/cache/llamacpp-rpc"
       "/var/db/sudo"
       "/var/lib/bluetooth"
       "/var/lib/comfyui"
@@ -19,13 +20,14 @@
       "/var/lib/containers/storage/terraria"
       "/var/lib/containers/storage/terraria/config"
       "/var/lib/hass"
+      "/var/lib/llama-cpp"
       "/var/lib/nixos"
-      { directory = "/var/lib/private/open-webui"; mode = "0700"; }
       "/var/lib/systemd/coredump"
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
       { directory = "/var/lib/open-webui"; mode = "0700"; }
+      { directory = "/var/lib/private/open-webui"; mode = "0700"; }
       # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
     ];
 
