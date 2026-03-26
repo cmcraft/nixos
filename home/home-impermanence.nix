@@ -1,6 +1,6 @@
 { ... }:
 {
-  home.persistence."/persist" = {
+  cmcraft.home.persistence."/persist" = {
     directories = [
       ".cache"
       ".claude"
