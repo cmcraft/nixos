@@ -26,6 +26,7 @@
       ".config/Code"
       ".config/sops/age"
       ".icons"
+      ".vscode"
       {
         directory = ".local/share/Steam";
       }
