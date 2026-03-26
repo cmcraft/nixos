@@ -32,6 +32,7 @@
       ".config/fontconfig"
       ".config/forge"
       ".config/gdu"
+      ".config/git"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
