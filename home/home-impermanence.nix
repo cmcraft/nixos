@@ -14,6 +14,7 @@
       ".gnupg"
       ".ssh"
       ".mozilla"
+      ".themes"
       ".nixops"
       ".lmstudio"
       ".local/share/keyrings"
