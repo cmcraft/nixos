@@ -28,6 +28,7 @@
       ".config/qt6ct"
       ".config/rofi"
       ".config/sops/age"
+      ".config/stylix"
       ".config/Vencord"
       ".gnupg"
       ".icons"
