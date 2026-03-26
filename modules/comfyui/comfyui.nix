@@ -11,6 +11,8 @@
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
     dataDir = "/home/cmcraft/comfy";
     openFirewall = true;
+    user = "cmcraft";
+    group = "users";
     # extraArgs = [ "--lowvram" ];
     # environment = { };
   };

@@ -148,7 +148,7 @@
   networking.networkmanager.enable = true;
   networking.firewall = {
     allowPing = true;
-    allowedTCPPorts = [ 80 443 3000 8080 8188];
+    allowedTCPPorts = [ 80 443 3000 8080 ];
   };
 
   programs.appimage.enable = true;
@@ -170,7 +170,7 @@
     useDefaultShell = false;
     shell = pkgs.fish;
     group = "cmcraft";
-    extraGroups = [ "users" "wheel" "networkmanager" "comfyui" ];
+    extraGroups = [ "users" "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGY+/Xe3OEDCmxq00H/MQu7XrJbkllgdho1VoN4PuL3k cmcraft@Remus" ];
   };
 
