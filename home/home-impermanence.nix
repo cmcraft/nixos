@@ -46,6 +46,7 @@
       ".vscode"
       "comfy"
       "comfy/models/checkpoints"
+      "comfy/custom_nodes"
       "comfy/output"
       "Documents"
       "Downloads"

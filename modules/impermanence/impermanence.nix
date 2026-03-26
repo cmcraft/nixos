@@ -27,6 +27,7 @@
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
       { directory = "/var/lib/private/open-webui"; mode = "0700"; }
+      { directory = "/var/lib/private/open-webui/data"; mode = "0700"; }
       # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
     ];
 
