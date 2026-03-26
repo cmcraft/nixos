@@ -8,7 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
-    # ../../modules/comfyui/comfyui.nix
+    ../../modules/comfyui/comfyui.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
