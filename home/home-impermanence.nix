@@ -22,6 +22,7 @@
       ".cache"
       ".config"
       ".config/alacritty"
+      ".config/autostart"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
