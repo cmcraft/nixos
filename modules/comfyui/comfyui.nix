@@ -11,12 +11,15 @@
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
     dataDir = "/home/cmcraft/comfy";
     openFirewall = true;
-    # extraArgs = [ "--lowvram" ];
+    extraArgs = [ "--highvram" ];
     environment = {
-      HSA_OVERRIDE_GFX_VERSION = "11.0.0"; 
+      HSA_OVERRIDE_GFX_VERSION = "11.5.0"; 
       HIP_VISIBLE_DEVICES = "0";
       # Point to the system-wide ROCm path
-      ROCM_PATH = "/run/current-system/sw"; 
+      ROCM_PATH = "/run/current-system/sw";
+      ROC_ENABLE_PRE_ALLOCATION = "1";
+      PYTORCH_ROCM_ARCH = "gfx1150"; 
+      LD_LIBRARY_PATH = "${pkgs.rocmPackages.clr}/lib:${pkgs.libdrm}/lib"; 
     };
   };
 }
