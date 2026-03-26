@@ -28,6 +28,7 @@
     ];
     files = [
       ".screenrc"
+      ".bash_profile"
     ];
   };
   home.stateVersion = "26.05";
