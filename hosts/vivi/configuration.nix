@@ -16,6 +16,7 @@
     # ../../modules/greetd/greetd.nix
     # ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
+    ../../modules/llama-rpc-server/llama-rpc-server.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/open-webui/open-webui.nix

@@ -1,5 +1,8 @@
 { pkgs, ... }: 
 {
+  service.llamacpp-rocm = {
+    enable = true;
+  };
   services.llamacpp-rpc-server = {
     enable = true;
     package = pkgs.llamacpp-rocm.gfx1151;  # Choose your GPU target
