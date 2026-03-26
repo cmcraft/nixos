@@ -36,6 +36,7 @@
       ".config/gtk-3.0"
       ".config/gtk-4.0"
       ".config/hypr"
+      ".config/mako"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
