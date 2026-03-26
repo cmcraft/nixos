@@ -10,7 +10,6 @@
       { directory = "/var/cache/llamacpp-rpc"; user = "llamacpp-rpc"; group = "llamacpp-rpc"; mode = "0755"; }
       "/var/db/sudo"
       "/var/lib/bluetooth"
-      "/var/lib/comfyui"
       "/var/lib/containers"
       "/var/lib/containers/storage/factorio"
       "/var/lib/containers/storage/minecraft"
