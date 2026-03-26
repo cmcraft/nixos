@@ -2,31 +2,29 @@
 {
   environment.persistence."/persist" = {
     directories = [
-      "/etc/nixos"
+      "/etc/home-assistant"
       "/etc/NetworkManager/system-connections"
+      "/etc/nixos"
       "/etc/secureboot"
       "/var/db/sudo"
       "/var/lib/bluetooth"
       "/var/lib/comfyui"
       "/var/lib/containers"
-      "/var/lib/nixos"
-      "/var/lib/systemd/coredump"
+      "/var/lib/containers/storage/factorio"
       "/var/lib/containers/storage/minecraft"
-      "/var/lib/containers/storage/minecraft/burnt-toast"
-      "/var/lib/containers/storage/minecraft/burnt-toast/data"
-      "/var/lib/containers/storage/minecraft/burnt-toast/modpacks"
       "/var/lib/containers/storage/redbot"
       "/var/lib/containers/storage/redbot/core/logs"
-      "/var/lib/containers/storage/factorio"
+      "/var/lib/containers/storage/strix-halo/comfyui"
       "/var/lib/containers/storage/terraria"
       "/var/lib/containers/storage/terraria/config"
-      # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
       "/var/lib/hass"
-      "/etc/home-assistant"
+      "/var/lib/nixos"
+      "/var/lib/open-webui"
+      "/var/lib/systemd/coredump"
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
-      "/var/lib/containers/storage/strix-halo/comfyui"
+      # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
     ];
 
     files = [
