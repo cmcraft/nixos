@@ -19,9 +19,11 @@
       ".local/share/direnv"
       ".cache"
       ".config"
+      ".config/fish"
       ".config/dconf"
       ".config/Code"
       ".config/sops/age"
+      ".icons"
       {
         directory = ".local/share/Steam";
       }
