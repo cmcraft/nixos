@@ -25,6 +25,7 @@
       ".config/dconf"
       ".config/Code"
       ".config/Kvantum"
+      ".config/Vencord"
       ".config/sops/age"
       ".icons"
       ".vscode"
