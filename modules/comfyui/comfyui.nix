@@ -1,8 +1,10 @@
 { config, pkgs, ... }:
 {
   imports = [
-    inputs.comfyui-nix.nixosModules.default
+    comfyui-nix.nixosModules.default
   ];
+  nixpkgs.overlays = [ comfyui-nix.overlays.default ];
+  
   services.comfyui = {
     enable = true;
     gpuSupport = "rocm";  # Enable NVIDIA GPU acceleration (recommended for most users)
