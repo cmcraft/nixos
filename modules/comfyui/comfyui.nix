@@ -12,6 +12,11 @@
     dataDir = "/home/cmcraft/comfy";
     openFirewall = true;
     # extraArgs = [ "--lowvram" ];
-    # environment = { };
+    environment = {
+      HSA_OVERRIDE_GFX_VERSION = "11.0.0"; 
+      HIP_VISIBLE_DEVICES = "0";
+      # Point to the system-wide ROCm path
+      ROCM_PATH = "/run/current-system/sw"; 
+    };
   };
 }

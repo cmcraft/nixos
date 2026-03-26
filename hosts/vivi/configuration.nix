@@ -143,6 +143,7 @@
 
   hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.clr.icd
+    libdrm
   ];
 
   networking.hostName = "vivi";
@@ -212,6 +213,13 @@
     users = {
       cmcraft = import ../../home/home.nix;
     };
+  };
+
+  system.activationScripts.amdgpu-ids = {
+    text = ''
+      mkdir -p /opt/amdgpu/share/libdrm
+      ln -sfn ${pkgs.libdrm}/share/libdrm/amdgpu.ids /opt/amdgpu/share/libdrm/amdgpu.ids
+    '';
   };
 
   system.stateVersion = "25.05";
