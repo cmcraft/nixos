@@ -162,6 +162,11 @@
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
 
+  systemd.services.open-webui.serviceConfig.DynamicUser = lib.mkForce false;
+  systemd.services.open-webui.serviceConfig.User = "open-webui";
+  systemd.services.open-webui.serviceConfig.Group = "open-webui";
+
+
   users.mutableUsers = false;
   users.users.cmcraft = {
     isNormalUser = true;
@@ -180,8 +185,20 @@
     group = "colord";
   };
 
+  users.users.comfyui = {
+    isSystemUser = true;
+    group = "comfyui";
+  };
+
+  users.users.open-webui = {
+    isSystemUser = true;
+    group = "open-webui";
+  };
+
   users.groups.cmcraft = {};
   users.groups.colord = {};
+  users.groups.comfyui = {};
+  users.groups.open-webui = {};
   users.groups.video = {};
   users.groups.render = {};
 
