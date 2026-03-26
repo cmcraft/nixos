@@ -166,6 +166,9 @@
   systemd.services.open-webui.serviceConfig.User = "open-webui";
   systemd.services.open-webui.serviceConfig.Group = "open-webui";
 
+  systemd.services.comfyui.serviceConfig.DynamicUser = lib.mkForce false;
+  systemd.services.comfyui.serviceConfig.User = "comfyui";
+  systemd.services.comfyui.serviceConfig.Group = "comfyui";
 
   users.mutableUsers = false;
   users.users.cmcraft = {
