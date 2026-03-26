@@ -24,6 +24,7 @@
       ".config/fish"
       ".config/dconf"
       ".config/Code"
+      ".config/Kvantum"
       ".config/sops/age"
       ".icons"
       ".vscode"
