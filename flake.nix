@@ -130,6 +130,8 @@
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series
+        
+        comfyui-nix.nixosModules.default
         # Import the overlay
         ({ pkgs, ... }: {
           nixpkgs.overlays = [ 
