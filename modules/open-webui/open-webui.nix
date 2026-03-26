@@ -6,7 +6,6 @@
     host = "0.0.0.0";
     openFirewall = true;
     port = 3000;
-    stateDir = "/persist/var/lib/open-webui";
 
     environment = {
       ANONYMIZED_TELEMETRY = "False";
