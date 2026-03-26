@@ -20,7 +20,6 @@
       "/var/lib/containers/storage/terraria/config"
       "/var/lib/hass"
       "/var/lib/nixos"
-      "/var/lib/open-webui"
       "/var/lib/systemd/coredump"
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
