@@ -20,7 +20,7 @@
       "/var/lib/containers/storage/terraria/config"
       "/var/lib/hass"
       "/var/lib/nixos"
-      "/var/lib/private/open-webui"
+      { directory = "/var/lib/private/open-webui"; mode = "0700"; }
       "/var/lib/systemd/coredump"
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
