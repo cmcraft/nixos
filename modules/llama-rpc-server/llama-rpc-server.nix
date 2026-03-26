@@ -2,7 +2,7 @@
 {
   services.llamacpp-rpc-server = {
     enable = true;
-    package = pkgs.llamacpp-rocm.gfx1151;  # Choose your GPU target
+    package = pkgs.llamacpp-rocm;  # Choose your GPU target
     threads = 32;
     host = "0.0.0.0";  # Listen on all interfaces
     port = 50052;
