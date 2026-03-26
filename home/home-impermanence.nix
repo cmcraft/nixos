@@ -33,6 +33,7 @@
       ".config/forge"
       ".config/gdu"
       ".config/git"
+      ".config/gtk-3.0"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
