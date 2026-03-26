@@ -1,6 +1,8 @@
 { ... }:
 {
   home.persistence."/persist" = {
+    removePrefixDirectory = true;
+    allowOther = true;
     directories = [
       ".cache"
       ".claude"
@@ -38,6 +40,7 @@
       ".lmstudio"
       ".local/share/direnv"
       ".local/share/keyrings"
+      ".local/share/Steam"
       ".mozilla"
       ".nixops"
       ".ssh"
@@ -53,10 +56,6 @@
       "Pictures/screenshots"
       "Videos"
       "vivi"
-      
-      {
-        directory = ".local/share/Steam";
-      }
     ];
     files = [
       ".screenrc"
