@@ -140,7 +140,7 @@
           ];
 
           environment.systemPackages = [
-            pkgs.llamacpp-rocm.gfx1151
+            pkgs.llamacpp-rocm
             pkgs.comfy-ui-rocm
           ];
         })
