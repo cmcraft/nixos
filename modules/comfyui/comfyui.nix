@@ -9,7 +9,7 @@
     enableManager = true;  # Enable the built-in ComfyUI Manager
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
-    dataDir = "/var/lib/comfy";
+    dataDir = "/var/lib/comfyui";
     openFirewall = true;
     extraArgs = [ "--highvram" ];
     environment = {
