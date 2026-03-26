@@ -28,6 +28,7 @@
       ".config/blender"
       ".config/btop"
       ".config/environment.d"
+      ".config/fastfetch"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
