@@ -19,6 +19,7 @@
       ".local/share/direnv"
       ".cache"
       ".config"
+      ".config/dconf"
       ".config/Code"
       ".config/sops/age"
       {
