@@ -35,6 +35,7 @@
       ".config/git"
       ".config/gtk-3.0"
       ".config/gtk-4.0"
+      ".config/hypr"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
