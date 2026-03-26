@@ -31,6 +31,7 @@
       ".config/fastfetch"
       ".config/fontconfig"
       ".config/forge"
+      ".config/gdu"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
