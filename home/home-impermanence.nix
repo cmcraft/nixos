@@ -37,6 +37,7 @@
       ".config/gtk-4.0"
       ".config/hypr"
       ".config/mako"
+      ".config/nvim"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
