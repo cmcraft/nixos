@@ -138,13 +138,13 @@
           ];
 
           environment.systemPackages = with pkgs; [
-            llamacpp-rocm.gfx1151
+            llamacpp-rocm
             comfy-ui-rocm
           ];
         })
 
         llamacpp-rocm.nixosModules.rpc-server
-        
+
         {
             imports = [ home-manager.nixosModules.home-manager ];
             home-manager.users.cmcraft =
