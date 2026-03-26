@@ -61,7 +61,6 @@
   environment.systemPackages = [
     pkgs.llama-cpp
     pkgs.llamacpp-rocm
-    pkgs.llamacpp-vulcan
     pkgs.clinfo
     pkgs.claude-code
     pkgs.opencode
