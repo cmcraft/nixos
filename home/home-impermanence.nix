@@ -30,6 +30,7 @@
       ".config/sops/age"
       ".config/stylix"
       ".config/systemd"
+      ".config/waybar"
       ".config/Vencord"
       ".gnupg"
       ".icons"
