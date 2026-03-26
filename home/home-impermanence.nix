@@ -21,6 +21,7 @@
       ".local/share/direnv"
       ".cache"
       ".config"
+      ".config/alacritty"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
