@@ -29,6 +29,7 @@
       ".config/btop"
       ".config/environment.d"
       ".config/fastfetch"
+      ".config/fontconfig"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
