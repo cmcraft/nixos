@@ -29,6 +29,7 @@
       ".config/rofi"
       ".config/sops/age"
       ".config/stylix"
+      ".config/systemd"
       ".config/Vencord"
       ".gnupg"
       ".icons"
