@@ -17,6 +17,8 @@
       ".lmstudio"
       ".local/share/keyrings"
       ".local/share/direnv"
+      ".cache"
+      ".config"
       ".config/Code"
       ".config/sops/age"
       {
@@ -27,5 +29,5 @@
       ".screenrc"
     ];
   };
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 }
