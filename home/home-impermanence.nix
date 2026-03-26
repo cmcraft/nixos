@@ -24,6 +24,7 @@
       ".gnupg"
       ".config/Vencord"
       ".config/sops/age"
+      ".config/qt6ct"
       ".config/qt5ct"
       ".config/nvim"
       ".config/mako"
