@@ -24,6 +24,7 @@
       ".config/alacritty"
       ".config/autostart"
       ".config/blender"
+      ".config/btop"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
