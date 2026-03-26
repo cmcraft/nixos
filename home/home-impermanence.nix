@@ -23,6 +23,7 @@
       ".config"
       ".config/alacritty"
       ".config/autostart"
+      ".config/blender"
       ".config/fish"
       ".config/dconf"
       ".config/Code"
