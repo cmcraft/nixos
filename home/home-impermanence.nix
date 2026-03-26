@@ -31,6 +31,7 @@
       ".config/stylix"
       ".config/systemd"
       ".config/waybar"
+      ".config/wpaperd"
       ".config/Vencord"
       ".gnupg"
       ".icons"
