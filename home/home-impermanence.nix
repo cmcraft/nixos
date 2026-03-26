@@ -13,6 +13,7 @@
       ".claude"
       ".gnupg"
       ".ssh"
+      ".mozilla"
       ".nixops"
       ".lmstudio"
       ".local/share/keyrings"
