@@ -1,8 +1,6 @@
 { ... }:
 {
   home.persistence."/persist" = {
-    removePrefixDirectory = true;
-    allowOther = true;
     directories = [
       ".cache"
       ".claude"
