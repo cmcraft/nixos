@@ -148,11 +148,7 @@
   networking.networkmanager.enable = true;
   networking.firewall = {
     allowPing = true;
-    allowedTCPPorts = [ 80 443 ];
-    extraCommands = ''
-      add rule ip saddr 127.0.0.1 counter accept
-      add rule ip6 saddr ::1 counter accept
-    '';
+    allowedTCPPorts = [ 80 443 3000 8080 8188];
   };
 
   programs.appimage.enable = true;
