@@ -2,7 +2,7 @@
 {
   services.comfyui = {
     enable = true;
-    # gpuSupport = "rocm";  # Enable AMD GPU acceleration
+    gpuSupport = "rocm";  # Enable AMD GPU acceleration
     enableManager = true;  # Enable the built-in ComfyUI Manager
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
