@@ -145,8 +145,6 @@
           ];
         })
 
-        llamacpp-rocm.nixosModules.rpc-server
-
         {
             imports = [ home-manager.nixosModules.home-manager ];
             home-manager.users.cmcraft =

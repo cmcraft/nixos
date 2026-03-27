@@ -7,7 +7,7 @@
     serviceConfig = {
       # Adjust flags for your specific GPU and model path
       ExecStart = ''
-        ${inputs.llama-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llama-cpp-rocm}/bin/llama-server \
+        ${inputs.llamacpp-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llama-cpp-rocm}/bin/llama-server \
           --models-dir /var/lib/llama-cpp/models \
           --models-max 4 \
           --host 127.0.0.1 \
