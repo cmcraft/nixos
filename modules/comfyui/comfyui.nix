@@ -19,9 +19,9 @@
       HIP_VISIBLE_DEVICES = "0";
       # Point to the system-wide ROCm path
       ROCM_PATH = "${pkgs.rocmPackages.clr}";
-      # ROC_ENABLE_PRE_ALLOCATION = "1";
-      # PYTORCH_ROCM_ARCH = "gfx1151"; 
-      # LD_LIBRARY_PATH = "${pkgs.rocmPackages.clr}/lib:${pkgs.libdrm}/lib"; 
+      ROC_ENABLE_PRE_ALLOCATION = "1";
+      PYTORCH_ROCM_ARCH = "gfx1151"; 
+      LD_LIBRARY_PATH = "${pkgs.rocmPackages.clr}/lib:${pkgs.libdrm}/lib"; 
     };
   };
 }
