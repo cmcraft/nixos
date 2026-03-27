@@ -5,7 +5,7 @@
     gpuSupport = "rocm";  # Enable AMD GPU acceleration
     enableManager = true;  # Enable the built-in ComfyUI Manager
     port = 8188;
-    listenAddress = "127.0.0.1";  # Use "0.0.0.0" for network access
+    listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
     dataDir = "/var/lib/comfyui";
     openFirewall = true;
     extraArgs = [ 
