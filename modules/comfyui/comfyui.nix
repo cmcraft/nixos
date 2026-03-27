@@ -11,7 +11,7 @@
     extraArgs = [ 
       "--enable-dynamic-vram"
       "--disable-smart-memory"
-      "--gpu-only"
+      # "--gpu-only"
       "--highvram" 
     ];
     environment = {
