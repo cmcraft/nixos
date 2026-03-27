@@ -12,7 +12,6 @@
       "--enable-dynamic-vram"
       "--disable-smart-memory"
       # "--gpu-only"
-      "--use-split-cross-attention"
       "--highvram"
       "--disable-xformers" 
       "--use-pytorch-cross-attention" 
