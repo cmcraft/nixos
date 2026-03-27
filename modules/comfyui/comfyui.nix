@@ -2,7 +2,7 @@
 {
   services.comfyui = {
     enable = true;
-    gpuSupport = "rocm";  # Enable NVIDIA GPU acceleration (recommended for most users)
+    # gpuSupport = "rocm";  # Enable NVIDIA GPU acceleration (recommended for most users)
     # gpuSupport = "rocm";  # Enable AMD GPU acceleration
     # cudaCapabilities = [ "8.9" ];  # Optional: optimize system CUDA packages for RTX 40xx
     #   Note: Pre-built PyTorch wheels already support all GPU architectures
