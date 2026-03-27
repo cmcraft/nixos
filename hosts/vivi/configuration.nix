@@ -16,7 +16,7 @@
     # ../../modules/greetd/greetd.nix
     # ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
-    ../../modules/llama-rpc-server/llama-rpc-server.nix
+    ../../modules/llamacpp-server/llamacpp-server.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/open-webui/open-webui.nix
@@ -68,6 +68,7 @@
 
     pkgs.git
     pkgs.kitty
+    inputs.llama-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llama-cpp-rocm
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
     pkgs.unzip

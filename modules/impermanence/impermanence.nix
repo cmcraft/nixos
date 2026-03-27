@@ -7,7 +7,6 @@
       "/etc/NetworkManager/system-connections"
       "/etc/nixos"
       "/etc/secureboot"
-      { directory = "/var/cache/llamacpp-rpc"; user = "llamacpp-rpc"; group = "llamacpp-rpc"; mode = "0755"; }
       "/var/db/sudo"
       "/var/lib/bluetooth"
       "/var/lib/containers"
@@ -19,7 +18,7 @@
       "/var/lib/containers/storage/terraria"
       "/var/lib/containers/storage/terraria/config"
       "/var/lib/hass"
-      "/var/lib/llama-cpp"
+      "/var/lib/llama-cpp/models"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/terraria"
