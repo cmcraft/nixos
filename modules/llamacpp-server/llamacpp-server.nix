@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ inputs, pkgs, ... }: 
 {
   systemd.services.llama-server = {
     description = "Llama.cpp HTTP Server";
