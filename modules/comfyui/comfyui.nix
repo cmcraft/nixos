@@ -13,7 +13,9 @@
       "--disable-smart-memory"
       # "--gpu-only"
       "--use-split-cross-attention"
-      "--highvram" 
+      "--highvram"
+      "--disable-xformers" 
+      "--use-pytorch-cross-attention" 
     ];
     environment = {
       HSA_OVERRIDE_GFX_VERSION = "11.5.1";
@@ -26,7 +28,9 @@
       ROC_ENABLE_PRE_ALLOCATION = "0";
       PYTORCH_ROCM_ARCH = "gfx1151";
       BNB_ROCM_ARCH = "gfx1151"; 
-      LD_LIBRARY_PATH = "${pkgs.rocmPackages.clr}/lib:${pkgs.libdrm}/lib"; 
+      LD_LIBRARY_PATH = "${pkgs.rocmPackages.clr}/lib:${pkgs.libdrm}/lib";
+      TORCH_SDP_KERNEL_OPTIONS = "flash,math,mem_efficient"; 
+      XFORMERS_FORCE_DISABLE_TRITON = "1";
     };
   };
 }
