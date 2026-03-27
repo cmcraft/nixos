@@ -10,6 +10,7 @@ in
   sops.age.keyFile = "/persist/home/cmcraft/.config/sops/age/keys.txt";
 
   sops.secrets = {
+    "cmcraft/hf_token" = { };
     "cmcraft/password" = {
       neededForUsers = true;
      };
