@@ -3,6 +3,7 @@
   home.persistence."/persist" = {
     directories = [
       ".cache"
+      ".cache/llama.cpp"
       ".claude"
       ".config"
       ".config/alacritty"

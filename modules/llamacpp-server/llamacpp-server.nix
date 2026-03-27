@@ -8,7 +8,8 @@
       # Adjust flags for your specific GPU and model path
       ExecStart = ''
         ${inputs.llamacpp-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llamacpp-rocm}/bin/llama-server \
-          --models-dir /var/lib/llama-cpp/models \
+          --models-dir /home/cmcraft/.cache/llama.cpp \
+          --sleep-idle-seconds 900 \
           --models-max 4 \
           --host 127.0.0.1 \
           --port 8080 \
