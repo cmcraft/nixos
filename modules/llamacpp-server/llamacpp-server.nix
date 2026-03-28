@@ -9,8 +9,8 @@
       ExecStart = ''
         ${inputs.llamacpp-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llamacpp-rocm}/bin/llama-server \
           --models-dir /home/cmcraft/.cache/llama.cpp \
-          --mmproj-load-on-demand \
           --sleep-idle-seconds 900 \
+          --mmproj-auto \
           --models-max 4 \
           --host 127.0.0.1 \
           --port 8080 \
