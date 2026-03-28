@@ -5,10 +5,12 @@
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
-      # Adjust flags for your specific GPU and model path
+      WorkingDirectory= "/var/lib/llama-cpp";
+      ExecStartPre= "bash /home/cmcraft/nixos/scripts/generate_models_ini.sh";
       ExecStart = ''
         ${inputs.llamacpp-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llamacpp-rocm}/bin/llama-server \
           --models-dir /home/cmcraft/.cache/llama.cpp \
+          --models-preset /var/lib/llama-cpp/models.ini \
           --sleep-idle-seconds 900 \
           --mmproj-auto \
           --models-max 4 \
