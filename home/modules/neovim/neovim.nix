@@ -13,7 +13,7 @@
         extraPackages = with pkgs; [
             # LazyVim
             lua-language-server
-            nodePackages_latest.vscode-json-languageserver
+            # nodePackages_latest.vscode-json-languageserver
             nil
             gopls
             gofumpt
