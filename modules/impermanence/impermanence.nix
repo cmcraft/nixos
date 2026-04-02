@@ -11,6 +11,8 @@
       "/var/lib/bluetooth"
       "/var/lib/containers"
       "/var/lib/containers/storage/factorio"
+      "/var/lib/containers/storage/lemonade/models"
+      "/var/lib/containers/storage/lemonade/config"
       "/var/lib/containers/storage/minecraft"
       "/var/lib/containers/storage/redbot"
       "/var/lib/containers/storage/redbot/core/logs"
@@ -24,9 +26,9 @@
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
-      { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }
-      { directory = "/var/lib/open-webui"; mode = "0700"; }
-      { directory = "/var/lib/open-webui/data"; mode = "0700"; }
+      # { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }
+      # { directory = "/var/lib/open-webui"; mode = "0700"; }
+      # { directory = "/var/lib/open-webui/data"; mode = "0700"; }
       # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
     ];
 

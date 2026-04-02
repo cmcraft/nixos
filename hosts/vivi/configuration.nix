@@ -8,7 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
-    ../../modules/comfyui/comfyui.nix
+    # ../../modules/comfyui/comfyui.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
@@ -16,10 +16,11 @@
     # ../../modules/greetd/greetd.nix
     # ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
-    ../../modules/llamacpp-server/llamacpp-server.nix
+    ../../modules/docker/lemonade.nix
+    # ../../modules/llamacpp-server/llamacpp-server.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
-    ../../modules/open-webui/open-webui.nix
+    # ../../modules/open-webui/open-webui.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
     ../../modules/stylix/stylix.nix
@@ -83,10 +84,18 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
-    "iommu=pt"
-    "amdgpu.gttsize=126976"
-    "ttm.pages_limit=32505856"
-  ];
+  # Unlocks shared memory limits for the 128GB pool (approx 112GB limit)
+  "ttm.pages_limit=29360128"
+  "ttm.page_pool_size=29360128"
+  "amdttm.pages_limit=29360128"
+  "amdttm.page_pool_size=29360128"
+  
+  # Set IOMMU to passthrough to reduce overhead for the iGPU
+  "iommu=off"
+  
+  # Increases GTT size for ROCm workloads (96GB example)
+  "amdgpu.gttsize=98304"
+];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -143,6 +152,7 @@
     };
   };
 
+  hardware.enableRedistributableFirmware = true;
   hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.clr.icd
     libdrm

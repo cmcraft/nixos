@@ -31,5 +31,6 @@
       TORCH_SDP_KERNEL_OPTIONS = "flash,math,mem_efficient"; 
       XFORMERS_FORCE_DISABLE_TRITON = "1";
     };
+    package = pkgs.comfy-ui-rocm or pkgs.comfy-ui;
   };
 }
