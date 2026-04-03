@@ -22,7 +22,7 @@
       "ROCR_VISIBLE_DEVICES" = "0";
       "HIP_VISIBLE_DEVICES" = "0";
       "FLASH_ATTENTION_TRITON_AMD_ENABLE" = "TRUE";
-      "LEMONADE_CTX_SIZE=200000"
+      "LEMONADE_CTX_SIZE" = "200000";
     };
 
     volumes = [
