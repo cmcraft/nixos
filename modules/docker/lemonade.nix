@@ -34,6 +34,5 @@
     "--shm-size=32gb"                 # Essential for large models
   ];
 
-    cmd = [ "serve" "--host" "0.0.0.0" "--no-tray" ];
   };
 }
