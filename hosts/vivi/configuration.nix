@@ -202,6 +202,11 @@
     group = "colord";
   };
 
+  users.users.colord = {
+    isSystemUser = true;
+    group = "vespa";
+  };
+
   users.users.comfyui = {
     isSystemUser = true;
     group = "comfyui";
@@ -218,6 +223,7 @@
   users.groups.open-webui = {};
   users.groups.video = {};
   users.groups.render = {};
+  users.groups.vespa = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
