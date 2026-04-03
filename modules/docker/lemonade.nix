@@ -17,15 +17,17 @@
     ];
     # Environment variables for hardware and server config
     environment = {
-      "LEMONADE_BACKEND" = "gpu"; # Set to gpu for iGPU-only or hybrid
+      "LEMONADE_LLAMACPP_BACKEND" = "rocm"; # Set to gpu for iGPU-only or hybrid
       "HSA_OVERRIDE_GFX_VERSION" = "11.5.1"; # Critical for 8060S compatibility
       "ROCR_VISIBLE_DEVICES" = "0";
       "HIP_VISIBLE_DEVICES" = "0";
       "FLASH_ATTENTION_TRITON_AMD_ENABLE" = "TRUE";
+      "LEMONADE_CTX_SIZE=200000"
     };
 
     volumes = [
       "/var/lib/containers/storage/lemonade/models:/root/.cache/huggingface"
+      "/var/lib/containers/containers/lemonade/lemonade-llama:/opt/lemonade/llama"
       "/var/lib/containers/storage/lemonade/config:/root/.cache/lemonade"
     ];
 
