@@ -202,7 +202,7 @@
     group = "colord";
   };
 
-  users.users.colord = {
+  users.users.vespa = {
     isSystemUser = true;
     group = "vespa";
   };
