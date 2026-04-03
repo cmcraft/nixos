@@ -27,6 +27,7 @@ in
     "cloudflare/zone-identifier" = { };
     "cloudflare/token" = { };
     "terraria/password" = { };
+    "postgres/password" = { };
   };
 
   sops.templates."nest" = {
