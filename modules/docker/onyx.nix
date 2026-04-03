@@ -33,7 +33,7 @@
 
     # API: Main Application Logic
     "onyx-api" = {
-      image = "onyxdotapp/onyx-onyx-backend:latest";
+      image = "onyxdotapp/onyx-backend:latest";
       ports = [ "8080:8080" ];
       extraOptions = [ "--add-host=host.containers.internal:host-gateway" ];
       environment = {
