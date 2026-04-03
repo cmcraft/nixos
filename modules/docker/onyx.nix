@@ -23,7 +23,6 @@
     # BACKGROUND: Document Indexing & Web Scraping
     "onyx-background" = {
       image = "onyxdotapp/onyx-backend:latest";
-      # cmd = [ "python /app/onyx/background/worker.py" ];
       environment = {
         POSTGRES_HOST = "onyx-db";
         VESPA_HOST = "onyx-index";
@@ -35,13 +34,12 @@
     "onyx-api" = {
       image = "onyxdotapp/onyx-backend:latest";
       ports = [ "8080:8080" ];
-      extraOptions = [ "--add-host=host.containers.internal:host-gateway" ];
       environment = {
         POSTGRES_HOST = "onyx-db";
         VESPA_HOST = "onyx-index";
         # Podman-specific host resolution
         GEN_AI_MODEL_PROVIDER = "custom";
-        GEN_AI_API_ENDPOINT = "http://containers.internal"; 
+        GEN_AI_API_ENDPOINT = "http://localhost:8000"; 
         WEB_DOMAIN = "http://192.168.1.214:3000";
       };
       volumes = [ "/var/lib/containers/storage/onyx/config:/app/dynamic_config:Z" ];
