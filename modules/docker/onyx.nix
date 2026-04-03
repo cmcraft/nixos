@@ -17,7 +17,7 @@
 
     # INDEX: The Vector Search Engine (Vespa)
     "onyx-index" = {
-      image = "vespaengine/vespa:8.315.22";
+      image = "vespaengine/vespa:latest";
       volumes = [ "/var/lib/containers/storage/onyx/index:/opt/vespa/var" ];
     };
 
