@@ -11,6 +11,7 @@
       "/var/lib/bluetooth"
       "/var/lib/containers"
       "/var/lib/containers/storage/factorio"
+      "/var/lib/containers/storage/lemonade/lemonade-llama"
       "/var/lib/containers/storage/lemonade/models"
       "/var/lib/containers/storage/lemonade/config"
       "/var/lib/containers/storage/minecraft"
