@@ -22,7 +22,7 @@
 
     # BACKGROUND: Document Indexing & Web Scraping
     "onyx-background" = {
-      image = "onyxdotapp/onyx-api-server:latest";
+      image = "onyxdotapp/onyx-backend:latest";
       cmd = [ "/app/scripts/run-background.sh" ];
       environment = {
         POSTGRES_HOST = "onyx-db";
@@ -33,7 +33,7 @@
 
     # API: Main Application Logic
     "onyx-api" = {
-      image = "onyxdotapp/onyx-api-server:latest";
+      image = "onyxdotapp/onyx-onyx-backend:latest";
       ports = [ "8080:8080" ];
       extraOptions = [ "--add-host=host.containers.internal:host-gateway" ];
       environment = {
