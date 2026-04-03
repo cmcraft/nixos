@@ -190,4 +190,9 @@ in
         }
       ]
   '';
+
+  sops.templates."postgres".content = ''
+    POSTGRES_PASSWORD=${config.sops.placeholder."redbot/token"}
+    POSTGRES_DB =postgres
+  '';
 }
