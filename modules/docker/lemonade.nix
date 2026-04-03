@@ -7,7 +7,7 @@
 
   virtualisation.oci-containers.containers."lemonade" = {
     image = "ghcr.io/lemonade-sdk/lemonade-server:latest";
-    autoStart = false;
+    autoStart = true;
     ports = [ "8000:8000" ];
     
     devices = [
