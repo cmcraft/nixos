@@ -23,7 +23,7 @@
     # BACKGROUND: Document Indexing & Web Scraping
     "onyx-background" = {
       image = "onyxdotapp/onyx-backend:latest";
-      cmd = [ "/app/scripts/run-background.sh" ];
+      cmd = [ "python /app/onyx/background/worker.py" ];
       environment = {
         POSTGRES_HOST = "onyx-db";
         VESPA_HOST = "onyx-index";
