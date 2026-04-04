@@ -39,7 +39,7 @@
         VESPA_HOST = "localhost";
         GEN_AI_MODEL_PROVIDER = "custom";
         # Use your LAN IP for Lemonade (Host)
-        GEN_AI_API_ENDPOINT = "http://192.168.1"; 
+        GEN_AI_API_ENDPOINT = "http://192.168.1.214:8000"; 
       };
       volumes = [ "/var/lib/containers/storage/onyx/config:/app/dynamic_config:Z" ];
     };
