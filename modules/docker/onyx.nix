@@ -9,7 +9,7 @@
     onyx-db = {
       image = "postgres:15-alpine";
       autoStart = true;
-      environmentFiles = [ config.sops.templates."postgres-env".path ];
+      environmentFiles = [ config.sops.templates."postgres".path ];
       volumes = [ "/var/lib/onyx/postgres:/var/lib/postgresql/data" ];
       extraOptions = [ "--network=onyx-net" ];
     };
@@ -27,7 +27,7 @@
       image = "onyx-dot-app/onyx-api-server:latest";
       dependsOn = [ "onyx-db" "onyx-vespa" ];
       autoStart = true;
-      environmentFiles = [ config.sops.templates."postgres-env".path ];
+      environmentFiles = [ config.sops.templates."postgres".path ];
       environment = {
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
       };
