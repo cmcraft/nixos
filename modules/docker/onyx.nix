@@ -1,62 +1,54 @@
 { config, pkgs, ... }: 
 {
-  imports = [
-    ../docker/docker.nix
-  ];
+  # Create the Pod on boot
+  systemd.services.podman-onyx-pod = {
+    path = [ pkgs.podman ];
+    serviceConfig.Type = "oneshot";
+    script = "podman pod create --name onyx-pod -p 8080:8080 -p 3000:3000 --replace";
+    wantedBy = [ "multi-user.target" ];
+  };
+
   virtualisation.oci-containers.containers = {
-    
-    # DB: Core Storage
     "onyx-db" = {
       image = "postgres:15-alpine";
-      autoStart = true;
-      environmentFiles = [
-        config.sops.templates."postgres".path
-      ];
+      extraOptions = [ "--pod=onyx-pod" ];
+      environmentFiles = [ config.sops.templates."postgres".path ];
       volumes = [ "/var/lib/containers/storage/onyx/db:/var/lib/postgresql/data:Z" ];
     };
 
-    # INDEX: The Vector Search Engine (Vespa)
     "onyx-index" = {
       image = "vespaengine/vespa:latest";
-      autoStart = true;
+      extraOptions = [ "--pod=onyx-pod" ];
       volumes = [ "/var/lib/containers/storage/onyx/index:/opt/vespa/var:Z" ];
     };
 
-    # BACKGROUND: Document Indexing & Web Scraping
     "onyx-background" = {
       image = "onyxdotapp/onyx-backend:latest";
-      autoStart = true;
+      extraOptions = [ "--pod=onyx-pod" ];
       environment = {
-        POSTGRES_HOST = "onyx-db";
-        VESPA_HOST = "onyx-index";
+        POSTGRES_HOST = "localhost"; # Inside a pod, use localhost
+        VESPA_HOST = "localhost";
       };
-      dependsOn = [ "onyx-db" "onyx-index" ];
     };
 
-    # API: Main Application Logic
     "onyx-api" = {
       image = "onyxdotapp/onyx-backend:latest";
-      autoStart = true;
-      ports = [ "8080:8080" ];
+      extraOptions = [ "--pod=onyx-pod" ];
       environment = {
-        POSTGRES_HOST = "onyx-db";
-        VESPA_HOST = "onyx-index";
-        # Podman-specific host resolution
+        POSTGRES_HOST = "localhost";
+        VESPA_HOST = "localhost";
         GEN_AI_MODEL_PROVIDER = "custom";
-        GEN_AI_API_ENDPOINT = "http://192.168.1.214:8000"; 
-        WEB_DOMAIN = "http://192.168.1.214:3000";
+        # Use your LAN IP for Lemonade (Host)
+        GEN_AI_API_ENDPOINT = "http://192.168.1"; 
       };
       volumes = [ "/var/lib/containers/storage/onyx/config:/app/dynamic_config:Z" ];
-      dependsOn = [ "onyx-db" "onyx-index" ];
     };
 
-    # WEB: The User Interface
     "onyx-web" = {
       image = "onyxdotapp/onyx-web-server:latest";
-      autoStart = true;
-      ports = [ "3000:3000" ];
+      extraOptions = [ "--pod=onyx-pod" ];
       environment = {
-        INTERNAL_URL = "http://onyx-api:8080";
+        INTERNAL_URL = "http://localhost:8080";
         WEB_DOMAIN = "http://192.168.1.214:3000";
       };
     };
