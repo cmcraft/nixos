@@ -10,7 +10,7 @@
       image = "postgres:15-alpine";
       autoStart = true;
       environmentFiles = [ config.sops.templates."postgres".path ];
-      volumes = [ "/var/lib/onyx/postgres:/var/lib/postgresql/data" ];
+      volumes = [ "/var/lib/containers/storage/onyx/postgres:/var/lib/postgresql/data" ];
       extraOptions = [ "--network=onyx-net" ];
     };
 
@@ -18,7 +18,7 @@
     onyx-vespa = {
       image = "vespaengine/vespa:latest";
       autoStart = true;
-      volumes = [ "/var/lib/onyx/vespa:/opt/vespa/var" ];
+      volumes = [ "/var/lib/containers/storage/onyx/vespa:/opt/vespa/var" ];
       extraOptions = [ "--network=onyx-net" ];
     };
 
@@ -31,7 +31,7 @@
       environment = {
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
       };
-      volumes = [ "/var/lib/onyx/model_cache:/var/lib/onyx/model_cache" ];
+      volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
       extraOptions = [ "--network=onyx-net" ];
     };
 
