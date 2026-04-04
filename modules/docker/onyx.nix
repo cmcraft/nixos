@@ -41,7 +41,11 @@
       image = "onyxdotapp/onyx-web-server:latest";
       autoStart = true;
       ports = [ "3000:3000" ];
-      environment = { ONYX_API_SERVER_URL = "http://192.168.1.214:8080"; API_SERVER_HOST = "onyx-api"; INTERNAL_URL = "http://onyx-api:8080"; };
+      environment = { 
+        ONYX_API_SERVER_URL = "http://192.168.1.214:8080";
+        WEB_DOMAIN = "http://192.168.1.214:3000"; 
+        ONYX_API_SERVER_URL = "http://192.168.1.214:8080"; 
+        INTERNAL_URL = "http://onyx-api:8080"; };
       dependsOn = [ "onyx-api" ];
       extraOptions = [ "--network=onyx-net" ];
     };
