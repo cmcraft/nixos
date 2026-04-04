@@ -50,8 +50,16 @@
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
 
         VESPA_HOST = "onyx-vespa";
+        VESPA_PORT = "8081";
         VESPA_CONFIG_SERVER_HOST = "onyx-vespa";
         VESPA_CONFIG_SERVER_PORT = "19071";
+
+        # This stops the 60-second crash loop while the API is doing the heavy lifting
+        VESPA_READY_CHECK_ENABLED = "false"; 
+        DISABLE_VESPA_WAIT_FOR_READINESS = "true";
+    
+        # Increase memory/timeout for the Strix Halo to handle the schema push
+        VESPA_WAIT_TIMEOUT = "1200"; 
 
       };
       volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
