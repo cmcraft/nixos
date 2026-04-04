@@ -27,7 +27,7 @@
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
-      "/var/lib/containers/storage/onyx/postgres"
+      { directory = "/var/lib/containers/storage/onyx/postgres"; user = "70"; group = "70"; mode = "0700"; }
       { directory = "/var/lib/containers/storage/onyx/vespa"; user = "1000"; group = "1000"; mode = "0750"; }
       "/var/lib/containers/storage/onyx/model_cache"
 
