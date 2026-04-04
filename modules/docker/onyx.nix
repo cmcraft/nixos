@@ -61,6 +61,26 @@
       extraOptions = [ "--network=onyx-net" ];
     };
 
+        # Background Indexer (Same image, different role)
+    onyx-background = {
+      image = "onyxdotapp/onyx-backend:latest";
+      dependsOn = [ "onyx-db" "onyx-vespa" "onyx-redis" ];
+      # Use the background worker command
+      cmd = [ "/usr/bin/supervisord" "-c" "/etc/supervisor/conf.d/supervisord.conf" ];
+      environmentFiles = [ config.sops.templates."postgres".path ];
+      environment = {
+        ONYX_ROLE = "background"; # THE KEY DIFFERENCE
+        REDIS_HOST = "onyx-redis";
+        C_FORCE_ROOT = "true";
+        VESPA_HOST = "onyx-vespa";
+        # Same persistent cache for models
+        TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
+      };
+      volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
+      extraOptions = [ "--network=onyx-net" ];
+    };
+
+
     # Frontend Web Server
     onyx-web = {
       image = "onyxdotapp/onyx-web-server:latest";
