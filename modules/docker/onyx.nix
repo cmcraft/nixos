@@ -48,7 +48,9 @@
         REDIS_HOST = "onyx-redis";
         C_FORCE_ROOT = "true";
         DB_MIGRATION_REQUIRED = "true";
+        INITIAL_SETUP_REQUIRED = "true";
         VESPA_WAIT_TIMEOUT = "300";
+        DISABLE_VESPA_WAIT_FOR_READINESS = "true";
         VESPA_READY_CHECK_ENABLED = "false";  
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
 
