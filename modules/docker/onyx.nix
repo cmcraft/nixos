@@ -1,11 +1,13 @@
 { config, pkgs, ... }: 
 {
-  # Create the Pod on boot
+  # 1. Create the Pod with explicit dependency handling
   systemd.services.podman-onyx-pod = {
     path = [ pkgs.podman ];
+    # Ensure this runs before the containers try to start
+    before = [ "podman-onyx-db.service" "podman-onyx-index.service" "podman-onyx-api.service" "podman-onyx-web.service" "podman-onyx-background.service" ];
+    wantedBy = [ "multi-user.target" ];
     serviceConfig.Type = "oneshot";
     script = "podman pod create --name onyx-pod -p 8080:8080 -p 3000:3000 --replace";
-    wantedBy = [ "multi-user.target" ];
   };
 
   virtualisation.oci-containers.containers = {
@@ -26,8 +28,10 @@
       image = "onyxdotapp/onyx-backend:latest";
       extraOptions = [ "--pod=onyx-pod" ];
       environment = {
-        POSTGRES_HOST = "localhost"; # Inside a pod, use localhost
+        POSTGRES_HOST = "localhost";
         VESPA_HOST = "localhost";
+        # CRITICAL: Tell the backend to act as a worker
+        TASK_RS_WORKER = "true";
       };
     };
 
@@ -38,8 +42,8 @@
         POSTGRES_HOST = "localhost";
         VESPA_HOST = "localhost";
         GEN_AI_MODEL_PROVIDER = "custom";
-        # Use your LAN IP for Lemonade (Host)
-        GEN_AI_API_ENDPOINT = "http://192.168.1.214:8000"; 
+        # FIXED: Added /v1 for Lemonade/OpenAI compatibility
+        GEN_AI_API_ENDPOINT = "http://192.168.1"; 
       };
       volumes = [ "/var/lib/containers/storage/onyx/config:/app/dynamic_config:Z" ];
     };
@@ -48,6 +52,7 @@
       image = "onyxdotapp/onyx-web-server:latest";
       extraOptions = [ "--pod=onyx-pod" ];
       environment = {
+        # Inside the pod, the web server talks to the API on localhost
         INTERNAL_URL = "http://localhost:8080";
         WEB_DOMAIN = "http://192.168.1.214:3000";
       };
