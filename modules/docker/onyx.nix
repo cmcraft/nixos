@@ -22,16 +22,24 @@
       extraOptions = [ "--network=onyx-net" ];
     };
 
+    # Redis
+    onyx-redis = {
+      image = "redis:7-alpine";
+      extraOptions = [ "--network=onyx-net" ];
+    };
+
     # Backend API Server
     onyx-api = {
       image = "onyxdotapp/onyx-backend:latest";
-      dependsOn = [ "onyx-db" "onyx-vespa" ];
+      dependsOn = [ "onyx-db" "onyx-vespa" "onyx-redis" ];
       autoStart = true;
       ports = [ "8080:8080" ];
       cmd = [ "/usr/bin/supervisord" "-c" "/etc/supervisor/conf.d/supervisord.conf" ];
       environmentFiles = [ config.sops.templates."postgres".path ];
       environment = {
         ONYX_ROLE = "api";
+        REDIS_HOST = "onyx-redis";
+        C_FORCE_ROOT = "true";
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
       };
       volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
