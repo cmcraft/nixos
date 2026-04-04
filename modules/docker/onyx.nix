@@ -41,7 +41,7 @@
       dependsOn = [ "onyx-db" "onyx-vespa" "onyx-redis" ];
       autoStart = true;
       ports = [ "8080:8080" ];
-      cmd = [ "/usr/bin/supervisord" "-c" "/etc/supervisor/conf.d/supervisord.conf" ];
+      cmd = [ "/bin/sh" "-c" "python /app/onyx/bootstrap/migrate_db.py && /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf" ];      
       environmentFiles = [ config.sops.templates."postgres".path ];
       environment = {
         ONYX_ROLE = "api";
