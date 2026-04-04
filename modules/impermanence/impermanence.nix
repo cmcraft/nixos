@@ -30,6 +30,7 @@
       { directory = "/var/lib/containers/storage/onyx/postgres"; user = "70"; group = "70"; mode = "0700"; }
       { directory = "/var/lib/containers/storage/onyx/vespa"; user = "1000"; group = "1000"; mode = "0750"; }
       "/var/lib/containers/storage/onyx/model_cache"
+      {directory = "/var/lib/containers/storage/onyx/redis"; user = "999"; group = "999"; mode = "0750"; }
 
       # { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }
       # { directory = "/var/lib/open-webui"; mode = "0700"; }

@@ -25,6 +25,7 @@
     # Redis
     onyx-redis = {
       image = "redis:7-alpine";
+      volumes = [ "/var/lib/containers/storage/onyx/redis:/data" ];
       extraOptions = [ "--network=onyx-net" ];
     };
 
