@@ -8,6 +8,7 @@
     # DB: Core Storage
     "onyx-db" = {
       image = "postgres:15-alpine";
+      autoStart = true;
       environmentFiles = [
         config.sops.templates."postgres".path
       ];
@@ -17,12 +18,14 @@
     # INDEX: The Vector Search Engine (Vespa)
     "onyx-index" = {
       image = "vespaengine/vespa:latest";
+      autoStart = true;
       volumes = [ "/var/lib/containers/storage/onyx/index:/opt/vespa/var:Z" ];
     };
 
     # BACKGROUND: Document Indexing & Web Scraping
     "onyx-background" = {
       image = "onyxdotapp/onyx-backend:latest";
+      autoStart = true;
       environment = {
         POSTGRES_HOST = "onyx-db";
         VESPA_HOST = "onyx-index";
@@ -33,6 +36,7 @@
     # API: Main Application Logic
     "onyx-api" = {
       image = "onyxdotapp/onyx-backend:latest";
+      autoStart = true;
       ports = [ "8080:8080" ];
       environment = {
         POSTGRES_HOST = "onyx-db";
@@ -49,6 +53,7 @@
     # WEB: The User Interface
     "onyx-web" = {
       image = "onyxdotapp/onyx-web-server:latest";
+      autoStart = true;
       ports = [ "3000:3000" ];
       environment = {
         INTERNAL_URL = "http://onyx-api:8080";
