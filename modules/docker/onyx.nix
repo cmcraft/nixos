@@ -24,6 +24,7 @@
         "--network=onyx-net" 
         "--hostname=onyx-vespa"
         "--env" "VESPA_CONFIGSERVER_MBEAN_RPC_ADVERTISE_ADDRESS=onyx-vespa"
+        "--add-host=onyx-vespa:127.0.0.1"
       ];
     };
 
