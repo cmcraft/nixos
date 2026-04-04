@@ -192,7 +192,15 @@ in
   '';
 
   sops.templates."postgres".content = ''
-    POSTGRES_PASSWORD=${config.sops.placeholder."redbot/token"}
-    POSTGRES_DB =postgres
+    POSTGRES_USER=onyx_user
+    POSTGRES_DB=onyx_db
+    POSTGRES_PASSWORD=${config.sops.placeholder."postgres/password"}
+    # Onyx API uses these to connect to the DB
+    POSTGRES_HOST=onyx-db
+    # Lemonade LLM Connection
+    GENERIC_OPENAI_API_KEY=lemonade
+    GENERIC_OPENAI_BASE_URL=http://lemonade-server:8000/v1
+    # Vespa search engine
+    VESPA_HOST=onyx-vespa
   '';
 }
