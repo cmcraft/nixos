@@ -28,7 +28,7 @@
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
       "/var/lib/containers/storage/onyx/postgres"
-      "/var/lib/containers/storage/onyx/vespa"
+      { directory = "/var/lib/containers/storage/onyx/vespa"; user = "1000"; group = "1000"; mode = "0750"; }
       "/var/lib/containers/storage/onyx/model_cache"
 
       # { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }
