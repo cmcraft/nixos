@@ -41,6 +41,8 @@
         ONYX_ROLE = "api";
         REDIS_HOST = "onyx-redis";
         C_FORCE_ROOT = "true";
+        DB_MIGRATION_REQUIRED = "true";
+        VESPA_WAIT_TIMEOUT = "300";  
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
       };
       volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
