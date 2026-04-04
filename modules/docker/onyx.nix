@@ -18,9 +18,13 @@
     onyx-vespa = {
       image = "vespaengine/vespa:latest";
       autoStart = true;
-      ports = [ "8081:8081" ];
+      ports = [ "8081:8081" "19071:19071" ];
       volumes = [ "/var/lib/containers/storage/onyx/vespa:/opt/vespa/var" ];
-      extraOptions = [ "--network=onyx-net" ];
+      extraOptions = [ 
+        "--network=onyx-net" 
+        "--hostname=onyx-vespa"
+        "--env" "VESPA_CONFIGSERVER_MBEAN_RPC_ADVERTISE_ADDRESS=onyx-vespa"
+      ];
     };
 
     # Redis
