@@ -48,7 +48,8 @@
         REDIS_HOST = "onyx-redis";
         C_FORCE_ROOT = "true";
         DB_MIGRATION_REQUIRED = "true";
-        VESPA_WAIT_TIMEOUT = "300";  
+        VESPA_WAIT_TIMEOUT = "300";
+        VESPA_READY_CHECK_ENABLED = "false";  
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
 
         # EXPLICIT VESPA PORTS
