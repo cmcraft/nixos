@@ -41,28 +41,18 @@
       dependsOn = [ "onyx-db" "onyx-vespa" "onyx-redis" ];
       autoStart = true;
       ports = [ "8080:8080" ];
-      cmd = [ "/bin/sh" "-c" "python /app/onyx/bootstrap/migrate_db.py && /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf" ];      
       environmentFiles = [ config.sops.templates."postgres".path ];
       environment = {
         ONYX_ROLE = "api";
         REDIS_HOST = "onyx-redis";
         C_FORCE_ROOT = "true";
         DB_MIGRATION_REQUIRED = "true";
-        INITIAL_SETUP_REQUIRED = "true";
-        VESPA_WAIT_TIMEOUT = "300";
-        VESPA_READY_CHECK_ENABLED = "false";  
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
 
-        # EXPLICIT VESPA PORTS
-        # 19071 is where the API pushes the "Brain" data
-        # 8081 is where the API queries the "Data"
         VESPA_HOST = "onyx-vespa";
-        VESPA_PORT = "8081";
         VESPA_CONFIG_SERVER_HOST = "onyx-vespa";
         VESPA_CONFIG_SERVER_PORT = "19071";
 
-        # This prevents the API from killing itself while waiting for 8081 to wake up
-        DISABLE_VESPA_WAIT_FOR_READINESS = "true"; 
       };
       volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
       extraOptions = [ "--network=onyx-net" ];
