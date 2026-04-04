@@ -24,7 +24,7 @@
 
     # Backend API Server
     onyx-api = {
-      image = "onyx-dot-app/onyx-api-server:latest";
+      image = "onyx-dot-app/onyx-backend:latest";
       dependsOn = [ "onyx-db" "onyx-vespa" ];
       autoStart = true;
       environmentFiles = [ config.sops.templates."postgres".path ];
