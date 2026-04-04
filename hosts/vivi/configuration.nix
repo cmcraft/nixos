@@ -207,6 +207,11 @@
     group = "vespa";
   };
 
+  users.users.onyx = {
+    isSystemUser = true;
+    group = "onyx";
+  };
+
   users.users.comfyui = {
     isSystemUser = true;
     group = "comfyui";
@@ -220,6 +225,7 @@
   users.groups.cmcraft = {};
   users.groups.colord = {};
   users.groups.comfyui = {};
+  users.groups.onyx = {};
   users.groups.open-webui = {};
   users.groups.video = {};
   users.groups.render = {};
