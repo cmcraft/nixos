@@ -19,7 +19,6 @@
     ../../modules/docker/lemonade.nix
     # ../../modules/llamacpp-server/llamacpp-server.nix
     ../../modules/nm-applet/nm-applet.nix
-    ../../modules/docker/onyx.nix
     ../../modules/openssh/openssh.nix
     # ../../modules/open-webui/open-webui.nix
     ../../modules/pipewire/pipewire.nix
@@ -163,9 +162,8 @@
   networking.networkmanager.enable = true;
   networking.firewall = {
     allowPing = true;
-    allowedTCPPorts = [ 80 443 3000 8000 8080 8081 19071];
+    allowedTCPPorts = [ 80 443 3000 8000 8080 ];
   };
-  networking.firewall.interfaces."podman+".allowedUDPPorts = [ 53 ];
 
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
@@ -176,35 +174,6 @@
   # ];
   time.timeZone = "America/Chicago";
   security.sudo.wheelNeedsPassword = false;
-
-  systemd.services.init-onyx-network = {
-    description = "Create Podman network for Onyx";
-    after = [ "network.target" ];
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig.Type = "oneshot";
-    script = ''
-      ${pkgs.podman}/bin/podman network inspect onyx-net || ${pkgs.podman}/bin/podman network create onyx-net
-    '';
-  };
-
-  systemd.services."podman-onyx-api" = {
-    # Wait for the network, secrets, and the LLM server
-    after = [ "sops-nix.service" "podman-lemonade.service" ];
-    requires = [ "podman-lemonade.service" ];
-    
-    # Give Vespa and Postgres time to actually be "Ready" before the API hammers them
-    serviceConfig = {
-      Restart = "on-failure";
-      RestartSec = "10s"; # Retries if DB/Vespa aren't up yet
-    };
-  };
-
-# Ensure Vespa doesn't get killed by the OOM killer during a heavy index
-systemd.services."podman-onyx-vespa".serviceConfig.OOMScoreAdjust = -500;
-
-
-  # Ensure containers wait for sops decryption
-  systemd.services."podman-onyx-db".after = [ "sops-nix.service" "podman-lemonade.service" ];
 
   systemd.services.open-webui.serviceConfig.DynamicUser = lib.mkForce false;
   systemd.services.open-webui.serviceConfig.User = "open-webui";
