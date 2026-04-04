@@ -44,6 +44,17 @@
         DB_MIGRATION_REQUIRED = "true";
         VESPA_WAIT_TIMEOUT = "300";  
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
+
+        # EXPLICIT VESPA PORTS
+        # 19071 is where the API pushes the "Brain" data
+        # 8081 is where the API queries the "Data"
+        VESPA_HOST = "onyx-vespa";
+        VESPA_PORT = "8081";
+        VESPA_CONFIG_SERVER_HOST = "onyx-vespa";
+        VESPA_CONFIG_SERVER_PORT = "19071";
+
+        # This prevents the API from killing itself while waiting for 8081 to wake up
+        DISABLE_VESPA_WAIT_FOR_READINESS = "true"; 
       };
       volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
       extraOptions = [ "--network=onyx-net" ];
