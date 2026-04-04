@@ -27,9 +27,9 @@
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
-      { directory = "/var/lib/containers/storage/onyx/db"; user = "onyx"; group = "onyx"; mode = "0700"; }
-      { directory = "/var/lib/containers/storage/onyx/config"; user = "onyx"; group = "onyx"; mode = "0755"; }
-      { directory = "/var/lib/containers/storage/onyx/index"; user = "vespa"; group = "vespa"; mode = "0755"; }
+      { directory = "/var/lib/containers/storage/onyx/db"; user = "root"; group = "root"; mode = "0700"; }
+      { directory = "/var/lib/containers/storage/onyx/config"; user = "root"; group = "root"; mode = "0755"; }
+      { directory = "/var/lib/containers/storage/onyx/index"; user = "1000"; group = "1000"; mode = "0755"; }
 
       # { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }
       # { directory = "/var/lib/open-webui"; mode = "0700"; }
