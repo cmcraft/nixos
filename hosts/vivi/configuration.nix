@@ -194,7 +194,7 @@
     
     # Give Vespa and Postgres time to actually be "Ready" before the API hammers them
     serviceConfig = {
-      Restart = "always";
+      Restart = "on-failure";
       RestartSec = "10s"; # Retries if DB/Vespa aren't up yet
     };
   };
