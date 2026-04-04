@@ -27,6 +27,7 @@
       image = "onyxdotapp/onyx-backend:latest";
       dependsOn = [ "onyx-db" "onyx-vespa" ];
       autoStart = true;
+      ports = [ "8080:8080" ];
       environmentFiles = [ config.sops.templates."postgres".path ];
       environment = {
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
@@ -40,7 +41,7 @@
       image = "onyxdotapp/onyx-web-server:latest";
       autoStart = true;
       ports = [ "3000:3000" ];
-      environment = { API_SERVER_HOST = "onyx-api"; };
+      environment = { ONYX_API_SERVER_URL = "http://192.168.1.214:8080"; API_SERVER_HOST = "onyx-api"; INTERNAL_URL = "http://onyx-api:8080"; };
       dependsOn = [ "onyx-api" ];
       extraOptions = [ "--network=onyx-net" ];
     };
