@@ -18,6 +18,7 @@
     onyx-vespa = {
       image = "vespaengine/vespa:latest";
       autoStart = true;
+      ports = [ "8081:8081" ];
       volumes = [ "/var/lib/containers/storage/onyx/vespa:/opt/vespa/var" ];
       extraOptions = [ "--network=onyx-net" ];
     };
