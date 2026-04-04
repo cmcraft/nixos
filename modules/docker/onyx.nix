@@ -24,12 +24,13 @@
 
     # Backend API Server
     onyx-api = {
-      image = "onyxdotapp/onyx-api:latest";
+      image = "onyxdotapp/onyx-backend:latest";
       dependsOn = [ "onyx-db" "onyx-vespa" ];
       autoStart = true;
       ports = [ "8080:8080" ];
       environmentFiles = [ config.sops.templates."postgres".path ];
       environment = {
+        MULTICONTAINER_APP_NAME = "api";
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
       };
       volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
