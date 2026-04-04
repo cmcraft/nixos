@@ -44,7 +44,6 @@
       environment = { 
         ONYX_API_SERVER_URL = "http://192.168.1.214:8080";
         WEB_DOMAIN = "http://192.168.1.214:3000"; 
-        ONYX_API_SERVER_URL = "http://192.168.1.214:8080"; 
         INTERNAL_URL = "http://onyx-api:8080"; };
       dependsOn = [ "onyx-api" ];
       extraOptions = [ "--network=onyx-net" ];
