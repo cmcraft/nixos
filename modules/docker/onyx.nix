@@ -24,7 +24,7 @@
 
     # Backend API Server
     onyx-api = {
-      image = "onyxdotapp/onyx-api-server:latest";
+      image = "onyxdotapp/onyx-api:latest";
       dependsOn = [ "onyx-db" "onyx-vespa" ];
       autoStart = true;
       ports = [ "8080:8080" ];
