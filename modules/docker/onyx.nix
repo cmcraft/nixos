@@ -43,7 +43,7 @@
         VESPA_HOST = "onyx-index";
         # Podman-specific host resolution
         GEN_AI_MODEL_PROVIDER = "custom";
-        GEN_AI_API_ENDPOINT = "http://localhost:8000"; 
+        GEN_AI_API_ENDPOINT = "http://192.168.1.214:8000"; 
         WEB_DOMAIN = "http://192.168.1.214:3000";
       };
       volumes = [ "/var/lib/containers/storage/onyx/config:/app/dynamic_config:Z" ];
