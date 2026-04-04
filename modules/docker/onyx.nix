@@ -28,9 +28,10 @@
       dependsOn = [ "onyx-db" "onyx-vespa" ];
       autoStart = true;
       ports = [ "8080:8080" ];
+      cmd = [ "/usr/bin/supervisord" "-c" "/etc/supervisor/conf.d/supervisord.conf" ];
       environmentFiles = [ config.sops.templates."postgres".path ];
       environment = {
-        MULTICONTAINER_APP_NAME = "api";
+        ONYX_ROLE = "api";
         TRANSFORMERS_CACHE = "/var/lib/onyx/model_cache";
       };
       volumes = [ "/var/lib/containers/storage/onyx/model_cache:/var/lib/onyx/model_cache" ];
