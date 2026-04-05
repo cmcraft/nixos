@@ -6,6 +6,10 @@
       enable = true;
       addresses = true;
       workstation = true;
+      # Publish hostname on local network for mDNS resolution
+      domain = true;
     };
+    # Ensure Avahi works correctly with systemd-resolved
+    nssmdns = true;
   };
 }
