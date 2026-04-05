@@ -10,6 +10,7 @@
       domain = true;
     };
     # Ensure Avahi works correctly with systemd-resolved
-    nssmdns = true;
+    nssmdns4 = true;
+    nssmdns6 = true;
   };
 }
