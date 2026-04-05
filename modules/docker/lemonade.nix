@@ -17,12 +17,14 @@
     ];
     # Environment variables for hardware and server config
     environment = {
-      "LEMONADE_LLAMACPP_BACKEND" = "rocm"; # Set to gpu for iGPU-only or hybrid
+      "LEMONADE_LLAMACPP" = "rocm"; # LlamaCpp backend: vulkan, rocm, or cpu
       "HSA_OVERRIDE_GFX_VERSION" = "11.5.1"; # Critical for 8060S compatibility
       "ROCR_VISIBLE_DEVICES" = "0";
       "HIP_VISIBLE_DEVICES" = "0";
       "FLASH_ATTENTION_TRITON_AMD_ENABLE" = "TRUE";
-      "LEMONADE_CTX_SIZE" = "200000";
+      "LEMONADE_CTX_SIZE" = "100000"; # Default context size for models
+      "LEMONADE_MAX_LOADED_MODELS" = "5"; # Maximum models to keep loaded per type
+      "LEMONADE_GLOBAL_TIMEOUT" = "900"; # 15 minutes in seconds for auto-unload
     };
 
     volumes = [
@@ -33,8 +35,8 @@
 
     # Grant hardware access for GPU/NPU acceleration
     extraOptions = [
-    "--shm-size=32gb"                 # Essential for large models
-  ];
+      "--shm-size=32gb" # Essential for large models
+    ];
 
   };
 }
