@@ -21,7 +21,7 @@
     # ../../modules/llamacpp-server/llamacpp-server.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
-    # ../../modules/open-webui/open-webui.nix
+    ../../modules/open-webui/open-webui.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
     ../../modules/stylix/stylix.nix
