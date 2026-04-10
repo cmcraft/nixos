@@ -8,6 +8,9 @@
   # Strix Halo Toolboxes - API-accessible containers for AMD Ryzen AI MAX+ (Strix Halo)
 
   virtualisation.oci-containers.containers.strix-halo-comfyui = {
+    labels = {
+        "io.containers.autoupdate" = "registry";
+    };
     image = "docker.io/kyuz0/amd-strix-halo-comfyui:latest";
     autoStart = false;
     devices = [ "/dev/dri" "/dev/kfd" ];

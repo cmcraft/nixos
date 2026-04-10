@@ -6,9 +6,12 @@
   ];
 
   virtualisation.oci-containers.containers."lemonade" = {
+    labels = {
+        "io.containers.autoupdate" = "registry";
+    };
     image = "ghcr.io/lemonade-sdk/lemonade-server:latest";
     autoStart = true;
-    ports = [ "8000:8000" ];
+    ports = [ "8000:8000" "13305:13305" "13306:13306"];
     
     devices = [
       "/dev/dri"
@@ -27,6 +30,7 @@
       "LEMONADE_CTX_SIZE" = "32768"; # Default context size for models
       "LEMONADE_MAX_LOADED_MODELS" = "1"; # Maximum models to keep loaded per type
       "LEMONADE_GLOBAL_TIMEOUT" = "900"; # 15 minutes in seconds for auto-unload
+      "LEMONADE_MAX_VRAM_GB" = "96";
     };
 
     volumes = [
@@ -37,7 +41,9 @@
 
     # Grant hardware access for GPU/NPU acceleration
     extraOptions = [
-      "--shm-size=64gb" # Essential for large models
+      "--shm-size=96gb" # Increased for 128GB host memory
+      "--cap-add=SYS_PTRACE" # Sometimes needed for ROCm performance profiling
+      "--security-opt=seccomp=unconfined" # Helps with NPU/accel access
     ];
 
   };

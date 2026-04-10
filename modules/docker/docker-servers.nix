@@ -7,6 +7,9 @@
   
     virtualisation.oci-containers.containers = {
     redbot = {
+      labels = {
+        "io.containers.autoupdate" = "registry";
+      };
       image = "phasecorex/red-discordbot:full";
       autoStart = false;
       volumes = [ "/var/lib/containers/storage/redbot:/data" ];
@@ -18,6 +21,9 @@
 
   virtualisation.oci-containers.containers = {
     factorio = {
+      labels = {
+        "io.containers.autoupdate" = "registry";
+      };
       image = "factoriotools/factorio:stable";
       autoStart = false;
       ports = [ 
@@ -33,6 +39,9 @@
 
   virtualisation.oci-containers.containers = {
     terraria = {
+      labels = {
+        "io.containers.autoupdate" = "registry";
+      };
       image = "ryshe/terraria:latest";
       autoStart = false;
       ports = [ 

@@ -36,4 +36,27 @@
     passt    # For Pasta rootless networking
     compose2nix
   ];
+
+  systemd.services.podman-auto-update = {
+    description = "Podman Auto-Update Service";
+    wants = [ "network-online.target" ];
+    after = [ "network-online.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      # Runs the built-in podman auto-update command
+      ExecStart = "${pkgs.podman}/bin/podman auto-update";
+      # Optional: cleans up old images after updating
+      ExecStartPost = "${pkgs.podman}/bin/podman image prune -f";
+    };
+  };
+
+  systemd.timers.podman-auto-update = {
+    description = "Timer for Podman Auto-Update Service";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnCalendar = "03:30";
+      Persistent = true; # Run immediately if the last scheduled time was missed
+    };
+  };
+
 }
