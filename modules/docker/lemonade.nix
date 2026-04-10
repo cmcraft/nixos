@@ -25,7 +25,7 @@
       "FLASH_ATTENTION_TRITON_AMD_ENABLE" = "TRUE";
       "PYTORCH_TUNABLEOP_ENABLED" = "1"; # Vital for 40-CU throughput
       "LEMONADE_CTX_SIZE" = "32768"; # Default context size for models
-      "LEMONADE_MAX_LOADED_MODELS" = "2"; # Maximum models to keep loaded per type
+      "LEMONADE_MAX_LOADED_MODELS" = "1"; # Maximum models to keep loaded per type
       "LEMONADE_GLOBAL_TIMEOUT" = "900"; # 15 minutes in seconds for auto-unload
     };
 
