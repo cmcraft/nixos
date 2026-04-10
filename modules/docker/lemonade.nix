@@ -18,6 +18,7 @@
     # Environment variables for hardware and server config
     environment = {
       "LEMONADE_LLAMACPP" = "rocm"; # LlamaCpp backend: vulkan, rocm, or cpu
+      # "HSA_OVERRIDE_GFX_VERSION" = "11.0.0"; # More stable performance target
       "HSA_OVERRIDE_GFX_VERSION" = "11.5.1"; # Critical for 8060S compatibility
       "ROCR_VISIBLE_DEVICES" = "0";
       "HIP_VISIBLE_DEVICES" = "0";
