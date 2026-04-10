@@ -29,9 +29,9 @@
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
 
       # { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }
-      # { directory = "/var/lib/open-webui"; mode = "0700"; }
-      # { directory = "/var/lib/open-webui/data"; mode = "0700"; }
-      # { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
+      { directory = "/var/lib/open-webui"; mode = "0700"; }
+      { directory = "/var/lib/open-webui/data"; mode = "0700"; }
+      { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
     ];
 
     files = [
