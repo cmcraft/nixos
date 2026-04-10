@@ -84,18 +84,32 @@
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [
-  # Unlocks shared memory limits for the 128GB pool (approx 112GB limit)
-  "ttm.pages_limit=29360128"
-  "ttm.page_pool_size=29360128"
-  "amdttm.pages_limit=29360128"
-  "amdttm.page_pool_size=29360128"
+#   boot.kernelParams = [
+#   # Unlocks shared memory limits for the 128GB pool (approx 112GB limit)
+#   "ttm.pages_limit=29360128"
+#   "ttm.page_pool_size=29360128"
+#   "amdttm.pages_limit=29360128"
+#   "amdttm.page_pool_size=29360128"
   
-  # Set IOMMU to passthrough to reduce overhead for the iGPU
-  "iommu=off"
+#   # Set IOMMU to passthrough to reduce overhead for the iGPU
+#   "iommu=off"
   
-  # Increases GTT size for ROCm workloads (96GB example)
-  "amdgpu.gttsize=98304"
+#   # Increases GTT size for ROCm workloads (96GB example)
+#   "amdgpu.gttsize=98304"
+# ];
+
+boot.kernelParams = [
+  # Set GTT (Graphics Translation Table) to 100GB (102400 MB)
+  "amdgpu.gttsize=102400"
+  
+  # Ensure the iGPU can see the full range
+  "amdgpu.vis_vram_limit=102400"
+
+  # TTM limits in pages (120GB / 4KB per page = 31457280)
+  "ttm.pages_limit=31457280"
+  
+  # Improved IOMMU for performance
+  "iommu=pt"
 ];
 
   boot.loader.systemd-boot.enable = true;
