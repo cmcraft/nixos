@@ -22,8 +22,9 @@
       "ROCR_VISIBLE_DEVICES" = "0";
       "HIP_VISIBLE_DEVICES" = "0";
       "FLASH_ATTENTION_TRITON_AMD_ENABLE" = "TRUE";
-      "LEMONADE_CTX_SIZE" = "100000"; # Default context size for models
-      "LEMONADE_MAX_LOADED_MODELS" = "5"; # Maximum models to keep loaded per type
+      "PYTORCH_TUNABLEOP_ENABLED" = "1"; # Vital for 40-CU throughput
+      "LEMONADE_CTX_SIZE" = "32768"; # Default context size for models
+      "LEMONADE_MAX_LOADED_MODELS" = "2"; # Maximum models to keep loaded per type
       "LEMONADE_GLOBAL_TIMEOUT" = "900"; # 15 minutes in seconds for auto-unload
     };
 
@@ -35,7 +36,7 @@
 
     # Grant hardware access for GPU/NPU acceleration
     extraOptions = [
-      "--shm-size=32gb" # Essential for large models
+      "--shm-size=64gb" # Essential for large models
     ];
 
   };
