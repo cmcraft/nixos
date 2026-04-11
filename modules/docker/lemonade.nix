@@ -11,7 +11,7 @@
     };
     image = "ghcr.io/lemonade-sdk/lemonade-server:latest";
     autoStart = true;
-    ports = [ "8000:8000" "13305:13305" "13306:13306"];
+    ports = [ "8000:8000" "9000:9000" "13305:13305" "13306:13306"];
     
     devices = [
       "/dev/dri"
