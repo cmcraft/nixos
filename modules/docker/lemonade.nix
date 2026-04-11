@@ -18,18 +18,30 @@
       "/dev/kfd"
       "/dev/accel"
     ];
-    # Environment variables for hardware and server config
+
     environment = {
-      "LEMONADE_LLAMACPP" = "rocm"; # LlamaCpp backend: vulkan, rocm, or cpu
-      # "HSA_OVERRIDE_GFX_VERSION" = "11.0.0"; # More stable performance target
-      "HSA_OVERRIDE_GFX_VERSION" = "11.5.1"; # Critical for 8060S compatibility
+      "LEMONADE_LLAMACPP" = "rocm";
+      "HSA_OVERRIDE_GFX_VERSION" = "11.5.1"; 
       "ROCR_VISIBLE_DEVICES" = "0";
       "HIP_VISIBLE_DEVICES" = "0";
+      
+      # --- SPEED BOOSTS ---
       "FLASH_ATTENTION_TRITON_AMD_ENABLE" = "TRUE";
-      "PYTORCH_TUNABLEOP_ENABLED" = "1"; # Vital for 40-CU throughput
-      "LEMONADE_CTX_SIZE" = "32768"; # Default context size for models
-      "LEMONADE_MAX_LOADED_MODELS" = "1"; # Maximum models to keep loaded per type
-      "LEMONADE_GLOBAL_TIMEOUT" = "900"; # 15 minutes in seconds for auto-unload
+      "GGML_HIP_ROCWMMA_FATTN" = "1"; # Force RDNA3 optimized attention
+      "PYTORCH_TUNABLEOP_ENABLED" = "1";
+      
+      # KV Cache Quantization (Huge bandwidth savings)
+      "LEMONADE_KV_CACHE_TYPE" = "q4_0"; # Reduces KV cache size/bandwidth by 4x
+      
+      # Speculative Decoding (The "Draft" model speedup)
+      # Ensure this file exists in your models volume!
+      "LEMONADE_DRAFT_MODEL" = "/root/.cache/huggingface/Qwen2.5-1.5B-Instruct-Q8_0.gguf";
+      "LEMONADE_DRAFT_NGL" = "-1"; # Offload draft to GPU
+      
+      # --- MEMORY MANAGEMENT ---
+      "LEMONADE_CTX_SIZE" = "32768"; 
+      "LEMONADE_MAX_LOADED_MODELS" = "1"; 
+      "LEMONADE_GLOBAL_TIMEOUT" = "900"; 
       "LEMONADE_MAX_VRAM_GB" = "96";
     };
 
@@ -39,12 +51,11 @@
       "/var/lib/containers/storage/lemonade/config:/root/.cache/lemonade"
     ];
 
-    # Grant hardware access for GPU/NPU acceleration
     extraOptions = [
-      "--shm-size=96gb" # Increased for 128GB host memory
-      "--cap-add=SYS_PTRACE" # Sometimes needed for ROCm performance profiling
-      "--security-opt=seccomp=unconfined" # Helps with NPU/accel access
+      "--shm-size=96gb" 
+      "--cap-add=SYS_PTRACE"
+      "--security-opt=seccomp=unconfined"
+      "--ipc=host" # Better memory throughput between host and container
     ];
-
   };
 }
