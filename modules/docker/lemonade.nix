@@ -35,7 +35,7 @@
       
       # Speculative Decoding (The "Draft" model speedup)
       # Ensure this file exists in your models volume!
-      "LEMONADE_DRAFT_MODEL" = "/root/.cache/huggingface/Qwen2.5-1.5B-Instruct-Q8_0.gguf";
+      "LEMONADE_DRAFT_MODEL" = "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q8_0.gguf";
       "LEMONADE_DRAFT_NGL" = "-1"; # Offload draft to GPU
       
       # --- MEMORY MANAGEMENT ---
