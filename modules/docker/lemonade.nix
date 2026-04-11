@@ -52,7 +52,7 @@
     ];
 
     extraOptions = [
-      "--shm-size=96gb" 
+      # "--shm-size=96gb" 
       "--cap-add=SYS_PTRACE"
       "--security-opt=seccomp=unconfined"
       "--ipc=host" # Better memory throughput between host and container
