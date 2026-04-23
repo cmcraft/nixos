@@ -24,6 +24,7 @@
     ../../modules/open-webui/open-webui.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
+    ../../modules/sillytavern/sillytavern.nix
     ../../modules/stylix/stylix.nix
     # ../../modules/xserver/xserver.nix
     # ../../modules/docker/strix-halo-llm-toolbox.nix
