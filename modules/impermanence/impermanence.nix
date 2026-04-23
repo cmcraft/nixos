@@ -24,6 +24,7 @@
       "/var/lib/llama-cpp/models"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
+      "/var/lib/SillyTavern"
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }

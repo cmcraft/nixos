@@ -226,12 +226,18 @@ boot.kernelParams = [
     group = "open-webui";
   };
 
+  users.users.sillytavern = {
+    isSystemUser = true;
+    group = "sillytavern";
+  };
+
   users.groups.cmcraft = {};
   users.groups.colord = {};
   users.groups.comfyui = {};
   users.groups.open-webui = {};
   users.groups.video = {};
   users.groups.render = {};
+  users.groups.sillytavern = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
