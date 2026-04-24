@@ -193,8 +193,8 @@ in
   '';
 
   sops.templates."sillytavern-env".content = ''
-    SILLYTAVERN_BASIC_AUTH_MODE=true
-    SILLYTAVERN_BASIC_AUTH_USER=${config.sops.placeholder."sillytavern/username"}
-    SILLYTAVERN_BASIC_AUTH_PASS=${config.sops.placeholder."sillytavern/password"}
+    SILLYTAVERN_BASICAUTHMODE=true
+    SILLYTAVERN_BASICAUTHUSER_USERNAME=${config.sops.placeholder."sillytavern/username"}
+    SILLYTAVERN_BASICAUTHUSER_PASSWORD=${config.sops.placeholder."sillytavern/password"}
   '';
 }
