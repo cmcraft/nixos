@@ -3,5 +3,6 @@
 {
   services.sillytavern = {
     enable = true;
+    port = 8045;
   };
 }
