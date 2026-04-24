@@ -5,7 +5,10 @@
     enable = true;
     port = 8045;
     listen = true;
-    whitelist = true;
+    whitelist = false;
+    serviceConfig = {
+      EnvironmentFile = config.sops.templates."sillytavern-env".path;
+    };
   };
 
   networking.firewall = {
