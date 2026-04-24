@@ -178,7 +178,7 @@ boot.kernelParams = [
   networking.networkmanager.enable = true;
   networking.firewall = {
     allowPing = true;
-    allowedTCPPorts = [ 80 443 3000 8000 8045 8080 ];
+    allowedTCPPorts = [ 80 443 3000 8000 8080 ];
   };
 
   programs.appimage.enable = true;
