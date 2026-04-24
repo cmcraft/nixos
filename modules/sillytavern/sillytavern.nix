@@ -3,7 +3,7 @@
 {
   services.sillytavern = {
     enable = true;
-    configFile = "${config.sops.templates."sillytavern-config".path}"
+    configFile = "${config.sops.templates."sillytavern-config".path}";
 
   };
 
