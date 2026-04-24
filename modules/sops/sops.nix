@@ -192,9 +192,16 @@ in
       ]
   '';
 
-  sops.templates."sillytavern-env".content = ''
-    SILLYTAVERN_BASICAUTHMODE=true
-    SILLYTAVERN_BASICAUTHUSER_USERNAME=${config.sops.placeholder."sillytavern/username"}
-    SILLYTAVERN_BASICAUTHUSER_PASSWORD=${config.sops.placeholder."sillytavern/password"}
+  # 1. Map your secrets into a full SillyTavern config.yaml file
+  sops.templates."sillytavern-config".content = ''
+    listen: true
+    port: 8045
+    whitelistMode: false
+    
+    basicAuthMode: true
+    basicAuthUser:
+      username: "${config.sops.placeholder."sillytavern/username"}"
+      password: "${config.sops.placeholder."sillytavern/password"}"
   '';
+
 }

@@ -3,16 +3,8 @@
 {
   services.sillytavern = {
     enable = true;
-    port = 8045;
-    listen = true;
-    whitelist = false;
-  };
+    configFile = "${config.sops.templates."sillytavern-config".path}"
 
-  systemd.services.sillytavern = {
-    serviceConfig = {
-      # This reads the generated environment file at service startup
-      EnvironmentFile = config.sops.templates."sillytavern-env".path;
-    };
   };
 
   networking.firewall = {
