@@ -24,7 +24,7 @@
       "/var/lib/llama-cpp/models"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
-      "/var/lib/sillytavern"
+      "/var/lib/SillyTavern"
       # "/var/lib/sillytavern/public/scripts/extensions/third-party"
       "/var/lib/terraria"
       "/var/lib/zigbee2mqtt"
