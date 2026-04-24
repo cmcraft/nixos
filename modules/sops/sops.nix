@@ -192,7 +192,6 @@ in
       ]
   '';
 
-  # 1. Map your secrets into a full SillyTavern config.yaml file
   sops.templates."sillytavern-config".content = ''
     listen: true
     port: 8045
