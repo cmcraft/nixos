@@ -26,6 +26,7 @@
     ../../modules/sops/sops.nix
     ../../modules/sillytavern/sillytavern.nix
     ../../modules/stylix/stylix.nix
+    ../../modules/tailscale/tailscale.nix
     # ../../modules/xserver/xserver.nix
     # ../../modules/docker/strix-halo-llm-toolbox.nix
   ];
