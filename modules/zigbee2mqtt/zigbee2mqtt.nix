@@ -22,7 +22,7 @@
       #};
       # CC2674P10
       serial = {
-        port = "tcp://192.168.1.200:7638";
+        port = "tcp://10.10.10.21:7638";
         baudrate = 115200;
         adapter = "zstack";
         disableLed = "false";
