@@ -16,20 +16,20 @@
     ../../modules/factorio/factorio.nix
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
-    ../../modules/gamescope/gamescope.nix
-    ../../modules/greetd/greetd.nix
+    # ../../modules/gamescope/gamescope.nix
+    # ../../modules/greetd/greetd.nix
     ../../modules/home-assistant/home-assistant.nix
-    ../../modules/hyprland/hyprland.nix
+    # ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/mosquitto/mosquitto.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
-    ../../modules/steam/steam.nix
+    # ../../modules/steam/steam.nix
     ../../modules/stylix/stylix.nix
     ../../modules/terraria/terraria.nix
-    ../../modules/xserver/xserver.nix
+    # ../../modules/xserver/xserver.nix
     ../../modules/zigbee2mqtt/zigbee2mqtt.nix
   ];
   
