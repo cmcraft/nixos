@@ -73,7 +73,7 @@
 
     pkgs.git
     pkgs.kitty
-    inputs.llamacpp-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llamacpp-rocm
+    inputs.llama-cpp-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llama-cpp-rocm
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
     pkgs.unzip
