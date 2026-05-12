@@ -140,7 +140,7 @@
           ];
 
           environment.systemPackages = [
-            pkgs.llamacpp-rocm
+            pkgs.llama-cpp-rocm
             pkgs.comfy-ui-rocm
           ];
         })
