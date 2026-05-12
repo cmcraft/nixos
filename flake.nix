@@ -52,11 +52,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    llamacpp-rocm.url = "github:hellas-ai/nix-strix-halo";
+    llama-cpp-rocm.url = "github:hellas-ai/nix-strix-halo";
     comfyui-nix.url = "github:utensils/comfyui-nix";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llamacpp-rocm, comfyui-nix, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llama-cpp-rocm, comfyui-nix, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
