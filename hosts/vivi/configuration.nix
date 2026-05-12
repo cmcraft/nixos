@@ -65,7 +65,7 @@
 
   environment.systemPackages = [
     pkgs.llama-cpp
-    pkgs.llamacpp-rocm
+    pkgs.llama-cpp-rocm
     pkgs.python3Packages.huggingface-hub
     pkgs.clinfo
     # pkgs.claude-code
