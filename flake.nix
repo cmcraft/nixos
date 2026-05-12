@@ -135,7 +135,7 @@
         # Import the overlay
         ({ pkgs, ... }: {
           nixpkgs.overlays = [ 
-            llamacpp-rocm.overlays.default 
+            llama-cpp-rocm.overlays.default 
             comfyui-nix.overlays.default
           ];
 
