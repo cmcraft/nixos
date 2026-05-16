@@ -6,8 +6,6 @@
 
     package = pkgs.home-assistant.override {
       extraPackages = ps: with ps; [
-        google-auth
-        google-auth-oauthlib
         aiohttp
         grpcio
         protobuf
@@ -25,14 +23,14 @@
       # Recommended for fast zlib compression
       # https://www.home-assistant.io/integrations/isal
       "isal"
+      "homekit"
+      "homekit_controller"
       "mqtt"
       "mqtt_eventstream"
       "mqtt_json"
       "mqtt_room"
       "mqtt_statestream"
       "myq"
-      "google"
-      "nest"
       "openweathermap"
       "http"
       "climate"
@@ -47,6 +45,7 @@
       # https://www.home-assistant.io/integrations/default_config/
       default_config = {};
       "automation ui" = "!include automations.yaml";
+      "homekit" = "!include homekit.yaml";
       "scene ui" = "!include scenes.yaml";
       "script ui" = "!include scripts.yaml";
     };
