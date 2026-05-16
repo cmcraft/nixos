@@ -51,6 +51,7 @@ in
     }
   '';
   path = "/var/lib/hass/.storage/application_credentials";
+  owner = "hass";
   };
 
   sops.templates."terraria".content = ''
@@ -91,6 +92,7 @@ in
       password: ${config.sops.placeholder."mosquitto/password"}
     '';
     path = "/var/lib/zigbee2mqtt/secrets.yaml";
+    owner = "zigbee2mqtt";
   };
   
   sops.templates."redbot".content = ''
