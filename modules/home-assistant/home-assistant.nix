@@ -22,6 +22,8 @@
       "shopping_list"
       # Recommended for fast zlib compression
       # https://www.home-assistant.io/integrations/isal
+      "androidtv_remote"
+      "ecobee"
       "isal"
       "homekit"
       "homekit_controller"
@@ -39,7 +41,6 @@
     ];
     extraPackages = python3Packages: with python3Packages; [
       # keep in case we need it later
-      "androidtvremote2"
     ];
     config = {
       # Includes dependencies for a basic setup
