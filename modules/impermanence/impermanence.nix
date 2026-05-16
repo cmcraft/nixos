@@ -20,14 +20,14 @@
       "/var/lib/containers/storage/strix-halo/comfyui"
       "/var/lib/containers/storage/terraria"
       "/var/lib/containers/storage/terraria/config"
-      "/var/lib/hass"
+      { directory = "/var/lib/hass"; user = "hass"; group = "hass"; mode = "u=rwx,g=rx,o="; }
       "/var/lib/llama-cpp/models"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/SillyTavern"
       # "/var/lib/sillytavern/public/scripts/extensions/third-party"
       "/var/lib/terraria"
-      "/var/lib/zigbee2mqtt"
+      { directory = "/var/lib/zigbee2mqtt"; user = "zigbee2mqtt"; group = "zigbee2mqtt"; mode = "u=rwx,g=rx,o="; }
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
 
       # { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }

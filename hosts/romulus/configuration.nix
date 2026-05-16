@@ -188,6 +188,16 @@
     group = "colord";
   };
 
+  users.users.hass = {
+    isSystemUser = true;
+    group = "hass";
+  };
+
+  users.users.zigbee2mqtt = {
+    isSystemUser = true;
+    group = "zigbee2mqtt";
+  };
+
   #users.users.factorio = {
   #  isSystemUser = true;
   #  group = "factorio";
@@ -195,6 +205,8 @@
   
   users.groups.cmcraft = {};
   users.groups.colord = {};
+  users.groups.hass = {};
+  users.groups.zigbee2mqtt = {};
   #users.groups.factorio = {};
 
   home-manager = {
