@@ -15,6 +15,7 @@
     extraComponents = [
       # Components required to complete the onboarding
       "analytics"
+      "androidtvremote2"
       "bluetooth"
       "google_translate"
       "met"
