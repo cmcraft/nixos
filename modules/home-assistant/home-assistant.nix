@@ -95,7 +95,7 @@
                 }
                 {
                   type = "entity";
-                  entity = "sensor.hallway_temperature";
+                  entity = "sensor.that_which_sweats_current_temperature";
                 }
                 {
                   type = "entity";
@@ -129,7 +129,7 @@
                 }
                 {
                   type = "entity";
-                  entity = "sensor.hallway_humidity";
+                  entity = "sensor.that_which_sweats_current_humidity";
                 }
                 {
                   type = "entity";
