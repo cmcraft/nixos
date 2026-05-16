@@ -15,7 +15,6 @@
     extraComponents = [
       # Components required to complete the onboarding
       "analytics"
-      "androidtvremote2"
       "bluetooth"
       "google_translate"
       "met"
@@ -40,6 +39,7 @@
     ];
     extraPackages = python3Packages: with python3Packages; [
       # keep in case we need it later
+      "androidtvremote2"
     ];
     config = {
       # Includes dependencies for a basic setup
