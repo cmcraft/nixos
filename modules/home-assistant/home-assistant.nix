@@ -60,10 +60,6 @@
           title = "Zoraya";
           cards = [
             {
-              type = "picture-entity";
-              entity = "camera.front_door";
-            }
-            {
               type = "thermostat";
               entity = "climate.that_which_sweats";
               name = "Hallway";
