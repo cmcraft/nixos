@@ -65,7 +65,7 @@
             }
             {
               type = "thermostat";
-              entity = "climate.hallway";
+              entity = "climate.that_which_sweats";
               name = "Hallway";
               features = [
                 {
