@@ -233,6 +233,11 @@ boot.kernelParams = [
     group = "sillytavern";
   };
 
+  users.users.hass = {
+    isSystemUser = true;
+    group = "hass";
+  };
+
   users.users.hermes = {
     isSystemUser = true;
     group = "hermes";
@@ -250,6 +255,7 @@ boot.kernelParams = [
   users.groups.video = {};
   users.groups.render = {};
   users.groups.sillytavern = {};
+  users.groups.hass = {};
   users.groups.hermes = {};
   users.groups.zigbee2mqtt = {};
 
