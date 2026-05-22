@@ -206,8 +206,4 @@ in
       password: "${config.sops.placeholder."sillytavern/password"}"
   '';
 
-  services.hermes-agent.environmentFiles = [
-    config.sops.secrets."hermes-env".path
-  ];
-
 }
