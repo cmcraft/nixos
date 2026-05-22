@@ -15,6 +15,7 @@
     ../../modules/fuse/fuse.nix
     ../../modules/fwupd/fwupd.nix
     # ../../modules/greetd/greetd.nix
+    ../../modules/hermes/hermes-agent.nix
     # ../../modules/hyprland/hyprland.nix
     ../../modules/impermanence/impermanence.nix
     ../../modules/docker/lemonade.nix
