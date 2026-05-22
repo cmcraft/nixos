@@ -238,6 +238,11 @@ boot.kernelParams = [
     group = "hermes";
   };
 
+  users.users.zigbee2mqtt = {
+    isSystemUser = true;
+    group = "zigbee2mqtt";
+  };
+
   users.groups.cmcraft = {};
   users.groups.colord = {};
   users.groups.comfyui = {};
@@ -246,6 +251,7 @@ boot.kernelParams = [
   users.groups.render = {};
   users.groups.sillytavern = {};
   users.groups.hermes = {};
+  users.groups.zigbee2mqtt = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
