@@ -48,6 +48,13 @@
         port = 8124;
       };
     };
+
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 10;
+      StartLimitIntervalSec = 120;
+      StartLimitBurst = 5;
+    };
   };
 
   networking.firewall = {
