@@ -233,6 +233,11 @@ boot.kernelParams = [
     group = "sillytavern";
   };
 
+  users.users.hermes = {
+    isSystemUser = true;
+    group = "hermes";
+  };
+
   users.groups.cmcraft = {};
   users.groups.colord = {};
   users.groups.comfyui = {};
@@ -240,6 +245,7 @@ boot.kernelParams = [
   users.groups.video = {};
   users.groups.render = {};
   users.groups.sillytavern = {};
+  users.groups.hermes = {};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };

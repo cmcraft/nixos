@@ -29,6 +29,7 @@ in
     "terraria/password" = { };
     "sillytavern/username" = { };
     "sillytavern/password" = { };
+    "hermes-env" = { format = "yaml"; };
   };
 
   sops.templates."nest" = {
@@ -204,5 +205,9 @@ in
       username: "${config.sops.placeholder."sillytavern/username"}"
       password: "${config.sops.placeholder."sillytavern/password"}"
   '';
+
+  services.hermes-agent.environmentFiles = [
+    config.sops.secrets."hermes-env".path
+  ];
 
 }

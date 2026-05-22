@@ -21,6 +21,7 @@
       "/var/lib/containers/storage/terraria"
       "/var/lib/containers/storage/terraria/config"
       { directory = "/var/lib/hass"; user = "hass"; group = "hass"; mode = "u=rwx,g=rx,o="; }
+      { directory = "/var/lib/hermes"; user = "hermes"; group = "hermes"; mode = "u=rwx,g=rx,o="; }
       "/var/lib/llama-cpp/models"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
