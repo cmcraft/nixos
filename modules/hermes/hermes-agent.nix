@@ -31,7 +31,7 @@
     };
 
     documents = {
-      "USER.md" = ./documents/USER.md;
+      # "USER.md" = ./documents/USER.md;
     };
   };
 }
