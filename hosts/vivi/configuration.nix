@@ -20,10 +20,12 @@
     ../../modules/impermanence/impermanence.nix
     ../../modules/docker/lemonade.nix
     # ../../modules/llamacpp-server/llamacpp-server.nix
+    ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
     ../../modules/sops/sops.nix
     ../../modules/sillytavern/sillytavern.nix
+    ../../modules/stylix/stylix.nix
     ../../modules/tailscale/tailscale.nix
     # ../../modules/xserver/xserver.nix
     # ../../modules/docker/strix-halo-llm-toolbox.nix
