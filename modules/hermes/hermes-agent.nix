@@ -6,6 +6,8 @@
     restart = "on-failure";
     restartSec = 5;
 
+    stateDir = "/var/lib/hermes";
+    workingDirectory = "${stateDir}/workspace";
     environmentFiles = [ config.sops.secrets."hermes-env".path ];
     addToSystemPackages = true;
     extraDependencyGroups = [ "messaging" ];
@@ -15,7 +17,7 @@
       model = {
         provider = "custom";
         base_url = "http://vivi.local:13305/v1";
-        default = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
+        default = "Qwen3.6-35B-A3B-MTP-GGUF-Q8_0";
         context_length = "65536";
       };
       toolsets = [ "all" ];
@@ -24,7 +26,7 @@
       compression = {
         enabled = true;
         threshold = 0.85;
-        summary_model = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
+        summary_model = "Qwen3.6-35B-A3B-MTP-GGUF-Q8_0";
       };
       # personality.nix
       display = { compact = false; personality = "kawaii"; };
