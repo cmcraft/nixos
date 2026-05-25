@@ -32,6 +32,7 @@
       
       # KV Cache Quantization (Huge bandwidth savings)
       "LEMONADE_KV_CACHE_TYPE" = "q4_0"; # Reduces KV cache size/bandwidth by 4x
+      "LEMONADE_CTX_CACHE_SIZE" = "3";
       
       # Speculative Decoding (The "Draft" model speedup)
       # Ensure this file exists in your models volume!
