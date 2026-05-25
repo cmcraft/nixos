@@ -241,6 +241,7 @@ boot.kernelParams = [
   users.users.hermes = {
     isSystemUser = true;
     group = "hermes";
+    extraGroups = [ "adm" ];
   };
 
   users.users.zigbee2mqtt = {
