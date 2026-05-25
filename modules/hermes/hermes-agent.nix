@@ -14,7 +14,7 @@
       model = {
         base_url = "http://127.0.0.1:13305/v1";
         default = "Qwen3.6-35B-A3B-MTP-GGUF-Q8_0";
-      }
+      };
       toolsets = [ "all" ];
       max_turns = 100;
       terminal = { backend = "local"; cwd = "."; timeout = 180; };
