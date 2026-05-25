@@ -42,4 +42,9 @@ in {
       # "USER.md" = ./documents/USER.md;
     };
   };
+
+  serviceConfig = {
+    # Set to at least 210s as recommended by the warning
+    TimeoutStopSec = "210s"; 
+  };
 }
