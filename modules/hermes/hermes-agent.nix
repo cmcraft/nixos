@@ -12,6 +12,7 @@
     # base.nix
     settings = {
       model = {
+        provider = "custom";
         base_url = "http://vivi.local:13305/v1";
         default = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
       };
