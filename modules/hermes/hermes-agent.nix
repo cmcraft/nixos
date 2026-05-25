@@ -1,13 +1,17 @@
 # configuration.nix
-{ config, ... }: {
+{ config, ... }: 
+let 
+  stateDir = "/var/lib/hermes";
+  workingDirectory = "${stateDir}/workspace";
+in {
   services.hermes-agent = {
     enable = true;
 
     restart = "on-failure";
     restartSec = 5;
 
-    stateDir = "/var/lib/hermes";
-    workingDirectory = "${services.hermes-agent.stateDir}/workspace";
+    stateDir = stateDir;
+    workingDirectory = workingDirectory;
     environmentFiles = [ config.sops.secrets."hermes-env".path ];
     addToSystemPackages = true;
     extraDependencyGroups = [ "messaging" ];
