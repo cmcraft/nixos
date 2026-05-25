@@ -7,7 +7,7 @@
     restartSec = 5;
 
     stateDir = "/var/lib/hermes";
-    workingDirectory = "${stateDir}/workspace";
+    workingDirectory = "${services.hermes-agent.stateDir}/workspace";
     environmentFiles = [ config.sops.secrets."hermes-env".path ];
     addToSystemPackages = true;
     extraDependencyGroups = [ "messaging" ];
