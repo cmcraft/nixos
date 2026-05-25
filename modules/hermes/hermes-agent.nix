@@ -12,7 +12,7 @@
     # base.nix
     settings = {
       model = {
-        base_url = "http://127.0.0.1:13305/api/v1";
+        base_url = "http://vivi.local:13305/api/v1";
         default = "Qwen3.6-35B-A3B-MTP-GGUF-Q8_0";
       };
       toolsets = [ "all" ];
