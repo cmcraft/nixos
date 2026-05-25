@@ -15,6 +15,7 @@
         provider = "custom";
         base_url = "http://vivi.local:13305/v1";
         default = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
+        context_length = "65536";
       };
       toolsets = [ "all" ];
       max_turns = 100;
