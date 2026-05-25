@@ -23,10 +23,7 @@
         threshold = 0.85;
         summary_model = "Qwen3.6-35B-A3B-MTP-GGUF-Q8_0";
       };
-    };
-
-    # personality.nix
-    settings = {
+      # personality.nix
       display = { compact = false; personality = "kawaii"; };
       memory = { memory_enabled = true; user_profile_enabled = true; };
       agent = { max_turns = 60; verbose = false; };
