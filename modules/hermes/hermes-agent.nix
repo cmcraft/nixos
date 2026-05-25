@@ -43,8 +43,9 @@ in {
     };
   };
 
-  serviceConfig = {
-    # Set to at least 210s as recommended by the warning
-    TimeoutStopSec = "210s"; 
+  systemd.services.hermes-agent = {
+    serviceConfig = {
+      TimeoutStopSec = "210s";
+    };
   };
 }
