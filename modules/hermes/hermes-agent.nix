@@ -13,7 +13,7 @@
     settings = {
       model = {
         base_url = "http://vivi.local:13305/v1";
-        # default = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
+        default = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
       };
       toolsets = [ "all" ];
       max_turns = 100;
@@ -21,7 +21,7 @@
       compression = {
         enabled = true;
         threshold = 0.85;
-        # summary_model = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
+        summary_model = "Qwen3-6-35B-A3B-MTP-GGUF-Q8_0";
       };
       # personality.nix
       display = { compact = false; personality = "kawaii"; };
