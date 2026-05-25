@@ -238,6 +238,11 @@ boot.kernelParams = [
     group = "hass";
   };
 
+  users.users.hermes = {
+    isSystemUser = true;
+    group = "hermes";
+  };
+
   users.users.zigbee2mqtt = {
     isSystemUser = true;
     group = "zigbee2mqtt";
@@ -251,6 +256,7 @@ boot.kernelParams = [
   users.groups.render = {};
   users.groups.sillytavern = {};
   users.groups.hass = {};
+  users.groups.hermes = {};
   users.groups.zigbee2mqtt = {};
 
   home-manager = {
