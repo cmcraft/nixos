@@ -53,7 +53,11 @@ in {
         enabled = true;
         abort_on_summary_failure = true;
         threshold = 0.35;
-        summary_model = "Qwen3.5-4B-MTP-GGUF";
+      };
+      auxiliary = {
+        compression = {
+          model = "Qwen3.5-4B-MTP-GGUF";
+        };
       };
       # personality.nix
       display = { compact = false; personality = "kawaii"; };
