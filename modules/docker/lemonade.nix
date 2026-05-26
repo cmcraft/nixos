@@ -32,7 +32,7 @@
       
       # KV Cache Quantization (Huge bandwidth savings)
       "LEMONADE_KV_CACHE_TYPE" = "q4_0"; # Reduces KV cache size/bandwidth by 4x
-      "LEMONADE_CTX_CACHE_SIZE" = "3";
+      "LEMONADE_CTX_CACHE_SIZE" = "10";
       
       # Speculative Decoding (The "Draft" model speedup)
       # Ensure this file exists in your models volume!
@@ -41,7 +41,7 @@
       # "LEMONADE_DRAFT_NGL" = "-1"; # Offload draft to GPU
       
       # --- MEMORY MANAGEMENT ---
-      "LEMONADE_CTX_SIZE" = "65536"; 
+      "LEMONADE_CTX_SIZE" = "98304"; 
       "LEMONADE_MAX_LOADED_MODELS" = "2"; 
       "LEMONADE_GLOBAL_TIMEOUT" = "300"; 
       "LEMONADE_MAX_VRAM_GB" = "96";

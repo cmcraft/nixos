@@ -24,13 +24,35 @@ in {
         default = "Qwen3.6-35B-A3B-MTP-GGUF-Q8_0";
         context_length = "65536";
       };
-      toolsets = [ "all" ];
+      toolsets = 
+        [ 
+          "web"
+          "search"
+          "terminal"
+          "file"
+          "browser"
+          "vision"
+          "moa"
+          "skills"
+          "tts"
+          "todo"
+          "memory"
+          "session_search"
+          "cronjob"
+          "code_execution"
+          "delegation"
+          "clarify"
+          "homeassistant"
+          "messaging"
+          "debugging"
+          "safe"
+        ];
       max_turns = 100;
       terminal = { backend = "local"; cwd = "."; timeout = 180; };
       compression = {
         enabled = true;
-        threshold = 0.85;
-        summary_model = "Qwen3.6-35B-A3B-MTP-GGUF-Q8_0";
+        threshold = 0.60;
+        summary_model = "Qwen3.5-4B-MTP-GGUF";
       };
       # personality.nix
       display = { compact = false; personality = "kawaii"; };
