@@ -51,7 +51,8 @@ in {
       terminal = { backend = "local"; cwd = "."; timeout = 180; };
       compression = {
         enabled = true;
-        threshold = 0.60;
+        abort_on_summary_failure = true;
+        threshold = 0.35;
         summary_model = "Qwen3.5-4B-MTP-GGUF";
       };
       # personality.nix
