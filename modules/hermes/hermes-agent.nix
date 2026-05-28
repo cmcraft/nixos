@@ -1,5 +1,5 @@
 # configuration.nix
-{ config, ... }: 
+{ config, pkgs, ... }: 
 let 
   stateDir = "/var/lib/hermes";
   workingDirectory = "${stateDir}/workspace";
@@ -15,6 +15,12 @@ in {
     environmentFiles = [ config.sops.secrets."hermes-env".path ];
     addToSystemPackages = true;
     extraDependencyGroups = [ "messaging" ];
+    extraPackages = 
+      [ 
+        pkgs.pandoc 
+        pkgs.imagemagick 
+        pkgs.jq 
+      ]; 
 
     # base.nix
     settings = {
@@ -27,13 +33,12 @@ in {
       };
       toolsets = 
         [ 
-          "web"
+          "kanban"
           "search"
           "terminal"
           "file"
           "browser"
           "vision"
-          "moa"
           "skills"
           "tts"
           "todo"
@@ -43,7 +48,6 @@ in {
           "code_execution"
           "delegation"
           "clarify"
-          "homeassistant"
           "messaging"
           "debugging"
           "safe"
