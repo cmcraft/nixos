@@ -65,7 +65,6 @@
 
   environment.systemPackages = [
     pkgs.llama-cpp
-    pkgs.llama-cpp-rocm
     pkgs.python3Packages.huggingface-hub
     pkgs.clinfo
     # pkgs.claude-code
@@ -73,7 +72,6 @@
 
     pkgs.git
     pkgs.kitty
-    inputs.llama-cpp-rocm.packages.${pkgs.stdenv.hostPlatform.system}.llama-cpp-rocm
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.base16-schemes
     pkgs.unzip
@@ -171,7 +169,6 @@ boot.kernelParams = [
 
   hardware.enableRedistributableFirmware = true;
   hardware.graphics.extraPackages = with pkgs; [
-    rocmPackages.clr.icd
     libdrm
   ];
 

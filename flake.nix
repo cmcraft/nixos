@@ -52,13 +52,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    llama-cpp-rocm.url = "github:hellas-ai/nix-strix-halo";
     comfyui-nix.url = "github:utensils/comfyui-nix";
 
     hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, llama-cpp-rocm, comfyui-nix, hermes-agent, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, comfyui-nix, hermes-agent, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -138,13 +137,7 @@
         # Import the overlay
         ({ pkgs, ... }: {
           nixpkgs.overlays = [ 
-            llama-cpp-rocm.overlays.default 
             comfyui-nix.overlays.default
-          ];
-
-          environment.systemPackages = [
-            pkgs.llama-cpp-rocm
-            pkgs.comfy-ui-rocm
           ];
         })
 

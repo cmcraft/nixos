@@ -2,7 +2,7 @@
 {
   services.comfyui = {
     enable = true;
-    gpuSupport = "rocm";  # Enable AMD GPU acceleration
+    gpuSupport = "vulcan";  # Enable AMD GPU acceleration
     enableManager = true;  # Enable the built-in ComfyUI Manager
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
@@ -23,14 +23,12 @@
       PYTORCH_HIP_ALLOC_CONF = "garbage_collection_threshold:0.6,max_split_size_mb:512"; 
       HIP_VISIBLE_DEVICES = "0";
       # Point to the system-wide ROCm path
-      ROCM_PATH = "${pkgs.rocmPackages.clr}";
       ROC_ENABLE_PRE_ALLOCATION = "0";
       PYTORCH_ROCM_ARCH = "gfx1151";
       BNB_ROCM_ARCH = "gfx1151"; 
-      LD_LIBRARY_PATH = "${pkgs.rocmPackages.clr}/lib:${pkgs.libdrm}/lib";
       TORCH_SDP_KERNEL_OPTIONS = "flash,math,mem_efficient"; 
       XFORMERS_FORCE_DISABLE_TRITON = "1";
     };
-    package = pkgs.comfy-ui-rocm or pkgs.comfy-ui;
+    package = pkgs.comfy-ui;
   };
 }
