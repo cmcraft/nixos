@@ -29,6 +29,7 @@ in
     "terraria/password" = { };
     "sillytavern/username" = { };
     "sillytavern/password" = { };
+    "sillytavern/api-key" = { };
     "hermes-env" = { format = "yaml"; };
   };
 
@@ -204,6 +205,10 @@ in
     basicAuthUser:
       username: "${config.sops.placeholder."sillytavern/username"}"
       password: "${config.sops.placeholder."sillytavern/password"}"
+
+    apiKeys:
+      name: "hermes-agent"
+      key: "${config.sops.placeholder."sillytavern/api-key"}"
   '';
 
 }
