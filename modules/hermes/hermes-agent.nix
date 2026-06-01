@@ -19,7 +19,10 @@ in {
       [ 
         pkgs.pandoc 
         pkgs.imagemagick 
-        pkgs.jq 
+        pkgs.jq
+        pkgs.python3
+        pkgs.nodejs
+        pkgs.wget 
       ]; 
 
     # base.nix
