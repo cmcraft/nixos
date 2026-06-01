@@ -20,7 +20,7 @@
     ];
 
     environment = {
-      "LEMONADE_LLAMACPP" = "vulcan";
+      "LEMONADE_LLAMACPP" = "vulkan";
       "HSA_OVERRIDE_GFX_VERSION" = "11.5.1"; 
       "ROCR_VISIBLE_DEVICES" = "0";
       "HIP_VISIBLE_DEVICES" = "0";
