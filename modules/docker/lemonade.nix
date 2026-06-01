@@ -21,14 +21,8 @@
 
     environment = {
       "LEMONADE_LLAMACPP" = "vulkan";
-      "HSA_OVERRIDE_GFX_VERSION" = "11.5.1"; 
-      "ROCR_VISIBLE_DEVICES" = "0";
-      "HIP_VISIBLE_DEVICES" = "0";
-      
-      # --- SPEED BOOSTS ---
-      "FLASH_ATTENTION_TRITON_AMD_ENABLE" = "TRUE";
-      "GGML_HIP_ROCWMMA_FATTN" = "1"; # Force RDNA3 optimized attention
-      "PYTORCH_TUNABLEOP_ENABLED" = "1";
+      "GGML_VULKAN_DEVICE" = "0"
+      "RADV_PERFTEST" = "nogttspill"
       
       # KV Cache Quantization (Huge bandwidth savings)
       "LEMONADE_KV_CACHE_TYPE" = "q4_0"; # Reduces KV cache size/bandwidth by 4x
