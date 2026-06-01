@@ -22,6 +22,7 @@
     environment = {
       "LEMONADE_LLAMACPP" = "vulkan";
       "GGML_VULKAN_DEVICE" = "0";
+      "GGML_VK_PREFER_HOST_MEMORY" = "1";
       "RADV_PERFTEST" = "nogttspill";
       
       # KV Cache Quantization (Huge bandwidth savings)
