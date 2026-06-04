@@ -25,13 +25,6 @@
       url = "github:danyspin97/wpaperd";
     };
 
-    # zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
-    # swww = {
-    #   url = "github:LGFae/swww";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,7 +32,6 @@
 
     impermanence = {
       url = "github:nix-community/impermanence";
-      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     sops-nix = {
@@ -133,7 +125,6 @@
         impermanence.nixosModules.impermanence
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series
         
-        comfyui-nix.nixosModules.default
         # Import the overlay
         ({ pkgs, ... }: {
           nixpkgs.overlays = [ 

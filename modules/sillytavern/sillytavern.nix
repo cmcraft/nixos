@@ -3,6 +3,7 @@
 {
   services.sillytavern = {
     enable = true;
+    openFirewall = true;
     configFile = "${config.sops.templates."sillytavern-config".path}";
     user = "sillytavern";
     group = "sillytavern";
@@ -26,8 +27,36 @@
     };
   };
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 8045 ];
-  };  
+  # networking.firewall = {
+  #   enable = true;
+  #   allowedTCPPorts = [ 8045 ];
+  # };
+
+  users.users.sillytavern = {
+    isSystemUser = true;
+    group = "sillytavern";
+  };
+
+  users.groups.sillytavern = {};
+
+  sops.secrets = {
+    "sillytavern/username" = { };
+    "sillytavern/password" = { };
+    "sillytavern/api-key" = { };
+  };
+
+  sops.templates."sillytavern-config".content = ''
+    listen: true
+    port: 8045
+    whitelistMode: false
+    
+    basicAuthMode: true
+    basicAuthUser:
+      username: "${config.sops.placeholder."sillytavern/username"}"
+      password: "${config.sops.placeholder."sillytavern/password"}"
+
+    apiKeys:
+      name: "hermes-agent"
+      key: "${config.sops.placeholder."sillytavern/api-key"}"
+  '';
 }

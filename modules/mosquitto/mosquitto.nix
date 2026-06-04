@@ -2,6 +2,7 @@
 {
   services.mosquitto = {
     enable = true;
+    openFirewall = true;
 
 
     listeners = [
@@ -13,8 +14,23 @@
       }
     ];
   };
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 1883 ];
-  };  
+  
+  # networking.firewall = {
+  #   enable = true;
+  #   allowedTCPPorts = [ 1883 ];
+  # };
+
+  sops.secrets = {
+    "mosquitto/password" = {};
+  };
+
+  sops.templates."mosquitto.yaml" = {
+    content = ''
+      server: mqtt://localhost:1883
+      user: cmcraft
+      password: ${config.sops.placeholder."mosquitto/password"}
+    '';
+    path = "/var/lib/zigbee2mqtt/secrets.yaml";
+    owner = "zigbee2mqtt";
+  };
 }

@@ -20,4 +20,24 @@
       HTTP_TIMEOUT = "10s";
     };
   }; 
+
+  sops.secrets = {
+    "cloudflare/zone-identifier" = { };
+    "cloudflare/token" = { };
+  };
+
+  sops.templates."ddns-updater/config".content = ''
+    {
+      "settings": [
+        {
+          "provider": "cloudflare",
+          "zone_identifier": "${config.sops.placeholder."cloudflare/zone-identifier"}",
+          "domain": "knit-purl-binary.com",
+          "ttl": 600,
+          "ip_version": "ipv4",
+          "token": "${config.sops.placeholder."cloudflare/token"}",
+          "proxied": true
+        }
+      ]
+  '';
 }

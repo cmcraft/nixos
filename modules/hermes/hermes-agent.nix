@@ -82,9 +82,21 @@ in {
     };
   };
 
+  users.users.hermes = {
+    isSystemUser = true;
+    group = "hermes";
+    extraGroups = [ "adm" ];
+  };
+  users.groups.hermes = {};
+
+
   systemd.services.hermes-agent = {
     serviceConfig = {
       TimeoutStopSec = "210s";
     };
+  };
+
+  sops.secrets = {
+    "hermes-env" = { format = "yaml"; };
   };
 }

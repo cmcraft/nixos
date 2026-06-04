@@ -1,8 +1,17 @@
 { config, ... }:
 {
   systemd.services.zigbee2mqtt.after = ["mosquitto.service"];
+
+  users.users.zigbee2mqtt = {
+    isSystemUser = true;
+    group = "zigbee2mqtt";
+  };
+
+  users.groups.zigbee2mqtt = {};
+
   services.zigbee2mqtt = {
     enable = true;
+    openFirewall = true;
     settings = {
       homeassistant = {
         enabled = config.services.home-assistant.enable;
@@ -57,8 +66,8 @@
     };
   };
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 8124 7638 6638 ];
-  };  
+  # networking.firewall = {
+  #   enable = true;
+  #   allowedTCPPorts = [ 8124 7638 6638 ];
+  # };  
 }

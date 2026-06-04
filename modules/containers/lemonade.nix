@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../docker/docker.nix
+    ../containers/containers.nix
   ];
 
   virtualisation.oci-containers.containers."lemonade" = {
@@ -54,5 +54,10 @@
       "--security-opt=seccomp=unconfined"
       "--ipc=host" # Better memory throughput between host and container
     ];
+  };
+
+  networking.firewall = {
+    allowPing = true;
+    allowedTCPPorts = [ 8000 ];
   };
 }

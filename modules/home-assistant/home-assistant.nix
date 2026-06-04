@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 {
   systemd.services.home-assistant.after = [ "zigbee2mqtt.service" ];
+
+  users.users.hass = {
+      isSystemUser = true;
+      group = "hass";
+    };
+  users.groups.hass = {};
+
   services.home-assistant = {
     enable = true;
 
