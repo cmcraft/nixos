@@ -3,7 +3,6 @@
 {
   services.sillytavern = {
     enable = true;
-    openFirewall = true;
     configFile = "${config.sops.templates."sillytavern-config".path}";
     user = "sillytavern";
     group = "sillytavern";
@@ -27,10 +26,10 @@
     };
   };
 
-  # networking.firewall = {
-  #   enable = true;
-  #   allowedTCPPorts = [ 8045 ];
-  # };
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 8045 ];
+  };
 
   users.users.sillytavern = {
     isSystemUser = true;
