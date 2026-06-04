@@ -57,12 +57,14 @@
       };
     };
   };
-
-  serviceConfig = {
-    Restart = "on-failure";
-    RestartSec = 10;
-    StartLimitIntervalSec = 120;
-    StartLimitBurst = 5;
+  
+  systemd.services.zigbee2mqtt = {
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 10;
+      StartLimitIntervalSec = 120;
+      StartLimitBurst = 5;
+    };
   };
 
   networking.firewall = {
