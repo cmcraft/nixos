@@ -8,6 +8,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   environment.variables = {
       EDITOR = "nvim";
     };
