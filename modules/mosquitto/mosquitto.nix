@@ -2,8 +2,6 @@
 {
   services.mosquitto = {
     enable = true;
-    openFirewall = true;
-
 
     listeners = [
       {
@@ -15,10 +13,10 @@
     ];
   };
   
-  # networking.firewall = {
-  #   enable = true;
-  #   allowedTCPPorts = [ 1883 ];
-  # };
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 1883 ];
+  };
 
   sops.secrets = {
     "mosquitto/password" = {};
