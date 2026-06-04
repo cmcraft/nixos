@@ -16,6 +16,6 @@
 
     # inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     webcord
-    bitwarden-desktop
+    # bitwarden-desktop # calls for an EOL electron app
   ];
 }
