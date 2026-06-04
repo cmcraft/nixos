@@ -46,7 +46,7 @@ in
     SOPS_AGE_KEY_FILE= "$HOME/.config/sops/age/keys.txt";
   };
 
-  environment.pathsToLink = [ '/share/applications' '/share/xdg-desktop-portal' ];
+  environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
