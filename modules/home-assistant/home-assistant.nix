@@ -8,6 +8,14 @@
     };
   users.groups.hass = {};
 
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/etc/home-assistant"
+      { directory = "/var/lib/hass"; user = "hass"; group = "hass"; mode = "u=rwx,g=rx,o="; }
+    ];
+  };
+
   services.home-assistant = {
     enable = true;
 

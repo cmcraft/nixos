@@ -44,4 +44,11 @@
       "journeypermission_increaseplacementrange" : "2"
     }
   '';
+
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/var/lib/terraria"
+    ];
+  };
 }

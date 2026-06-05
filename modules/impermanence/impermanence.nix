@@ -3,38 +3,14 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      "/etc/home-assistant"
       "/etc/NetworkManager/system-connections"
       "/etc/nixos"
       "/etc/secureboot"
       "/var/db/sudo"
       "/var/lib/bluetooth"
-      "/var/lib/containers"
-      "/var/lib/containers/storage/factorio"
-      "/var/lib/containers/storage/lemonade/lemonade-llama"
-      "/var/lib/containers/storage/lemonade/models"
-      "/var/lib/containers/storage/lemonade/config"
-      "/var/lib/containers/storage/minecraft"
-      "/var/lib/containers/storage/redbot"
-      "/var/lib/containers/storage/redbot/core/logs"
-      "/var/lib/containers/storage/strix-halo/comfyui"
-      "/var/lib/containers/storage/terraria"
-      "/var/lib/containers/storage/terraria/config"
-      { directory = "/var/lib/hass"; user = "hass"; group = "hass"; mode = "u=rwx,g=rx,o="; }
-      { directory = "/var/lib/hermes"; user = "hermes"; group = "hermes"; mode = "u=rwx,g=rx,o="; }
-      "/var/lib/llama-cpp/models"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
-      "/var/lib/SillyTavern"
-      # "/var/lib/sillytavern/public/scripts/extensions/third-party"
-      "/var/lib/terraria"
-      { directory = "/var/lib/zigbee2mqtt"; user = "zigbee2mqtt"; group = "zigbee2mqtt"; mode = "u=rwx,g=rx,o="; }
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
-
-      # { directory = "/var/lib/comfyui"; user = "comfyui"; group = "comfyui"; mode = "0750"; }
-      { directory = "/var/lib/open-webui"; mode = "0700"; }
-      { directory = "/var/lib/open-webui/data"; mode = "0700"; }
-      { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
     ];
 
     files = [

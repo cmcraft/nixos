@@ -9,6 +9,13 @@
 
   users.groups.zigbee2mqtt = {};
 
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      { directory = "/var/lib/zigbee2mqtt"; user = "zigbee2mqtt"; group = "zigbee2mqtt"; mode = "u=rwx,g=rx,o="; }
+    ];
+  };
+
   services.zigbee2mqtt = {
     enable = true;
     settings = {

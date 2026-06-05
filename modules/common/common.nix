@@ -110,12 +110,4 @@
   };
   users.groups.colord = {};
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users = {
-      cmcraft = import ../../home/home.nix;
-    };
-  };
 }

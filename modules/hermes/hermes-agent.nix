@@ -99,4 +99,11 @@ in {
   sops.secrets = {
     "hermes-env" = { format = "yaml"; };
   };
+
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      { directory = "/var/lib/hermes"; user = "hermes"; group = "hermes"; mode = "u=rwx,g=rx,o="; }
+    ];
+  };
 }

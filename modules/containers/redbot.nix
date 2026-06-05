@@ -27,4 +27,12 @@
     TOKEN=${config.sops.placeholder."redbot/token"}
     PREFIX=!
   '';
+
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/var/lib/containers/storage/redbot"
+      "/var/lib/containers/storage/redbot/core/logs"
+    ];
+  };
 }

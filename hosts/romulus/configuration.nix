@@ -64,6 +64,15 @@
     };
   };
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = {
+      cmcraft = import ../../home/home.nix;
+    };
+  };
+
   networking.hostName = "romulus"; 
 
   system.stateVersion = "26.05"; # Did you read the comment?

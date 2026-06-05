@@ -61,6 +61,15 @@
     pkgs.steamguard-cli
   ];
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = {
+      cmcraft = import ../../home/home-gui.nix;
+    };
+  };
+
   networking.hostName = "remus"; 
 
   system.stateVersion = "26.05"; # Did you read the comment?

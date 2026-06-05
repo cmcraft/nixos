@@ -40,6 +40,13 @@
     compose2nix
   ];
 
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/var/lib/containers"
+    ];
+  };
+
   systemd.services.podman-auto-update = {
     description = "Podman Auto-Update Service";
     wants = [ "network-online.target" ];

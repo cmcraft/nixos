@@ -60,4 +60,13 @@
     allowPing = true;
     allowedTCPPorts = [ 8000 ];
   };
+
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/var/lib/containers/storage/lemonade/config"
+      "/var/lib/containers/storage/lemonade/lemonade-llama"
+      "/var/lib/containers/storage/lemonade/models"
+    ];
+  };
 }

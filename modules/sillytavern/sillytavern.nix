@@ -38,6 +38,13 @@
 
   users.groups.sillytavern = {};
 
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/var/lib/SillyTavern"
+    ];
+  };
+
   sops.secrets = {
     "sillytavern/username" = { };
     "sillytavern/password" = { };

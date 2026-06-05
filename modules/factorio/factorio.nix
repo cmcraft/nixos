@@ -19,6 +19,13 @@
     extraSettingsFile = config.sops.templates."factorio/extraSettingsFile".path;
   };
 
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      { directory = "/var/lib/factorio"; user = "factorio"; group = "factorio"; mode = "u=rwx,g=rx,o="; }
+    ];
+  };
+
   sops.secrets = {
     "factorio/password" = { };
     "factorio/token" = { };

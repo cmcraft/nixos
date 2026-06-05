@@ -54,8 +54,17 @@
     libdrm
   ];
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = {
+      cmcraft = import ../../home/home.nix;
+    };
+  };
+
   networking.hostName = "vivi";
-  
+
   networking.firewall = {
     allowPing = true;
     allowedTCPPorts = [ 80 443 3000 8080 ];
