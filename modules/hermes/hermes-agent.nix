@@ -85,7 +85,7 @@ in {
   users.users.hermes = {
     isSystemUser = true;
     extraGroups = [ "adm" "users"];
-    group = lib.mkforce "users";
+    group = lib.mkForce "users";
   };
 
   systemd.services.hermes-agent = {
