@@ -38,7 +38,7 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      "/var/lib/SillyTavern"
+      { directory = "/var/lib/SillyTavern"; user = "sillytavern"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
     ];
   };
 
