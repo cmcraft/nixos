@@ -1,5 +1,5 @@
 # configuration.nix
-{ config, pkgs, ... }: 
+{ config, lib, pkgs, ... }: 
 let 
   stateDir = "/var/lib/hermes";
   workingDirectory = "${stateDir}/workspace";
