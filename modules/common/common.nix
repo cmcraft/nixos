@@ -108,4 +108,6 @@
     isSystemUser = true;
     group = "colord";
   };
+  users.groups.colord = {};
+  
 }
