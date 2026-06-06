@@ -18,7 +18,7 @@
         bits= 4096;
       }
     ];
-    allowSFTP = false; # Don't set this if you need sftp
+    allowSFTP = true;
     extraConfig = ''
       AllowTcpForwarding yes
       X11Forwarding no
