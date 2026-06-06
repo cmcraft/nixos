@@ -105,6 +105,5 @@
 
   users.users.colord = {
     isSystemUser = true;
-    group = "users";
   };
 }

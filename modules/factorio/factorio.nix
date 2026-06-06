@@ -22,7 +22,7 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      { directory = "/var/lib/factorio"; user = "factorio"; group = "users"; mode = "u=rwx,g=rwx,o=rw"; }
+      { directory = "/var/lib/factorio"; user = "factorio"; group = "users"; mode = "u=rwx,g=rx,o=rx"; }
     ];
   };
 

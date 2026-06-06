@@ -10,7 +10,7 @@
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
-      { directory = "/var/lib/colord"; user = "colord"; group = "users"; mode = "u=rwx,g=rwx,o=rw"; }
+      { directory = "/var/lib/colord"; user = "colord"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
     ];
 
     files = [

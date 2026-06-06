@@ -33,7 +33,6 @@
 
   users.users.sillytavern = {
     isSystemUser = true;
-    group = "users";
   };
 
   environment.persistence."/persist" = {
