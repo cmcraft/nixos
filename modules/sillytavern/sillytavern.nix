@@ -33,10 +33,8 @@
 
   users.users.sillytavern = {
     isSystemUser = true;
-    group = "sillytavern";
+    group = "users";
   };
-
-  users.groups.sillytavern = {};
 
   environment.persistence."/persist" = {
     hideMounts = true;

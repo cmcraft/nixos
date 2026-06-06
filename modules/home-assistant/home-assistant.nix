@@ -4,15 +4,14 @@
 
   users.users.hass = {
       isSystemUser = true;
-      group = "hass";
+      group = "users";
     };
-  users.groups.hass = {};
 
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
       "/etc/home-assistant"
-      { directory = "/var/lib/hass"; user = "hass"; group = "hass"; mode = "u=rwx,g=rx,o="; }
+      { directory = "/var/lib/hass"; user = "hass"; group = "users"; mode = "u=rwx,g=rwx,o=rw"; }
     ];
   };
 

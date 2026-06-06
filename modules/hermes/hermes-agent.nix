@@ -84,11 +84,9 @@ in {
 
   users.users.hermes = {
     isSystemUser = true;
-    group = "hermes";
+    group = "users";
     extraGroups = [ "adm" ];
   };
-  users.groups.hermes = {};
-
 
   systemd.services.hermes-agent = {
     serviceConfig = {
@@ -103,7 +101,7 @@ in {
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      { directory = "/var/lib/hermes"; user = "hermes"; group = "hermes"; mode = "u=rwx,g=rx,o="; }
+      { directory = "/var/lib/hermes"; user = "hermes"; group = "users"; mode = "u=rwx,g=rwx,o=rw"; }
     ];
   };
 }

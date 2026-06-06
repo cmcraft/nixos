@@ -99,15 +99,12 @@
     useDefaultShell = false;
     shell = pkgs.fish;
     group = "cmcraft";
-    extraGroups = [ "users" "wheel" "networkmanager" "comfyui" ];
+    extraGroups = [ "users" "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGY+/Xe3OEDCmxq00H/MQu7XrJbkllgdho1VoN4PuL3k cmcraft@Remus" ];
   };
-  users.groups.cmcraft = {};
 
   users.users.colord = {
     isSystemUser = true;
-    group = "colord";
+    group = "users";
   };
-  users.groups.colord = {};
-
 }
