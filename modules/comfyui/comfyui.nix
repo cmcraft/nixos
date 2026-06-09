@@ -13,6 +13,14 @@
     dataDir = "/var/lib/comfyui";
     openFirewall = true;
     # environment = { };
+    extraArgs = [
+    "--disable-xformers"
+    "--use-pytorch-cross-attention"
+    "--highvram"
+    "--disable-smart-memory"
+    "--cache-none"
+    "--force-fp16"
+  ];
   };
 
   users.users.comfyui = {
