@@ -12,7 +12,10 @@
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
     dataDir = "/var/lib/comfyui";
     openFirewall = true;
-    # environment = { };
+    environment = {
+      AMD_DEBUG = "no2d,nodisplay,nowb";
+      HSA_OVERRIDE_GFX_VERSION = "11.5.1";
+     };
     extraArgs = [
     "--disable-xformers"
     "--use-pytorch-cross-attention"
