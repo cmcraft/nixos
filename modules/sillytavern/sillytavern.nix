@@ -45,7 +45,6 @@
   sops.secrets = {
     "sillytavern/username" = { };
     "sillytavern/password" = { };
-    "sillytavern/api-key" = { };
   };
 
   sops.templates."sillytavern-config".content = ''
