@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
     ../../modules/avahi/avahi.nix
+    ../../modules/comfyui/comfyui.nix
     ../../modules/common/common.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix

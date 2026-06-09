@@ -57,9 +57,5 @@
     basicAuthUser:
       username: "${config.sops.placeholder."sillytavern/username"}"
       password: "${config.sops.placeholder."sillytavern/password"}"
-
-    apiKeys:
-      name: "hermes-agent"
-      key: "${config.sops.placeholder."sillytavern/api-key"}"
   '';
 }
