@@ -9,7 +9,6 @@
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
     ../../modules/avahi/avahi.nix
-    ../../modules/comfyui/comfyui.nix
     ../../modules/common/common.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/fish/fish.nix
@@ -36,7 +35,7 @@
   environment.systemPackages = [
     pkgs.llama-cpp
     pkgs.clinfo
-    pkgs.comfy-ui-rocm
+    pkgs.stable-diffusion-cpp
   ];
 
   boot.kernelParams = [
@@ -48,9 +47,6 @@
     "ttm.pages_limit=31457280"
     # Improved IOMMU for performance
     "iommu=pt"
-    # ComfyUI silliness?
-    "amdgpu.mcbp=0"
-    "amdgpu.cwsr_enable=0"
   ];
 
   boot.initrd.kernelModules = [ "amdgpu" ];
