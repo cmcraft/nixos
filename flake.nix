@@ -44,12 +44,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    inputs.nix-strix-halo.url = "github:hellas-ai/nix-strix-halo";
+
     comfyui-nix.url = "github:utensils/comfyui-nix";
 
     hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, comfyui-nix, hermes-agent, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, nix-strix-halo, comfyui-nix, hermes-agent, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -120,6 +122,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/vivi/configuration.nix
+        nix-strix-halo.nixosModules.default
         hermes-agent.nixosModules.default
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
