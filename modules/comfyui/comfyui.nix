@@ -8,20 +8,6 @@
     enable = true;
     gpuSupport = "rocm";
 
-    # Force ComfyUI's python environment to pull the specific Strix Halo nightly binaries
-    package = (inputs.comfyui-nix.packages.${pkgs.system}.comfyui-rocm.override (oldAttrs: {
-      # Pin the package installer to grab torch/torchvision directly from AMD's nightly index
-      pythonWithDeps = oldAttrs.pythonWithDeps.overrideAttrs (oldPython: {
-        postBuild = ''
-          ${oldPython.postBuild or ""}
-          # Explicitly pull the optimized gfx1151 nightly build to prevent the segmentation fault
-          $out/bin/pip install --force-reinstall --pre \
-            --index-url https://rocm.nightlies.amd.com/v2/gfx1151/ \
-            torch torchvision torchaudio
-        '';
-      });
-    }));
-
     enableManager = true;
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
