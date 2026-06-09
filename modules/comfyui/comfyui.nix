@@ -1,20 +1,23 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  services.comfy-ui = {
+  imports = [ inputs.comfyui-nix.nixosModules.default ];
+  nixpkgs.overlays = [ inputs.comfyui-nix.overlays.default ];
+
+  services.comfyui = {
     enable = true;
     gpuSupport = "rocm";
     enableManager = true;
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
-    dataDir = "/var/lib/comfy-ui";
+    dataDir = "/var/lib/comfyui";
     openFirewall = true;
     # environment = { };
   };
 
-  users.users.comfy-ui = {
+  users.users.comfyui = {
     isSystemUser = true;
-    group = "comfy-ui";
+    group = "comfyui";
     extraGroups = [ "render" ];
   };
   users.groups.comfyui = {};
@@ -22,7 +25,7 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      { directory = "/var/lib/comfy-ui"; user = "comfy-ui"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
+      { directory = "/var/lib/comfyui"; user = "comfyui"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
     ];
   };
 }
