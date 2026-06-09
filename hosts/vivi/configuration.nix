@@ -50,6 +50,7 @@
     "iommu=pt"
     # ComfyUI silliness?
     "amdgpu.mcbp=0"
+    "amdgpu.cwsr_enable=0"
   ];
 
   boot.initrd.kernelModules = [ "amdgpu" ];

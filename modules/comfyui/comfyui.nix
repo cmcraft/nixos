@@ -7,6 +7,7 @@
   services.comfyui = {
     enable = true;
     gpuSupport = "rocm";
+    rocmOverrideGfxVersion = "11.5.1";
     enableManager = true;
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
@@ -14,13 +15,13 @@
     openFirewall = true;
     environment = {
       AMD_DEBUG = "no2d,nodisplay,nowb";
+      HIP_LAUNCH_BLOCKING = "1";
+      PYTORCH_CUDA_ALLOC_CONF = "backend:native";
      };
     extraArgs = [
-    "--disable-xformers"
     "--use-pytorch-cross-attention"
     "--highvram"
     "--disable-smart-memory"
-    "--cache-none"
     "--force-fp16"
   ];
   };
