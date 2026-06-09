@@ -35,7 +35,7 @@
   environment.systemPackages = [
     pkgs.llama-cpp
     pkgs.clinfo
-    pkgs.stable-diffusion-cpp
+    pkgs.stable-diffusion-cpp-vulkan
   ];
 
   boot.kernelParams = [
