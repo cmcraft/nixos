@@ -6,7 +6,7 @@
 
   services.comfyui = {
     enable = true;
-    gpuSupport = "rocm";
+    gpuSupport = "rocm-gfx1151";
     enableManager = true;
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access
@@ -14,7 +14,6 @@
     openFirewall = true;
     environment = {
       AMD_DEBUG = "no2d,nodisplay,nowb";
-      HSA_OVERRIDE_GFX_VERSION = "11.0.0";
      };
     extraArgs = [
     "--disable-xformers"
