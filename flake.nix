@@ -44,7 +44,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    inputs.nix-strix-halo.url = "github:hellas-ai/nix-strix-halo";
+    nix-strix-halo.url = "github:hellas-ai/nix-strix-halo";
 
     comfyui-nix.url = "github:utensils/comfyui-nix";
 
