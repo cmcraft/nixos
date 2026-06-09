@@ -1,8 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.comfyui-nix.packages.${pkgs.stdenv.hostPlatform.system}.rocm ];
-
   services.comfyui = {
     enable = true;
     gpuSupport = "rocm";

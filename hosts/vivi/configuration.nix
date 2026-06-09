@@ -7,6 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.comfyui-nix.packages.${pkgs.stdenv.hostPlatform.system}.rocm
     inputs.sops-nix.nixosModules.sops
     ../../modules/avahi/avahi.nix
     ../../modules/comfyui/comfyui.nix
