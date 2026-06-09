@@ -1,8 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [ comfyui-nix.nixosModules.default ];
-  nixpkgs.overlays = [ comfyui-nix.overlays.default ];
+  imports = [ inputs.comfyui-nix.packages.${pkgs.stdenv.hostPlatform.system}.rocm ];
 
   services.comfyui = {
     enable = true;
