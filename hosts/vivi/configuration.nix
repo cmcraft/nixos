@@ -36,7 +36,7 @@
   environment.systemPackages = [
     pkgs.llama-cpp
     pkgs.clinfo
-    pkgs.comfy-ui
+    pkgs.comfy-ui-rocm
   ];
 
   boot.kernelParams = [
