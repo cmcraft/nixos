@@ -1,6 +1,9 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
+  imports = [ comfyui-nix.nixosModules.default ];
+  nixpkgs.overlays = [ comfyui-nix.overlays.default ];
+  
   services.comfyui = {
     enable = true;
     gpuSupport = "rocm";
