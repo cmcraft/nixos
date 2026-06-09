@@ -28,4 +28,12 @@
       { directory = "/var/lib/comfyui"; user = "comfyui"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
     ];
   };
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      rocm-opencl-icd
+    ];
+  };
+
 }
