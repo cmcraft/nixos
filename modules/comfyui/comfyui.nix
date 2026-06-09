@@ -6,7 +6,7 @@
 
   services.comfyui = {
     enable = true;
-    gpuSupport = "rocm-gfx1151";
+    gpuSupport = "rocm";
     enableManager = true;
     port = 8188;
     listenAddress = "0.0.0.0";  # Use "0.0.0.0" for network access

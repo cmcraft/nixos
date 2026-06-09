@@ -48,6 +48,8 @@
     "ttm.pages_limit=31457280"
     # Improved IOMMU for performance
     "iommu=pt"
+    # ComfyUI silliness?
+    "amdgpu.mcbp=0"
   ];
 
   boot.initrd.kernelModules = [ "amdgpu" ];

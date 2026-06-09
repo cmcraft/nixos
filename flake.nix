@@ -44,7 +44,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    comfyui-nix.url = "github:utensils/comfyui-nix/fix-rocm-xformers-segfault";
+    comfyui-nix.url = "github:utensils/comfyui-nix";
 
     hermes-agent.url = "github:NousResearch/hermes-agent";
   };
