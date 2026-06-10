@@ -70,7 +70,7 @@
     ];
   };
 
-  systemd.services.sillytavern = {
+  systemd.services.podman-lemonade = {
     serviceConfig = {
       ExecStartPre = [
         "+${pkgs.coreutils}/bin/mkdir -p /var/lib/containers/storage/lemonade/config"
