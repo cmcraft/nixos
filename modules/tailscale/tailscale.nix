@@ -4,7 +4,7 @@
   # 1. Enable the service and the firewall
   services.tailscale = {
     enable = true;
-    authKeyFile = sops.templates."tailscale-auth-basic".path;
+    authKeyFile = config.sops.templates."tailscale-auth-basic".path;
   };
 
   sops.secrets = {
