@@ -99,7 +99,7 @@
     useDefaultShell = false;
     shell = pkgs.fish;
     group = "cmcraft";
-    extraGroups = [ "users" "wheel" "networkmanager" ];
+    extraGroups = [ "users" "wheel" "networkmanager" "hermes" ];
     openssh.authorizedKeys.keys = [ 
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGY+/Xe3OEDCmxq00H/MQu7XrJbkllgdho1VoN4PuL3k cmcraft@Remus"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII9/ZpvvU8/5/T3Q51jKdYshcZWaKZO0IeN4qL3bmTg9 hermes-agent@vivi"
