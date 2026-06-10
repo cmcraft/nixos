@@ -7,7 +7,9 @@
       if test -f "${config.sops.secrets."cmcraft/hf_token".path}"
         set -gx HF_TOKEN (cat "${config.sops.secrets."cmcraft/hf_token".path}")
       end
+    '';
 
+    interactiveShellInit = ''
       fastfetch
     '';
   };
