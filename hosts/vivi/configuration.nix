@@ -23,7 +23,7 @@
     ../../modules/sops/sops.nix
     ../../modules/sillytavern/sillytavern.nix
     ../../modules/stylix/stylix.nix
-    ../../modules/tailscale/tailscale.nix
+    ../../modules/tailscale/tailscale-lemonade.nix
   ];
 
   nix.settings = {

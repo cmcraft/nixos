@@ -4,15 +4,15 @@
   # 1. Enable the service and the firewall
   services.tailscale = {
     enable = true;
-    authKeyFile = sops.templates."tailscale-auth-basic".path;
+    authKeyFile = sops.templates."tailscale-auth-lemonade".path;
   };
 
   sops.secrets = {
-    "tailscale/auth-key" = { };
+    "tailscale/lemonade-auth-key" = { };
   };
 
-  sops.templates."tailscale-auth-basic".content = ''
-      ${config.sops.placeholder."tailscale/auth-key"}
+  sops.templates."tailscale-auth-lemonade".content = ''
+      ${config.sops.placeholder."tailscale/lemonade-auth-key"}
   '';
 
   networking.nftables.enable = true;
