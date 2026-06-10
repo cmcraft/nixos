@@ -15,6 +15,8 @@
         "+${pkgs.coreutils}/bin/mkdir -p /var/lib/SillyTavern"
         "+${pkgs.coreutils}/bin/rm -f /var/lib/SillyTavern/config.yaml"
         "+${pkgs.coreutils}/bin/cp -f ${config.sops.templates."sillytavern-config".path} /var/lib/SillyTavern/config.yaml"
+        "+${pkgs.coreutils}/bin/chown sillytavern:users /var/lib/SillyTavern/config.yaml"
+        "+${pkgs.coreutils}/bin/chmod 0775 /var/lib/SillyTavern/config.yaml"
       ];
 
       ExecStart = [
