@@ -84,6 +84,7 @@
 
   sops.secrets = {
     "lemonade/api-key" = { };
+    "lemonade/admin-api-key" = { };
   };
 
   sops.templates."lemonade-config".content = ''
@@ -99,6 +100,7 @@
       "global_timeout": 300,
       "host": "0.0.0.0",
       "api_key": "${config.sops.placeholder."lemonade/api-key"}",
+      "admin_api_key": "${config.sops.placeholder."lemonade/admin-api-key"}",
       "kokoro": {
         "cpu_bin": "builtin"
       },
