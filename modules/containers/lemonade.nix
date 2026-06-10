@@ -69,4 +69,12 @@
       "/var/lib/containers/storage/lemonade/models"
     ];
   };
+
+  sops.secrets = {
+    "lemonade/api-key" = { };
+  };
+
+  sops.templates."lemonade-api".content = ''
+      "${config.sops.placeholder."lemonade/api-key"}"
+  '';
 }
