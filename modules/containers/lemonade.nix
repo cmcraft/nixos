@@ -70,11 +70,87 @@
     ];
   };
 
+  systemd.services.sillytavern = {
+    serviceConfig = {
+      ExecStartPre = [
+        "+${pkgs.coreutils}/bin/mkdir -p /var/lib/containers/storage/lemonade/config"
+        "+${pkgs.coreutils}/bin/rm -f /var/lib/containers/storage/lemonade/config/config.json"
+        "+${pkgs.coreutils}/bin/cp -f ${config.sops.templates."lemonade-config".path} /var/lib/containers/storage/lemonade/config/config.json"
+        "+${pkgs.coreutils}/bin/chown -R root:users /var/lib/containers/storage/lemonade"
+        "+${pkgs.coreutils}/bin/chmod -R 0775 /var/lib/containers/storage/lemonade"
+      ];
+    };
+  };
+
   sops.secrets = {
     "lemonade/api-key" = { };
   };
 
-  sops.templates."lemonade-api".content = ''
-      "${config.sops.placeholder."lemonade/api-key"}"
+  sops.templates."lemonade-config".content = ''
+    {
+      "config_version": 1,
+      "ctx_size": 98304,
+      "disable_model_filtering": false,
+      "enable_dgpu_gtt": false,
+      "extra_models_dir": "",
+      "flm": {
+        "args": ""
+      },
+      "global_timeout": 300,
+      "host": "0.0.0.0",
+      "api_key": "${config.sops.placeholder."lemonade/api-key"}",
+      "kokoro": {
+        "cpu_bin": "builtin"
+      },
+      "llamacpp": {
+        "args": "",
+        "backend": "vulkan",
+        "cpu_args": "",
+        "cpu_bin": "builtin",
+        "prefer_system": true,
+        "rocm_args": "",
+        "rocm_bin": "builtin",
+        "vulkan_args": "",
+        "vulkan_bin": "builtin"
+      },
+      "log_level": "info",
+      "max_loaded_models": 7,
+      "models_dir": "auto",
+      "no_broadcast": false,
+      "no_fetch_executables": false,
+      "offline": false,
+      "port": 13305,
+      "rocm_channel": "stable",
+      "ryzenai": {
+        "server_bin": "builtin"
+      },
+      "sdcpp": {
+        "args": "",
+        "backend": "auto",
+        "cfg_scale": 7.0,
+        "cpu_args": "",
+        "cpu_bin": "builtin",
+        "height": 512,
+        "rocm_args": "",
+        "rocm_bin": "builtin",
+        "steps": 20,
+        "vulkan_args": "",
+        "vulkan_bin": "builtin",
+        "width": 512
+      },
+      "vllm": {
+        "args": "",
+        "backend": "auto"
+      },
+      "websocket_port": "auto",
+      "whispercpp": {
+        "args": "",
+        "backend": "auto",
+        "cpu_args": "",
+        "cpu_bin": "builtin",
+        "npu_args": "",
+        "npu_bin": "builtin"
+      }
+    }
   '';
 }
