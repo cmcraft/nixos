@@ -8,6 +8,11 @@
           # Globally replace the hardcoded paths with Lemonade's expected standard OpenAI route
           sed -i 's|/api/sdapi/v1/txt2img|/v1/images/generations|g' src/endpoints/stable-diffusion.js
           sed -i 's|/sdapi/v1/txt2img|/v1/images/generations|g' src/endpoints/stable-diffusion.js
+
+          # Force SillyTavern to print the exact raw JSON string to your terminal logs
+          substituteInPlace src/endpoints/stable-diffusion.js \
+          --replace "const data = await response.json();" "const data = await response.json();\n console.log('DIAGNOSTIC LEMONADE RESPONSE:', JSON.stringify(data, null, 2));"
+        
         '';
       });
     })
