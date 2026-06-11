@@ -9,9 +9,10 @@
           sed -i 's|/api/sdapi/v1/txt2img|/v1/images/generations|g' src/endpoints/stable-diffusion.js
           sed -i 's|/sdapi/v1/txt2img|/v1/images/generations|g' src/endpoints/stable-diffusion.js
 
-          # Force SillyTavern to print the exact raw JSON string to your terminal logs
+          # 2. Intercept the JSON response stream and reshape OpenAI format to WebUI format
           substituteInPlace src/endpoints/stable-diffusion.js \
-          --replace "const data = await response.json();" "const data = await response.json();\n console.log('DIAGNOSTIC LEMONADE RESPONSE:', JSON.stringify(data, null, 2));"
+          --replace "const data = await response.json();" \
+                    "let data = await response.json(); if (data && data.data \&\& data.data[0] \&\& data.data[0].b64_json) { data = { images: [data.data[0].b64_json] }; }"
         
         '';
       });
