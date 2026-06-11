@@ -4,11 +4,10 @@
   nixpkgs.overlays = [
     (final: prev: {
       sillytavern = prev.sillytavern.overrideAttrs (oldAttrs: {
-        # Modify source code strings directly after compilation unpack steps
         postPatch = (oldAttrs.postPatch or "") + ''
-          substituteInPlace src/endpoints/stable-diffusion.js \
-          --replace "const url = \`''${serverUrl}/sdapi/v1/txt2img\`;" "const url = \`''${serverUrl}/v1/images/generations\`;"
-
+          # Globally replace the hardcoded paths with Lemonade's expected standard OpenAI route
+          sed -i 's|/api/sdapi/v1/txt2img|/v1/images/generations|g' src/endpoints/stable-diffusion.js
+          sed -i 's|/sdapi/v1/txt2img|/v1/images/generations|g' src/endpoints/stable-diffusion.js
         '';
       });
     })
