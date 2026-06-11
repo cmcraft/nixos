@@ -7,7 +7,7 @@
         # Modify source code strings directly after compilation unpack steps
         postPatch = (oldAttrs.postPatch or "") + ''
           substituteInPlace src/endpoints/stable-diffusion.js \
-          --replace "const url = \`''${serverUrl}/api/sdapi/v1/txt2img\`;" "const url = \`''${serverUrl}/v1/images/generations\`;"
+          --replace "const url = \`''${serverUrl}/sdapi/v1/txt2img\`;" "const url = \`''${serverUrl}/v1/images/generations\`;"
 
         '';
       });
