@@ -1,6 +1,18 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [
+    (final: prev: {
+      sillytavern = prev.sillytavern.overrideAttrs (oldAttrs: {
+        # Modify source code strings directly after compilation unpack steps
+        postPatch = (oldAttrs.postPatch or "") + ''
+          substituteInPlace src/endpoints/stable-diffusion.js \
+            --replace "const url = \`\${serverUrl}/api/sdapi/v1/txt2img\`;" "const url = \`\${serverUrl}/v1/images/generations\`;"
+        '';
+      });
+    })
+  ];
+
   services.sillytavern = {
     enable = true;
     configFile = "${config.sops.templates."sillytavern-config".path}";
