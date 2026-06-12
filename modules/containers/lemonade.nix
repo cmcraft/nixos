@@ -38,7 +38,7 @@
       # --- MEMORY MANAGEMENT ---
       "LEMONADE_CTX_SIZE" = "98304"; 
       "LEMONADE_MAX_LOADED_MODELS" = "7"; 
-      "LEMONADE_GLOBAL_TIMEOUT" = "300"; 
+      "LEMONADE_GLOBAL_TIMEOUT" = "0"; 
       "LEMONADE_MAX_VRAM_GB" = "96";
     };
 
