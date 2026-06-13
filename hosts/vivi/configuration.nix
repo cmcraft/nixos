@@ -39,14 +39,10 @@
   ];
 
   boot.kernelParams = [
-    # Set GTT (Graphics Translation Table) to 100GB (102400 MB)
-    "amdgpu.gttsize=102400"
-    # Ensure the iGPU can see the full range
-    "amdgpu.vis_vram_limit=102400"
-    # TTM limits in pages (120GB / 4KB per page = 31457280)
-    "ttm.pages_limit=31457280"
-    # Improved IOMMU for performance
-    "iommu=pt"
+    "amdgpu.gttsize=126976"
+    "amdgpu.vis_vram_limit=126976"
+    "ttm.pages_limit=32505856"
+    "iommu=off"
   ];
 
   boot.initrd.kernelModules = [ "amdgpu" ];
