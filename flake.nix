@@ -49,6 +49,11 @@
     hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
+  nixConfig = {
+    extra-substituters = [ "https://attic.xuyh0120.win/lantian" ];
+    extra-trusted-public-keys = [ "lantian:EdAu6wX5Z4ie0IptS8SbyUbySg1K1g6WwG9YwXv1S3w=" ];
+  };
+
   outputs = { self, nixpkgs, nixos-hardware, nix-cachyos-kernel, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, hermes-agent, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
