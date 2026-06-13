@@ -8,7 +8,6 @@
   imports = [
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
-    inputs.nix-cachyos-kernel.nix-cachyos-kernel
     ../../modules/avahi/avahi.nix
     ../../modules/common/common.nix
     ../../modules/disko/disko-elysium.nix
@@ -28,7 +27,7 @@
     ../../modules/tuned/tuned.nix
   ];
 
-  boot.kernelPackages = pkgs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest;
+  boot.kernelPackages = inputs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest;
   services.scx.enable = true;
 
   nix.settings = {
