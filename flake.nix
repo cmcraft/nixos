@@ -5,6 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,7 +49,7 @@
     hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, hermes-agent, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, nix-cachyos-kernel, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, hermes-agent, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -123,6 +125,10 @@
         impermanence.nixosModules.impermanence
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series        
 
+        ({pkgs, ...}: {
+          boot.kernelPackages = nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest;
+          services.scx.enable = true;
+        })
         {
             imports = [ home-manager.nixosModules.home-manager ];
             home-manager.users.cmcraft =
