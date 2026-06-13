@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
+    inputs.nix-cachyos-kernel.nix-cachyos-kernel
     ../../modules/avahi/avahi.nix
     ../../modules/common/common.nix
     ../../modules/disko/disko-elysium.nix
