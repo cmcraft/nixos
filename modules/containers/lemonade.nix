@@ -113,7 +113,7 @@
         "rocm_args": "",
         "rocm_bin": "builtin",
         "vulkan_args": "",
-        "vulkan_bin": "builtin"
+        "vulkan_bin": "latest"
       },
       "log_level": "info",
       "max_loaded_models": 7,
@@ -137,7 +137,7 @@
         "rocm_bin": "builtin",
         "steps": 20,
         "vulkan_args": "",
-        "vulkan_bin": "builtin",
+        "vulkan_bin": "latest",
         "width": 512
       },
       "vllm": {
