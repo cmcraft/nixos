@@ -44,10 +44,11 @@
     "amdgpu.gttsize=126976"
     "amdgpu.vis_vram_limit=126976"
     "ttm.pages_limit=32505856"
-    "iommu=off"
+    "amd_iommu=on"
+    "iommu=pt"
   ];
 
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.kernelModules = [ "amdgpu" "kvm-amd" "amdxdna"];
 
   hardware.graphics.extraPackages = with pkgs; [
     libdrm
