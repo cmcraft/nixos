@@ -28,7 +28,6 @@
     ../../modules/xserver/xserver.nix
   ];
   
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   nix.settings = {
     download-buffer-size = 524288000;
     experimental-features = [ "nix-command" "flakes" ];

@@ -27,7 +27,6 @@
     ../../modules/tuned/tuned.nix
   ];
 
-  boot.kernelPackages = inputs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest;
   services.scx.enable = true;
 
   nix.settings = {

@@ -31,8 +31,6 @@
     ../../modules/zigbee2mqtt/zigbee2mqtt.nix
   ];
   
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  
   environment.systemPackages = with pkgs; [
     docker-client
     arion

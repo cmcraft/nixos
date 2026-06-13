@@ -26,8 +26,6 @@
     ../../modules/tailscale/tailscale.nix
     ../../modules/xserver/xserver.nix
   ];
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   
   nix.settings = {
     download-buffer-size = 524288000;
