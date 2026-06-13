@@ -30,9 +30,9 @@ in {
       model = {
         provider = "custom";
         base_url = "http://vivi.local:13305/v1";
-        default = "Qwen3.6-35B-A3B-MTP-GGUF";
+        default = "Qwen3.6-35B-A3B-APEX-MTP-GGUF-I-Quality";
         context_length = "98304";
-        llamacpp_args = "--spec-type draft-mtp --speculative-num-draft-tokens 4";
+        llamacpp_args = "--spec-type draft-mtp";
       };
       toolsets = 
         [ 
