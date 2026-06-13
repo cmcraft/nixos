@@ -88,7 +88,9 @@
   networking.dhcpcd.setHostname = true;
 
   time.timeZone = "America/Chicago";
+  
   security.sudo.wheelNeedsPassword = false;
+  security.polkit.enable = true;
 
   users.mutableUsers = false;
   users.users.cmcraft = {

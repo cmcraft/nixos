@@ -24,6 +24,7 @@
     ../../modules/sillytavern/sillytavern.nix
     ../../modules/stylix/stylix.nix
     ../../modules/tailscale/tailscale-lemonade.nix
+    ../../modules/tuned/tuned.nix
   ];
 
   nix.settings = {
@@ -36,6 +37,7 @@
     pkgs.llama-cpp
     pkgs.clinfo
     pkgs.stable-diffusion-cpp-vulkan
+    pkgs.tuned
   ];
 
   boot.kernelParams = [
