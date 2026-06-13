@@ -73,6 +73,11 @@
     allowedTCPPorts = [ 80 443 3000 8080 ];
   };
 
+  nix.settings = {
+    substituters = [ "https://attic.xuyh0120.win/lantian" ];
+    trusted-public-keys = [ "lantian:EdAu6wX5Z4ie0IptS8SbyUbySg1K1g6WwG9YwXv1S3w=" ];
+  };
+
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
