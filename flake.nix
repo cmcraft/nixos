@@ -125,10 +125,6 @@
         impermanence.nixosModules.impermanence
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series        
 
-        ({pkgs, ...}: {
-          boot.kernelPackages = nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest;
-          services.scx.enable = true;
-        })
         {
             imports = [ home-manager.nixosModules.home-manager ];
             home-manager.users.cmcraft =

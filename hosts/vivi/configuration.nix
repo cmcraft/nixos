@@ -27,6 +27,9 @@
     ../../modules/tuned/tuned.nix
   ];
 
+  boot.kernelPackages = pkgs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest;
+  services.scx.enable = true;
+
   nix.settings = {
     download-buffer-size = 524288000;
     experimental-features = [ "nix-command" "flakes" ];
