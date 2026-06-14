@@ -9,6 +9,7 @@
       autoPrune = {
         enable = true;
         flags = [ "--all" ];
+        extraPackages = [ pkgs.tzdata ];
       };
       # Create a `docker` alias for podman, to use it as a drop-in replacement
       dockerCompat = true;
@@ -24,6 +25,9 @@
         graphroot = "/var/lib/containers/storage";
         options.overlay.mountopt = "nodev,metacopy=on";
       }; # storage
+    };
+    containers.settings = {
+      containers.tz = "local";
     };
   }; # virtualisation
 
