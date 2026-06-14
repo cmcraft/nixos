@@ -26,7 +26,7 @@
         options.overlay.mountopt = "nodev,metacopy=on";
       }; # storage
     };
-    containers.settings = {
+    containers.containersConf.settings = {
       containers.tz = "local";
     };
   }; # virtualisation
