@@ -45,7 +45,7 @@
     };
 
     hermes-agent.url = "github:NousResearch/hermes-agent";
-    inputs.continuwuity.url = "git+https://forgejo.ellis.link/continuwuation/continuwuity";
+    continuwuity.url = "git+https://forgejo.ellis.link/continuwuation/continuwuity";
   };
 
   outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, hermes-agent, continuwuity, ... }@inputs: 
