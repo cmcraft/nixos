@@ -3,6 +3,7 @@
   services.matrix-continuwuity = {
     enable = true;
     package = inputs.continuwuity.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    admin.enable = true;
     settings = {
       global = {
         server_name = "knit-purl-binary.com";

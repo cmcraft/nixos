@@ -77,8 +77,8 @@
       modules = [
         ./hosts/romulus/configuration.nix
 
-        continuwuity.packages.${system}.default
-        
+        continuwuity.nixosModules.continuwuity
+
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         {
