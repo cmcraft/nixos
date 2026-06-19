@@ -10,6 +10,7 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
     ../../modules/avahi/avahi.nix
+    ../../modules/continuwuity/continuwuity.nix
     ../../modules/ddns-updater/ddns-updater.nix
     ../../modules/disko/disko-elysium.nix
     ../../modules/common/common.nix
@@ -41,6 +42,7 @@
     terraria-server
 
     usbutils
+    inputs.continuwuity.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   hardware.bluetooth = {

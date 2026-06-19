@@ -45,9 +45,10 @@
     };
 
     hermes-agent.url = "github:NousResearch/hermes-agent";
+    inputs.continuwuity.url = "git+https://forgejo.ellis.link/continuwuation/continuwuity";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, hermes-agent, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, hermes-agent, continuwuity, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -75,6 +76,9 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/romulus/configuration.nix
+
+        continuwuity.packages.${system}.default
+        
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         {
