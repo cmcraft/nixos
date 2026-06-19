@@ -76,9 +76,6 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/romulus/configuration.nix
-
-        continuwuity.nixosModules.continuwuity
-
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         {
