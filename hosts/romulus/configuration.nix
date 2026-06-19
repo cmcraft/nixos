@@ -42,6 +42,7 @@
     terraria-server
 
     usbutils
+    utimensat
     inputs.continuwuity.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
