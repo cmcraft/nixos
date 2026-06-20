@@ -2,7 +2,7 @@
 {
   services.matrix-continuwuity = {
     enable = true;
-    package = inputs.continuwuity.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    #package = inputs.continuwuity.packages.${pkgs.stdenv.hostPlatform.system}.default;
     admin.enable = true;
     settings = {
       global = {
