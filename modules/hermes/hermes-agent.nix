@@ -72,7 +72,7 @@ in {
         backend = "searxing";
       };
       matrix = {
-        
+        require_mention = false;
       };
       # personality.nix
       display = { compact = false; personality = "kawaii"; };
