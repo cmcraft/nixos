@@ -21,9 +21,13 @@
     "continuwuity/registration-token" = { };
   };
 
-  sops.templates."continuwuity-registration".content = ''
+  sops.templates."continuwuity-registration" = {
+  content = ''
     ${config.sops.placeholder."continuwuity/registration-token"}
   '';
+  path = "/var/lib/conduwuit/registration_token";
+  owner = "continuwuity";
+  };
 
   environment.persistence."/persist" = {
     hideMounts = true;
