@@ -7,7 +7,6 @@
     settings = {
       global = {
         server_name = "knit-purl-binary.com";
-        database_path = "/var/lib/continuwuity/";
         allow_registration = true;
         registration_token_file = "${config.sops.templates."continuwuity-registration".path}";
       };
