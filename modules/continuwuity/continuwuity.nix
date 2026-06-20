@@ -17,6 +17,11 @@
     isSystemUser = true;
   };
 
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 6167 ];
+  };
+
   sops.secrets = {
     "continuwuity/registration-token" = { };
   };
