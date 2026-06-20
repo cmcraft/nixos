@@ -6,6 +6,7 @@
     admin.enable = true;
     settings = {
       global = {
+        address = "0.0.0.0";
         server_name = "knit-purl-binary.com";
         allow_registration = true;
         registration_token_file = "${config.sops.templates."continuwuity-registration".path}";
