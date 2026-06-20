@@ -25,14 +25,14 @@
   content = ''
     ${config.sops.placeholder."continuwuity/registration-token"}
   '';
-  path = "/var/lib/continuwuity/registration_token";
+  path = "/var/lib/private/continuwuity/registration_token";
   owner = "continuwuity";
   };
 
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      { directory = "/var/lib/continuwuity"; user = "continuwuity"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
+      { directory = "/var/lib/private/continuwuity"; user = "continuwuity"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
     ];
   };
 }
