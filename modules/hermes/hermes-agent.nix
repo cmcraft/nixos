@@ -71,6 +71,9 @@ in {
         search_backend = "searxing";
         backend = "searxing";
       };
+      matrix = {
+        
+      };
       # personality.nix
       display = { compact = false; personality = "kawaii"; };
       memory = { memory_enabled = true; user_profile_enabled = true; };
