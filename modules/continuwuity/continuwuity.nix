@@ -14,6 +14,10 @@
     };
   };
 
+  users.users.continuwuity = {
+    isSystemUser = true;
+  };
+
   sops.secrets = {
     "continuwuity/registration-token" = { };
   };
