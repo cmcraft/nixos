@@ -14,7 +14,7 @@ in {
     workingDirectory = workingDirectory;
     environmentFiles = [ config.sops.secrets."hermes-env".path ];
     addToSystemPackages = true;
-    extraDependencyGroups = [ "natrix" "messaging" ];
+    extraDependencyGroups = [ "matrix" "messaging" ];
     extraPackages = 
       [ 
         pkgs.pandoc 
