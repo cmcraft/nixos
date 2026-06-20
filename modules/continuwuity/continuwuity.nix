@@ -20,7 +20,7 @@
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 6167 ];
+    allowedTCPPorts = [ 6167 443 8448 ];
   };
 
   sops.secrets = {
