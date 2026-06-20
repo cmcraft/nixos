@@ -10,6 +10,7 @@
         server_name = "knit-purl-binary.com";
         allow_registration = true;
         registration_token_file = "${config.sops.templates."continuwuity-registration".path}";
+        block_non_local_rooms = true;
       };
     };
   };
