@@ -32,7 +32,7 @@ in {
         base_url = "http://vivi.local:13305/v1";
         default = "Qwen3.6-35B-A3B-APEX-MTP-GGUF-I-Quality";
         context_length = "98304";
-        llamacpp_args = "--spec-type draft-mtp";
+        llamacpp_args = "--flash-attn on --log-disable --mlock --mmap --reasoning off --spec-type draft-mtp --spec-draft-n-max 2";
       };
       toolsets = 
         [ 
@@ -56,7 +56,7 @@ in {
           "safe"
         ];
       max_turns = 100;
-      terminal = { backend = "local"; cwd = "."; timeout = 180; };
+      terminal = { backend = "local"; cwd = "/var/lib/hermes/workspace"; timeout = 180; };
       compression = {
         enabled = true;
         abort_on_summary_failure = true;
