@@ -24,18 +24,6 @@
     allowedTCPPorts = [ 6167 443 8448 ];
   };
 
-  sops.secrets = {
-    "continuwuity/registration-token" = { };
-  };
-
-  sops.templates."continuwuity-registration" = {
-  content = ''
-    ${config.sops.placeholder."continuwuity/registration-token"}
-  '';
-  path = "/var/lib/private/continuwuity/registration_token";
-  owner = "continuwuity";
-  };
-
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
