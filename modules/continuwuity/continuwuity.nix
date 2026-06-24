@@ -41,7 +41,6 @@
     hideMounts = true;
     directories = [
       { directory = "/var/lib/private/continuwuity"; user = "continuwuity"; group = "users"; mode = "u=rwx,g=,o="; }
-            { directory = "/var/lib/continuwuity"; user = "continuwuity"; group = "users"; mode = "u=rwx,g=rwx,o="; }        
     ];
   };
 }
