@@ -27,7 +27,7 @@
     ../../modules/containers/redbot.nix
     ../../modules/sops/sops.nix
     ../../modules/stylix/stylix.nix
-    ../../modules/tailscale/romulus.nix
+    ../../modules/tailscale/tailscale.nix
     ../../modules/terraria/terraria.nix
     ../../modules/zigbee2mqtt/zigbee2mqtt.nix
   ];
