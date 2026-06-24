@@ -73,7 +73,6 @@ in {
       };
       matrix = {
         require_mention = false;
-        user_id = "@vivi:knit-purl-binary.com";
         auto_thread = false;
         dm_auto_thread = false;
       };
