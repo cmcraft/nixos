@@ -32,7 +32,7 @@ in {
         base_url = "http://vivi.local:13305/v1";
         default = "Qwen3.6-35B-A3B-APEX-MTP-GGUF-I-Quality";
         context_length = "98304";
-        llamacpp_args = "--flash-attn on --log-disable --mlock --mmap --reasoning off --spec-type draft-mtp --spec-draft-n-max 4 -b 1024";
+        llamacpp_args = "--flash-attn on --log-disable --mlock --mmap --reasoning off --spec-type draft-mtp --spec-draft-n-max 4 --batch-size 1024";
       };
       toolsets = 
         [ 
