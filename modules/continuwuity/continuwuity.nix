@@ -9,6 +9,7 @@
         address = [ "0.0.0.0" ];
         server_name = "knit-purl-binary.com";
         allow_registration = true;
+        registration_token_file = "${config.sops.templates."continuwuity-registration".path}";
         block_non_local_rooms = true;
       };
     };
@@ -21,6 +22,19 @@
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 6167 443 8448 ];
+  };
+
+
+  sops.secrets = {
+    "continuwuity/registration-token" = { };
+  };
+
+  sops.templates."continuwuity-registration" = {
+  content = ''
+    ${config.sops.placeholder."continuwuity/registration-token"}
+  '';
+  path = "/var/lib/private/continuwuity/registration_token";
+  owner = "continuwuity";
   };
 
   environment.persistence."/persist" = {
