@@ -23,7 +23,7 @@
     ../../modules/sops/sops.nix
     ../../modules/steam/steam.nix
     ../../modules/stylix/stylix.nix
-    ../../modules/tailscale/tailscale.nix
+    ../../modules/tailscale/remus.nix
     ../../modules/xserver/xserver.nix
   ];
   
