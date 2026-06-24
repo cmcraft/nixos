@@ -32,7 +32,7 @@ in {
         base_url = "http://vivi.local:13305/v1";
         default = "Qwen3.6-35B-A3B-APEX-MTP-GGUF-I-Quality";
         context_length = "98304";
-        llamacpp_args = "--flash-attn on --log-disable --mlock --mmap --reasoning off --spec-type draft-mtp --spec-draft-n-max 2";
+        llamacpp_args = "--flash-attn on --log-disable --mlock --mmap --reasoning off --spec-type draft-mtp --spec-draft-n-max 4 --batch 1024";
       };
       toolsets = 
         [ 
@@ -64,7 +64,9 @@ in {
       };
       auxiliary = {
         compression = {
-          model = "Qwen3.5-4B-MTP-GGUF";
+          provider = "custom";
+          base_url = "http://gir.local:8080/v1";
+          model = "LFM2.5-8B-A1B-MLX-4bit";
         };
       };
       web = {
@@ -85,6 +87,11 @@ in {
     documents = {
       # "USER.md" = ./documents/USER.md;
     };
+  };
+
+  networking.firewall = {
+    allowPing = true;
+    allowedTCPPorts = [ 9119 ];
   };
 
   users.users.hermes = {
