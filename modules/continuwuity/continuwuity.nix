@@ -40,9 +40,7 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      { directory = "/var/lib/private/continuwuity"; user = "continuwuity"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
-      { directory = "/var/lib/continuwuity"; user = "continuwuity"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }
-    
+      { directory = "/var/lib/private/continuwuity"; user = "continuwuity"; group = "users"; mode = "u=rwx,g=rwx,o=rx"; }    
     ];
   };
 }
