@@ -30,7 +30,7 @@ in {
       model = {
         provider = "custom";
         base_url = "http://vivi.local:13305/v1";
-        default = "Qwen3.6-35B-A3B-APEX-MTP-GGUF-I-Quality";
+        default = "Qwen3.6-35B-A3B-uncensored-heretic-Native-MTP-Preserved-GGUF-Q4_K_M";
         context_length = "98304";
         llamacpp_args = "--flash-attn on --log-disable --mlock --mmap --reasoning off --spec-type draft-mtp --spec-draft-n-max 4 --batch-size 1024";
       };
