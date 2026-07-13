@@ -11,7 +11,7 @@
         "io.containers.autoupdate" = "registry";
       };
       image = "phasecorex/red-discordbot:full";
-      autoStart = false;
+      autoStart = true;
       volumes = [ "/var/lib/containers/storage/redbot:/data" ];
       environmentFiles = [
         config.sops.templates."redbot".path
