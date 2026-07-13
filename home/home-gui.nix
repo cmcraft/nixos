@@ -28,5 +28,4 @@
     GRIMBLAST_EDITOR = "feh";
   };
 
-  home.pointerCursor.enable = true;
 }

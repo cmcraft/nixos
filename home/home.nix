@@ -17,6 +17,8 @@
     SOPS_AGE_KEY_FILE= "$HOME/.config/sops/age/keys.txt";
   };
 
+  home.pointerCursor.enable = true;
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
   home.stateVersion = "26.05";
