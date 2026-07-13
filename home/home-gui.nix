@@ -27,4 +27,6 @@
     XDG_PICTURES_DIR = "$HOME/Pictures";
     GRIMBLAST_EDITOR = "feh";
   };
+
+  home.pointerCursor.enable = true;
 }
