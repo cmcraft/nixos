@@ -10,7 +10,7 @@
       labels = {
         "io.containers.autoupdate" = "registry";
       };
-      image = "phasecorex/red-discordbot:full";
+      image = "docker.io/phasecorex/red-discordbot:full";
       autoStart = true;
       volumes = [ "/var/lib/containers/storage/redbot:/data" ];
       environmentFiles = [
