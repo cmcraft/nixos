@@ -37,9 +37,9 @@
     };
 
     volumes = [
-      "/var/lib/containers/storage/lemonade/models:/root/.cache/huggingface"
+      "/var/lib/containers/storage/lemonade/models:/opt/.cache/huggingface"
       "/var/lib/containers/storage/lemonade/lemonade-llama:/opt/lemonade/llama"
-      "/var/lib/containers/storage/lemonade/config:/root/.cache/lemonade"
+      "/var/lib/containers/storage/lemonade/config:/opt/.cache/lemonade"
     ];
 
     extraOptions = [
