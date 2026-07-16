@@ -37,9 +37,9 @@
     };
 
     volumes = [
-      "/var/lib/containers/storage/lemonade/models:/opt/lemonade/.cache/huggingface"
-      "/var/lib/containers/storage/lemonade/lemonade-llama:/opt/lemonade/llama"
-      "/var/lib/containers/storage/lemonade/config:/opt/lemonade/.cache/lemonade"
+      "/var/lib/containers/storage/lemonade/models:/opt/lemonade/.cache/huggingface:z"
+      "/var/lib/containers/storage/lemonade/lemonade-llama:/opt/lemonade/llama:z"
+      "/var/lib/containers/storage/lemonade/config:/opt/lemonade/.cache/lemonade:z"
     ];
 
     extraOptions = [
