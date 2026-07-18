@@ -24,8 +24,6 @@ in {
         pkgs.nodejs
         pkgs.wget 
       ]; 
-
-    # base.nix
     settings = {
       model = {
         provider = "custom";
@@ -56,7 +54,7 @@ in {
           "safe"
         ];
       max_turns = 100;
-      terminal = { backend = "local"; cwd = "/var/lib/hermes/workspace"; timeout = 180; };
+      terminal = { backend = "local"; cwd = "/var/lib/hermes/workspace"; home_mode = "profile"; timeout = 180; };
       compression = {
         enabled = true;
         abort_on_summary_failure = true;
@@ -82,6 +80,17 @@ in {
       display = { compact = false; personality = "kawaii"; };
       memory = { memory_enabled = true; user_profile_enabled = true; };
       agent = { max_turns = 60; verbose = false; };
+    };
+
+    profiles = {
+      vivi = {
+        enable = true;
+        name = "Vivi";
+        settings.model.provider = "custom";
+        settings.model.base_url = "http://vivi.local:13305/v1";
+        toolsets = [ "messaging" "memory" "session_search" "clarify" ];
+        stateDir = "/var/lib/hermes/profiles/vivi";
+      };
     };
 
     documents = {
