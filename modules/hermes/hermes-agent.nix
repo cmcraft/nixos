@@ -82,17 +82,6 @@ in {
       agent = { max_turns = 60; verbose = false; };
     };
 
-    profiles = {
-      vivi = {
-        enable = true;
-        name = "Vivi";
-        settings.model.provider = "custom";
-        settings.model.base_url = "http://vivi.local:13305/v1";
-        toolsets = [ "messaging" "memory" "session_search" "clarify" ];
-        stateDir = "/var/lib/hermes/profiles/vivi";
-      };
-    };
-
     documents = {
       # "USER.md" = ./documents/USER.md;
     };
