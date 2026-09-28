@@ -14,7 +14,8 @@
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
     ../../modules/fwupd/fwupd.nix
-    # ../../modules/gufo/gufo.nix
+    ../../modules/gufo/gufo-service.nix
+    ../../modules/gufo/gufo.nix
     ../../modules/impermanence/impermanence.nix
     # ../../modules/containers/lemonade.nix
     ../../modules/nm-applet/nm-applet.nix
