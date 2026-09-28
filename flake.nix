@@ -124,7 +124,7 @@
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series        
-
+        ./modules/gufo/gufo-service.nix
         {
             imports = [ home-manager.nixosModules.home-manager ];
             home-manager.users.cmcraft =
