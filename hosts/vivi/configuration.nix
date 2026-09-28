@@ -42,7 +42,7 @@
     pkgs.tuned
 
     inputs.gufo.packages.${pkgs.stdenv.hostPlatform.system}.default
-    (python3.withPackages (ps: [
+    (pkgs.python3.withPackages (ps: [
       python3Packages.huggingface-hub
     ]))
   ];
