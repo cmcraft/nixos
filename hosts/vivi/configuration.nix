@@ -14,7 +14,6 @@
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
     ../../modules/fwupd/fwupd.nix
-    inputs.gufo.nixosModules.gufo
     ../../modules/impermanence/impermanence.nix
     # ../../modules/containers/lemonade.nix
     ../../modules/nm-applet/nm-applet.nix
@@ -40,6 +39,8 @@
     pkgs.clinfo
     pkgs.stable-diffusion-cpp-vulkan
     pkgs.tuned
+
+    inputs.gufo.packages.${pkgs.system}.default
   ];
 
   boot.kernelParams = [
