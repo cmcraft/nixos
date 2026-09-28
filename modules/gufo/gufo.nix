@@ -79,7 +79,7 @@ in {
       };
     };
   };
-}
+
   services.gufo = {
     enable = true;
     host = "127.0.0.1";
@@ -90,3 +90,4 @@ in {
       "--dflash-model" "/var/lib/models/Qwen3.8-27B-DFlash2-Q4_K_M.gguf"
     ];
   };
+}
