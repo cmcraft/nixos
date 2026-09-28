@@ -42,9 +42,7 @@
     pkgs.tuned
 
     inputs.gufo.packages.${pkgs.stdenv.hostPlatform.system}.default
-    (pkgs.python3.withPackages (ps: [
-      python3Packages.huggingface-hub
-    ]))
+    pkgs.python3Packages.huggingface-hub
   ];
 
   boot.kernelParams = [
