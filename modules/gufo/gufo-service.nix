@@ -10,7 +10,7 @@ in {
 
     package = mkOption {
       type = types.package;
-      default = inputs.gufo.packages.${pkgs.system}.default;
+      default = inputs.gufo.packages.${pkgs.stdenv.hostPlatform.system}.default;
       description = "The Gufo derivation package to execute.";
     };
 
