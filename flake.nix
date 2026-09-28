@@ -44,11 +44,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hermes-agent.url = "github:NousResearch/hermes-agent";
-    continuwuity.url = "git+https://forgejo.ellis.link/continuwuation/continuwuity";
+    gufo = {
+      url = "github:gufo-org/gufo";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, hermes-agent, continuwuity, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, impermanence, hyprland, stylix, wpaperd, sops-nix, disko, gufo, ... }@inputs: 
   {
     nixosConfigurations.SURFBoard = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -119,7 +121,6 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/vivi/configuration.nix
-        hermes-agent.nixosModules.default
         stylix.nixosModules.stylix
         impermanence.nixosModules.impermanence
         nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series        

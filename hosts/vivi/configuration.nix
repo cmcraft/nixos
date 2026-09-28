@@ -14,9 +14,9 @@
     ../../modules/fish/fish.nix
     ../../modules/fuse/fuse.nix
     ../../modules/fwupd/fwupd.nix
-    ../../modules/hermes/hermes-agent.nix
+    inputs.gufo.nixosModules.gufo
     ../../modules/impermanence/impermanence.nix
-    ../../modules/containers/lemonade.nix
+    # ../../modules/containers/lemonade.nix
     ../../modules/nm-applet/nm-applet.nix
     ../../modules/openssh/openssh.nix
     ../../modules/pipewire/pipewire.nix
