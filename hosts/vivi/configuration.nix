@@ -42,6 +42,7 @@
     pkgs.tuned
 
     inputs.gufo.packages.${pkgs.stdenv.hostPlatform.system}.default
+    pkgs.huggingface-cli
   ];
 
   boot.kernelParams = [
