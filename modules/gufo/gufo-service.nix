@@ -1,4 +1,4 @@
-{ config, lib, pkgs, gufo, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with lib;
 
@@ -10,7 +10,7 @@ in {
 
     package = mkOption {
       type = types.package;
-      default = gufo.packages.${pkgs.system}.default;
+      default = inputs.gufo.packages.${pkgs.system}.default;
       description = "The Gufo derivation package to execute.";
     };
 
