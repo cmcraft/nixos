@@ -11,6 +11,13 @@
     ];
   };
 
+  users.users.gufo = {
+    isSystemUser = true;
+    group = "gufo";
+    extraGroups = [ "video" "render" ];
+  };
+  users.groups.gufo  = {};
+
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
