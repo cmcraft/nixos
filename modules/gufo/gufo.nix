@@ -30,7 +30,7 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      { directory = "/var/lib/gufo/models"; user = "gufo"; group = "users"; mode = "u=rwx,g=rx,o=rx"; }
+      { directory = "/var/lib/gufo"; user = "gufo"; group = "users"; mode = "u=rwx,g=rx,o=rx"; }
     ];
   };
 }
