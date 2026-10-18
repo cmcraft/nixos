@@ -4,10 +4,14 @@
     enable = true;
     host = "0.0.0.0";
     port = 8080;
-    modelPath = "/var/lib/gufo/models/Qwen3.8-27B-GGUF/Qwen3.8-27B-UD-Q8_K_XL.gguf";
+    modelPath = "/var/lib/gufo/models/gufo/Qwen3.8-Flash-Next-Uncensored-Gufo-Q4Mix.gguf";
     extraArgs = [
-      "--speculative" "dflash2"
-      "--dflash-model" "/var/lib/gufo/models/Qwen3.8-27B-DFlash2-GGUF/Qwen3.8-27B-DFlash2-Q4_K_M.gguf"
+      "--mmproj" "/var/lib/gufo/models/gufo/mmproj-BF16.gguf"
+      "--served-model-name" "gufo" 
+      "--context" "262144"
+      "--speculative" "mtp"
+      "--dflash-model" "/var/lib/gufo/models/gufo-sidecar/mtp/Qwen3.8-Flash-CIRU-STRIX-Orca-MTP-Q8_0.gguf"
+      "--draft-tokens" "6"
     ];
   };
 
