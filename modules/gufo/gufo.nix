@@ -10,7 +10,7 @@
       "--served-model-name" "gufo" 
       "--context" "262144"
       "--speculative" "mtp"
-      "--dflash-model" "/var/lib/gufo/models/gufo-sidecar/mtp/Qwen3.8-Flash-CIRU-STRIX-Orca-MTP-Q8_0.gguf"
+      "--mtp-model" "/var/lib/gufo/models/gufo-sidecar/mtp/Qwen3.8-Flash-CIRU-STRIX-Orca-MTP-Q8_0.gguf"
       "--draft-tokens" "6"
     ];
   };
