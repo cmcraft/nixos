@@ -16,7 +16,7 @@
 
       "--speculative" "mtp"
       "--mtp-model" "/var/lib/gufo/models/Qwen3.8-flash-next/MTP/mtp-Qwen3.8-Flash-Next-shared-Q8_0.gguf"
-      "--draft-tokens" "6"
+      # "--draft-tokens" "6"
     ];
   };
 
