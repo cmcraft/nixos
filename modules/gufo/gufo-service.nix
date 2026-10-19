@@ -63,8 +63,8 @@ in {
 
         # 3. Necessary security settings to interact with the ROCm layer
         DeviceAllow = [
-          "/dev/kfd rw"
-          "/dev/dri/renderD128 rw"
+          "/dev/kfd rwm"
+          "/dev/dri/renderD128 rwm"
         ];
         
         # Gufo demands massive memory allocations for large context windows and unified memory architectures
