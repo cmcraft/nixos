@@ -76,9 +76,13 @@ in {
         Group = "users";
         StateDirectory = "gufo";
         SupplementaryGroups = [ "video" "render" ]; # Automatically grants dynamic runtime user access to GPU nodes
-        ProtectSystem = "strict";
+        ProtectSystem = "true";
         ProtectHome = true;
-        ReadOnlyPaths = [ (dirOf cfg.modelPath) ];
+        ReadOnlyPaths = [ 
+          "/run/opengl-driver"
+          "/run/wrappers" 
+          (dirOf cfg.modelPath) 
+        ];
       };
     };
   };
