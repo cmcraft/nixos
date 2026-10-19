@@ -73,7 +73,7 @@ in {
         # Hardening security parameters
         DynamicUser = false;
         User = "gufo";
-        Group = "Users";
+        Group = "users";
         StateDirectory = "gufo";
         SupplementaryGroups = [ "video" "render" ]; # Automatically grants dynamic runtime user access to GPU nodes
         ProtectSystem = "strict";
