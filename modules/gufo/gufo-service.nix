@@ -54,7 +54,6 @@ in {
           ${cfg.package}/bin/gufo serve \
             --host ${cfg.host} \
             --port ${toString cfg.port} \
-            --sessions 2 \
             llm --model ${cfg.modelPath} \
             ${escapeShellArgs cfg.extraArgs}
         '';
