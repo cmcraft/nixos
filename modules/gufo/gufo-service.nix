@@ -71,7 +71,7 @@ in {
         LimitMEMLOCK = "infinity"; 
         
         # Hardening security parameters
-        DynamicUser = true;
+        DynamicUser = false;
         StateDirectory = "gufo";
         SupplementaryGroups = [ "video" "render" ]; # Automatically grants dynamic runtime user access to GPU nodes
         ProtectSystem = "strict";
